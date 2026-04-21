@@ -1,0 +1,90 @@
+{
+  "state": {
+    "code": "NY",
+    "name": "New York",
+    "agency": "NYSDEC",
+    "agency_full": "New York State Department of Environmental Conservation",
+    "agency_url": "https://www.dec.ny.gov",
+    "status": "coming-soon"
+  },
+  "recent_updates": [],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "Part 375",
+      "title": "6 NYCRR Part 375 — Remedial Program Regulations",
+      "description": "Primary New York State regulations for environmental remediation, covering Inactive Hazardous Waste Disposal Sites, Voluntary Cleanup Program, and Environmental Restoration Programs. Establishes cleanup criteria.",
+      "source_url": "https://www.dec.ny.gov/regulations/2629.html",
+      "document_type": "regulation",
+      "last_updated": "2006",
+      "tags": ["Part 375", "6 NYCRR", "cleanup", "remediation", "VCP", "ERP", "NYSDEC"]
+    },
+    {
+      "id": 2,
+      "category": "remediation",
+      "subcategory": "VCP",
+      "title": "Voluntary Cleanup Program (VCP) — Overview",
+      "description": "NYSDEC program allowing voluntary investigation and remediation of contaminated sites in exchange for regulatory closure. Provides liability protection upon issuance of a Certificate of Completion.",
+      "source_url": "https://www.dec.ny.gov/chemical/8450.html",
+      "document_type": "policy",
+      "last_updated": "2023",
+      "tags": ["VCP", "voluntary cleanup", "NYSDEC", "liability", "COC", "brownfields"]
+    },
+    {
+      "id": 3,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "NY Construction General Permit (GP-0-20-001)",
+      "description": "NYSDEC SPDES general permit for construction sites disturbing 1+ acres. Requires a Stormwater Pollution Prevention Plan (SWPPP) and inspection program. Covers water quality and quantity controls.",
+      "source_url": "https://www.dec.ny.gov/permits/92903.html",
+      "document_type": "permit",
+      "last_updated": "2020",
+      "tags": ["CGP", "SPDES", "construction", "SWPPP", "New York", "land disturbance"]
+    },
+    {
+      "id": 4,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "NY MS4 General Permit (GP-0-15-003)",
+      "description": "NYSDEC SPDES general permit for small municipal separate storm sewer systems. Requires Stormwater Management Programs with six minimum control measures and annual compliance reporting.",
+      "source_url": "https://www.dec.ny.gov/permits/50765.html",
+      "document_type": "permit",
+      "last_updated": "2015",
+      "tags": ["MS4", "SPDES", "municipal stormwater", "NYSDEC", "MCM"]
+    },
+    {
+      "id": 5,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "NY Stormwater Management Design Manual (2015)",
+      "description": "NYSDEC guidance for design of stormwater management practices for new development and redevelopment. The technical reference for SPDES permit compliance, BMP sizing, and water quality treatment.",
+      "source_url": "https://www.dec.ny.gov/chemical/29072.html",
+      "document_type": "manual",
+      "last_updated": "2015",
+      "tags": ["stormwater manual", "New York", "BMP", "LID", "post-construction", "SPDES"]
+    },
+    {
+      "id": 6,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "NY Brownfield Cleanup Program (BCP) — Site Assessment",
+      "description": "NYSDEC Brownfield Cleanup Program resources for Phase I and II assessments, including state-specific AAI guidance, BCP eligibility criteria, and environmental investigation work plans.",
+      "source_url": "https://www.dec.ny.gov/chemical/8450.html",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["BCP", "brownfields", "Phase I", "Phase II", "NYSDEC", "AAI", "site assessment"]
+    },
+    {
+      "id": 7,
+      "category": "assessment",
+      "subcategory": "Database Search",
+      "title": "NY Environmental Site Remediation Database (ENSR)",
+      "description": "NYSDEC online database of all sites in the State Superfund, VCP, BCP, and ERP programs. Essential for records reviews during Phase I ESAs.",
+      "source_url": "https://www.dec.ny.gov/chemical/23797.html",
+      "document_type": "policy",
+      "last_updated": "2024",
+      "tags": ["ENSR", "database", "records review", "Phase I", "Superfund", "NYSDEC"]
+    }
+  ]
+}

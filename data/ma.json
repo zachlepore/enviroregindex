@@ -1,0 +1,108 @@
+{
+  "state": {
+    "code": "MA",
+    "name": "Massachusetts",
+    "agency": "MassDEP",
+    "agency_full": "Massachusetts Department of Environmental Protection",
+    "agency_url": "https://www.mass.gov/orgs/massachusetts-department-of-environmental-protection",
+    "status": "coming-soon"
+  },
+  "recent_updates": [
+    {
+      "title": "MCP 2023 Amendments",
+      "description": "MassDEP finalized updates to the Massachusetts Contingency Plan (MCP) addressing changes to soil and groundwater cleanup standards.",
+      "date": "2023",
+      "color": "#2E7D52"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "MCP",
+      "title": "Massachusetts Contingency Plan (MCP) — 310 CMR 40.0000",
+      "description": "The primary regulation governing assessment and cleanup of oil and hazardous material releases in Massachusetts. Establishes cleanup standards, timelines, and the Licensed Site Professional (LSP) program.",
+      "source_url": "https://www.mass.gov/regulations/310-cmr-4000-massachusetts-contingency-plan",
+      "document_type": "regulation",
+      "last_updated": "2023",
+      "tags": ["MCP", "cleanup", "oil", "hazardous material", "310 CMR 40", "LSP"]
+    },
+    {
+      "id": 2,
+      "category": "remediation",
+      "subcategory": "MCP",
+      "title": "Reportable Conditions & Release Notification (310 CMR 40.0300)",
+      "description": "MassDEP requirements for reporting releases of oil and hazardous material, including thresholds, timeframes, and responsible party obligations under the MCP.",
+      "source_url": "https://www.mass.gov/info-details/mcp-numerical-standards",
+      "document_type": "regulation",
+      "last_updated": "2023",
+      "tags": ["release notification", "MCP", "reportable condition", "oil", "hazardous material"]
+    },
+    {
+      "id": 3,
+      "category": "remediation",
+      "subcategory": "LSP Program",
+      "title": "Licensed Site Professional (LSP) Program",
+      "description": "Overview of Massachusetts's LSP licensure system. LSPs oversee and certify site assessment and cleanup activities under the MCP. Analogous to CT's LEP.",
+      "source_url": "https://www.mass.gov/licensed-site-professional-lsp-program",
+      "document_type": "policy",
+      "last_updated": "2024",
+      "tags": ["LSP", "licensed professional", "MCP", "certification", "oversight"]
+    },
+    {
+      "id": 4,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "MA EPA MS4 General Permit (2016)",
+      "description": "EPA-issued MS4 General Permit for Massachusetts municipalities. Requires Stormwater Management Plans addressing six minimum control measures. MassDEP is the co-permitting authority.",
+      "source_url": "https://www.epa.gov/npdes/npdes-stormwater-program-massachusetts",
+      "document_type": "permit",
+      "last_updated": "2016",
+      "tags": ["MS4", "municipal stormwater", "NPDES", "EPA", "MCM", "Massachusetts"]
+    },
+    {
+      "id": 5,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "Construction General Permit (CGP) — Massachusetts",
+      "description": "EPA-issued general permit for construction sites disturbing 1+ acres in Massachusetts. Requires a Stormwater Pollution Prevention Plan (SWPPP) and compliance with applicable effluent limits.",
+      "source_url": "https://www.epa.gov/npdes/stormwater-discharges-construction-activities",
+      "document_type": "permit",
+      "last_updated": "2022",
+      "tags": ["CGP", "construction", "SWPPP", "EPA", "land disturbance", "NPDES"]
+    },
+    {
+      "id": 6,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "Massachusetts Stormwater Handbook",
+      "description": "MassDEP's primary guidance for post-construction stormwater management. Sets BMP design standards, sizing methods, and performance requirements referenced in permits and local bylaws.",
+      "source_url": "https://www.mass.gov/lists/stormwater-standards",
+      "document_type": "manual",
+      "last_updated": "2008 (with updates)",
+      "tags": ["stormwater handbook", "BMP", "post-construction", "LID", "Massachusetts", "design standards"]
+    },
+    {
+      "id": 7,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "MCP Phase I / II Initial Site Investigation",
+      "description": "Under the MCP, the Initial Site Investigation (ISI) and Comprehensive Site Assessment (CSA) serve as Phase I/II analogs. The LSP determines whether a release has occurred and characterizes site conditions.",
+      "source_url": "https://www.mass.gov/info-details/mcp-site-assessment-activities",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["ISI", "CSA", "Phase I", "Phase II", "MCP", "site assessment", "LSP"]
+    },
+    {
+      "id": 8,
+      "category": "assessment",
+      "subcategory": "Database Search",
+      "title": "MassDEP Site Search — Release Tracking System (BWSC)",
+      "description": "Online database to search for reported releases, cleanup status, and site files under the MCP. Maintained by MassDEP Bureau of Waste Site Cleanup (BWSC).",
+      "source_url": "https://eeaonline.eea.state.ma.us/EEA/eeaonline/Default.aspx",
+      "document_type": "policy",
+      "last_updated": "2024",
+      "tags": ["BWSC", "database", "site search", "release tracking", "MCP", "records review"]
+    }
+  ]
+}

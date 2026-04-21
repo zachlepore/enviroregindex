@@ -1,0 +1,57 @@
+{
+  "state": {
+    "code": "RI",
+    "name": "Rhode Island",
+    "agency": "RIDEM",
+    "agency_full": "Rhode Island Department of Environmental Management",
+    "agency_url": "https://dem.ri.gov",
+    "status": "coming-soon"
+  },
+  "recent_updates": [],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "RICRR",
+      "title": "Remediation Regulations (RICRR 250-RICR-140-10-1)",
+      "description": "Primary Rhode Island regulations governing the remediation of contaminated sites. Sets cleanup standards for soil and groundwater organized by land use and receptor type.",
+      "source_url": "https://dem.ri.gov/environmental-protection-bureau/waste-management/remediation",
+      "document_type": "regulation",
+      "last_updated": "2021",
+      "tags": ["RICRR", "cleanup standards", "soil", "groundwater", "RIDEM", "remediation"]
+    },
+    {
+      "id": 2,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "RI MS4 General Permit",
+      "description": "RIDEM-issued MS4 general permit for Rhode Island municipalities. Requires implementation of six minimum control measures and annual reporting.",
+      "source_url": "https://dem.ri.gov/environmental-protection-bureau/water-resources/stormwater",
+      "document_type": "permit",
+      "last_updated": "2020",
+      "tags": ["MS4", "NPDES", "municipal stormwater", "RIDEM", "Rhode Island"]
+    },
+    {
+      "id": 3,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "Construction General Permit (CGP) — Rhode Island",
+      "description": "RIDEM construction general permit for sites disturbing 1+ acres. Requires a Stormwater Pollution Prevention Plan addressing erosion, sedimentation, and post-construction management.",
+      "source_url": "https://dem.ri.gov/environmental-protection-bureau/water-resources/stormwater",
+      "document_type": "permit",
+      "last_updated": "2020",
+      "tags": ["CGP", "construction", "SWPPP", "RIDEM", "land disturbance", "erosion"]
+    },
+    {
+      "id": 4,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "RI Brownfields Program — Site Assessment Guidance",
+      "description": "RIDEM Brownfields Program resources for conducting Phase I and II ESAs in Rhode Island, including state-specific AAI requirements and voluntary cleanup program information.",
+      "source_url": "https://dem.ri.gov/environmental-protection-bureau/waste-management/brownfields",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["brownfields", "Phase I", "Phase II", "RIDEM", "AAI", "site assessment"]
+    }
+  ]
+}

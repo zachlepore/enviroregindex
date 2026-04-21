@@ -1,0 +1,368 @@
+{
+  "state": {
+    "code": "CT",
+    "name": "Connecticut",
+    "agency": "CT DEEP",
+    "agency_full": "Connecticut Department of Energy and Environmental Protection",
+    "agency_url": "https://portal.ct.gov/DEEP",
+    "status": "live"
+  },
+  "recent_updates": [
+    {
+      "title": "Release-Based Cleanup Regs (RBCRs) — Effective",
+      "description": "RBCRs took effect March 1, 2026, replacing the CT Property Transfer Act with a release-based reporting and cleanup system.",
+      "date": "March 1, 2026",
+      "color": "#E65100"
+    },
+    {
+      "title": "MS4 General Permit — Draft Reissuance",
+      "description": "CT DEEP issued a Notice of Tentative Determination to reissue the MS4 General Permit; public comment period opened March 25, 2025.",
+      "date": "March 25, 2025",
+      "color": "#1B4670"
+    },
+    {
+      "title": "REACT Portal Launch",
+      "description": "CT DEEP's new Release, Environmental Assessment, and Cleanup Tracker (REACT) portal is live for document uploads and tracking as of early 2026.",
+      "date": "February 2026",
+      "color": "#2E7D52"
+    },
+    {
+      "title": "CT Stormwater Quality Manual — Updated",
+      "description": "Revised manual incorporates updated LID guidance, new water quality storm sizing (1.3\"), and updated BMP performance criteria.",
+      "date": "2023",
+      "color": "#8B5E00"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "RSRs",
+      "title": "Remediation Standard Regulations (RSRs)",
+      "description": "Connecticut's primary soil and groundwater cleanup standards. Contains numeric criteria for 88 substances organized by land use (residential vs. commercial/industrial). Amended February 2021.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/Remediation-Standard-Regulations-Main-Page",
+      "document_type": "regulation",
+      "last_updated": "February 16, 2021",
+      "tags": ["RSR", "cleanup standards", "soil", "groundwater", "22a-133k"]
+    },
+    {
+      "id": 2,
+      "category": "remediation",
+      "subcategory": "RSRs",
+      "title": "RSRs — Fact Sheet",
+      "description": "Plain-language summary of how the RSRs work, when they apply, and the types of criteria (Direct Exposure, Pollutant Mobility, groundwater protection). Good starting point for new users.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/Remediation-Standard-Regulations-Fact-Sheet",
+      "document_type": "guidance",
+      "last_updated": "2021",
+      "tags": ["RSR", "fact sheet", "cleanup standards", "DEC", "PMC"]
+    },
+    {
+      "id": 3,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "Release-Based Cleanup Regulations (RBCRs) — Main Page",
+      "description": "The new CT cleanup regulatory framework effective March 1, 2026. Replaces the Property Transfer Act. Describes requirements to report, characterize, and remediate releases. Incorporates the RSRs.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/release-based-cleanup-program",
+      "document_type": "regulation",
+      "last_updated": "March 1, 2026",
+      "tags": ["RBCR", "release-based", "cleanup", "Transfer Act", "2026", "LEP"]
+    },
+    {
+      "id": 4,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "Environmental Cleanup — REACT Portal & Overview",
+      "description": "CT DEEP's Environmental Cleanup program page, including the new REACT (Release, Environmental Assessment, and Cleanup Tracker) portal for document submission and property tracking.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/environmental-cleanup",
+      "document_type": "policy",
+      "last_updated": "2026",
+      "tags": ["REACT", "RBCR", "environmental cleanup", "document portal", "tracking"]
+    },
+    {
+      "id": 5,
+      "category": "remediation",
+      "subcategory": "Variances & Engineered Controls",
+      "title": "Technical Impracticability (TI) Variance",
+      "description": "Remedial option under the RSRs when NAPL cannot be contained or removed per RSR requirements and remediation has been conducted to the extent technically practicable.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations",
+      "document_type": "regulation",
+      "last_updated": "2021",
+      "tags": ["TI variance", "NAPL", "RSR", "groundwater", "compliance measure"]
+    },
+    {
+      "id": 6,
+      "category": "remediation",
+      "subcategory": "Variances & Engineered Controls",
+      "title": "Engineered Controls (ECs) — Overview",
+      "description": "Permanent physical structures used to isolate pollutants that cannot meet RSR direct cleanup criteria. Application requirements, financial assurance forms, and completion statements available here.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations",
+      "document_type": "regulation",
+      "last_updated": "2021",
+      "tags": ["engineered control", "EC", "RSR", "variance", "financial assurance"]
+    },
+    {
+      "id": 7,
+      "category": "remediation",
+      "subcategory": "LEP Program",
+      "title": "Licensed Environmental Professional (LEP) Program",
+      "description": "Overview of the CT LEP licensure system. LEPs verify site investigations and remediation under the RSRs/RBCRs. Includes program description, LEP roster link, exam applications, and renewal forms.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program",
+      "document_type": "policy",
+      "last_updated": "2025",
+      "tags": ["LEP", "licensed professional", "verification", "roster", "license"]
+    },
+    {
+      "id": 8,
+      "category": "remediation",
+      "subcategory": "LEP Program",
+      "title": "LEP Verifications — Forms & Instructions",
+      "description": "LEP Verification Forms (Forms III and IV, 133x, Brownfields, RCRA) and instructions. Required for submitting a verification that a site has been remediated per RSRs or RBCRs.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program/LEP-Verifications",
+      "document_type": "form",
+      "last_updated": "2024",
+      "tags": ["LEP", "verification form", "Form III", "Form IV", "closure"]
+    },
+    {
+      "id": 9,
+      "category": "remediation",
+      "subcategory": "LEP Program",
+      "title": "Verification Report Guidance Document",
+      "description": "CT DEEP guidance on expectations for a Verification Report submitted by an LEP. Outlines required content, format, and checklist items consistent with RSR/RBCR requirements.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/licensed-environmental-professional-program/verification-report-guidance-document",
+      "document_type": "guidance",
+      "last_updated": "2021",
+      "tags": ["LEP", "verification report", "closure", "guidance", "RSR"]
+    },
+    {
+      "id": 10,
+      "category": "remediation",
+      "subcategory": "Voluntary Remediation",
+      "title": "Voluntary Remediation Program (VRP) — CGS 22a-133x Fact Sheet",
+      "description": "Fact sheet for CT's elective VRP. Any party can file an ECAF and fee with CT DEEP to expedite investigation and cleanup of contaminated property under LEP oversight.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/voluntary-remediation-program/voluntary-remediation-program-cgs-22a-133x-fact-sheet",
+      "document_type": "guidance",
+      "last_updated": "March 2023",
+      "tags": ["VRP", "ECAF", "voluntary", "22a-133x", "brownfields", "LEP"]
+    },
+    {
+      "id": 11,
+      "category": "remediation",
+      "subcategory": "Forms & Submittals",
+      "title": "Remediation Forms — Central Repository",
+      "description": "Master forms page for CT DEEP Remediation Division: ECAF, Engineered Control variance forms, LEP verification forms, monitoring status forms, and APS/criteria approval requests.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Forms",
+      "document_type": "form",
+      "last_updated": "March 2026",
+      "tags": ["forms", "ECAF", "REACT", "submittal", "LEP", "EC", "APS"]
+    },
+    {
+      "id": 12,
+      "category": "remediation",
+      "subcategory": "Technical Support",
+      "title": "Technical Support Documents — RSR Criteria Derivation",
+      "description": "Supporting documentation on how CT RSR soil and groundwater criteria were derived, including EPA IRIS toxicity values, exposure assumptions, and criteria for EPH/VPH/APH petroleum methods.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/1996-RSR-Criteria-Derivation",
+      "document_type": "guidance",
+      "last_updated": "1996 (basis)",
+      "tags": ["RSR", "criteria derivation", "risk-based", "IRIS", "EPH", "VPH", "APH"]
+    },
+    {
+      "id": 13,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "MS4 General Permit — Current (Effective Oct 1, 2023)",
+      "description": "General Permit for Discharge of Stormwater from Small Municipal Separate Storm Sewer Systems (MS4). Requires municipalities, public universities, and state/federal facilities to implement six Minimum Control Measures.",
+      "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Municipal-Stormwater",
+      "document_type": "permit",
+      "last_updated": "October 1, 2023",
+      "tags": ["MS4", "municipal stormwater", "general permit", "MCM", "NPDES", "annual report"]
+    },
+    {
+      "id": 14,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "MS4 General Permit — 2025 Draft Reissuance",
+      "description": "Draft MS4 General Permit issued March 2025 for public comment. Notice of Tentative Determination and Fact Sheet available. Permit administratively extended while DEEP reviews comments.",
+      "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Municipal-Stormwater",
+      "document_type": "permit",
+      "last_updated": "March 25, 2025",
+      "tags": ["MS4", "draft permit", "reissuance", "NPDES", "2025"]
+    },
+    {
+      "id": 15,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "Construction Stormwater General Permit (CGP)",
+      "description": "Required for construction sites disturbing 1+ acres. Requires a Stormwater Pollution Control Plan (SPCP). Locally Approvable projects (1–5 acres) may not need to register with DEEP directly if local approval applies. Effective December 31, 2020.",
+      "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Construction-Stormwater-GP",
+      "document_type": "permit",
+      "last_updated": "December 31, 2020",
+      "tags": ["CGP", "construction", "SPCP", "land disturbance", "erosion", "sediment", "ezFile"]
+    },
+    {
+      "id": 16,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "CT Guidelines for Soil Erosion and Sediment Control (2023)",
+      "description": "Comprehensive guidance for E&S control on construction sites. Referenced in the CGP and required by municipal land-use approvals. Updated in 2023 with new LID integration and construction phasing requirements.",
+      "source_url": "https://portal.ct.gov/-/media/DEEP/water/water_quality_management/Guidance/SESCG_2023_1_2.pdf",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["erosion", "sediment control", "E&S", "construction", "BMP", "LID", "SESC"]
+    },
+    {
+      "id": 17,
+      "category": "stormwater",
+      "subcategory": "Industrial Stormwater",
+      "title": "Industrial Stormwater General Permit (IGP)",
+      "description": "NPDES General Permit for Discharge of Stormwater Associated with Industrial Activity. Covers a wide range of industrial sectors; requires Stormwater Pollution Prevention Plans, monitoring, and benchmarks.",
+      "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Industrial-Stormwater-GP",
+      "document_type": "permit",
+      "last_updated": "2011 (with modifications)",
+      "tags": ["industrial", "IGP", "NPDES", "SWPPP", "monitoring", "benchmark"]
+    },
+    {
+      "id": 18,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "CT Stormwater Quality Manual (2023 Edition)",
+      "description": "Primary guidance for post-construction stormwater management in CT. Covers LID site design, BMP selection, water quality volume calculations (updated to 1.3\" design storm), and pollutant load reduction targets.",
+      "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Stormwater-Manual",
+      "document_type": "manual",
+      "last_updated": "2023",
+      "tags": ["stormwater manual", "post-construction", "LID", "BMP", "water quality", "volume control", "WQV"]
+    },
+    {
+      "id": 19,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "CT Stormwater Quality Manual — Online Interactive Version",
+      "description": "UConn NEMO-hosted interactive version of the CT Stormwater Quality Manual, with searchable chapters, design tools, and workflow checklists for LID and BMP design.",
+      "source_url": "https://ctstormwatermanual.nemo.uconn.edu/",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["stormwater manual", "LID", "BMP", "NEMO", "interactive", "design"]
+    },
+    {
+      "id": 20,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "Stormwater — CT DEEP Main Page",
+      "description": "Central landing page for all CT DEEP stormwater programs including MS4, construction, and industrial permits. Access to permit documents, annual report templates, and contact information.",
+      "source_url": "https://portal.ct.gov/deep/water-regulating-and-discharges/stormwater/",
+      "document_type": "policy",
+      "last_updated": "2026",
+      "tags": ["stormwater", "CT DEEP", "permits", "resources", "overview"]
+    },
+    {
+      "id": 21,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "Construction General Permit — Proposed Cold Water Habitat Buffer Modification",
+      "description": "DEEP proposed limited modification to the CGP allowing construction within 100-foot cold water habitat buffers if authorized through a separate state permitting mechanism or DEEP Fisheries coordination.",
+      "source_url": "https://portal.ct.gov/DEEP/Public-Notices/Public-Notices-Proposed-Actions---Opportunity-for-Comment/Proposed-General-Permits/General-Permit-for-the-Discharge-of-Stormwater-from-Construction-Activities",
+      "document_type": "permit",
+      "last_updated": "2023",
+      "tags": ["CGP", "cold water habitat", "buffer", "modification", "fisheries", "construction"]
+    },
+    {
+      "id": 22,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Site Characterization Guidance Document (SCGD)",
+      "description": "CT DEEP's primary guidance for Phase I, II, and III environmental site assessments. Prescribes a three-phase investigation sequence unique to CT. All CT-based ESAs should follow this document alongside ASTM E1527.",
+      "source_url": "https://portal.ct.gov/-/media/DEEP/site_clean_up/guidance/Site_Characterization/FinalSCGDpdf.pdf",
+      "document_type": "guidance",
+      "last_updated": "December 2010",
+      "tags": ["SCGD", "Phase I", "Phase II", "ESA", "site characterization", "AOC", "REC"]
+    },
+    {
+      "id": 23,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Site Characterization Guidance — DEEP Guidance Page",
+      "description": "CT DEEP landing page for site cleanup and characterization guidance documents, including links to the SCGD, expedited site assessment guidance, and supplemental technical documents.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Guidance",
+      "document_type": "guidance",
+      "last_updated": "2024",
+      "tags": ["SCGD", "site characterization", "guidance", "Phase II", "expedited", "ESA"]
+    },
+    {
+      "id": 24,
+      "category": "assessment",
+      "subcategory": "REACT / Database Search",
+      "title": "REACT — Release, Environmental Assessment & Cleanup Tracker",
+      "description": "CT DEEP's new online portal for searching properties with known releases, tracking cleanup progress, and submitting environmental documents. Replaces the legacy Online Document Search Portal for post-February 2026 submissions.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/environmental-cleanup",
+      "document_type": "policy",
+      "last_updated": "2026",
+      "tags": ["REACT", "database", "property search", "Phase I", "records review", "document search"]
+    },
+    {
+      "id": 25,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Brownfields — PREPARED Workbook: Due Diligence",
+      "description": "CT DEEP guidance on environmental due diligence for brownfield sites, explaining Phase I, II, and III ESAs in the context of CERCLA AAI (All Appropriate Inquiry) and CT-specific protections.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Brownfields/PREPARED-Workbook-Due-Diligence",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["brownfields", "Phase I", "AAI", "CERCLA", "due diligence", "prospective purchaser"]
+    },
+    {
+      "id": 26,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Voluntary Remediation Program — ECAF & Phase II Entry Point",
+      "description": "The Environmental Condition Assessment Form (ECAF) is the entry document for the Voluntary Remediation Program and often follows Phase I findings. Links VRP enrollment with formal Phase II investigation oversight.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/voluntary-remediation-program/voluntary-remediation-program-cgs-22a-133x-fact-sheet",
+      "document_type": "form",
+      "last_updated": "March 2023",
+      "tags": ["ECAF", "Phase II", "VRP", "voluntary", "22a-133x", "investigation"]
+    },
+    {
+      "id": 27,
+      "category": "assessment",
+      "subcategory": "LEP Program",
+      "title": "LEP Program — Overview for Site Assessment",
+      "description": "Licensed Environmental Professionals (LEPs) in CT are required to supervise Phase II investigations and verify site conditions under the RSRs and RBCRs. Includes LEP roster and audit program information.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program",
+      "document_type": "policy",
+      "last_updated": "2025",
+      "tags": ["LEP", "Phase II", "licensed professional", "verification", "audit"]
+    },
+    {
+      "id": 28,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "ASTM E1527 Standard — All Appropriate Inquiry (AAI)",
+      "description": "Federal ASTM Phase I standard (E1527) referenced in CT DEEP's SCGD. CT ESAs must comply with both E1527 and the SCGD. ASTM E1903 covers Phase II investigations.",
+      "source_url": "https://www.astm.org/e1527-21.html",
+      "document_type": "guidance",
+      "last_updated": "2021",
+      "tags": ["ASTM", "E1527", "Phase I", "AAI", "all appropriate inquiry", "federal"]
+    },
+    {
+      "id": 29,
+      "category": "assessment",
+      "subcategory": "REACT / Database Search",
+      "title": "CT DEEP Online Document Search Portal (Legacy — Pre-Feb 2026)",
+      "description": "Legacy search tool for environmental documents submitted to CT DEEP before February 2026. Documents after that date are in the REACT portal. Useful for historical site investigation records.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/environmental-cleanup",
+      "document_type": "policy",
+      "last_updated": "2026",
+      "tags": ["legacy", "document search", "historical", "Phase I", "records", "ECAF", "VRP"]
+    },
+    {
+      "id": 30,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Brownfields Program — Main Page",
+      "description": "CT DEEP Brownfields Program overview, covering eligibility, available programs (VRP, BRWP, BEP), LEP requirements, and liability protections for prospective purchasers and municipalities.",
+      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Brownfields",
+      "document_type": "policy",
+      "last_updated": "2024",
+      "tags": ["brownfields", "BRWP", "BEP", "liability", "prospective purchaser", "Phase I", "Phase II"]
+    }
+  ]
+}

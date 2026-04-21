@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnviroRegIndex — Environmental Regulatory Directory</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo" onclick="showView('home')" role="button" tabindex="0"
+          onkeydown="if(event.key==='Enter') showView('home')">
+      Enviro<span>Reg</span>Index
+    </span>
+
+    <div class="nav-search-wrap">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input
+        type="search"
+        id="globalSearch"
+        autocomplete="off"
+        placeholder="Search regulations, permits, guidance…"
+        oninput="handleGlobalSearch(this.value)"
+        aria-label="Search documents"
+      >
+    </div>
+
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab active" id="tab-home"        role="tab" onclick="showView('home')">Home</button>
+      <button class="nav-tab"        id="tab-remediation" role="tab" onclick="showView('remediation')">Remediation</button>
+      <button class="nav-tab"        id="tab-stormwater"  role="tab" onclick="showView('stormwater')">Stormwater</button>
+      <button class="nav-tab"        id="tab-assessment"  role="tab" onclick="showView('assessment')">Site Assessment</button>
+      <button class="nav-tab"        id="tab-search"      role="tab" style="display:none">Search</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STATE SELECTOR BAR
+═══════════════════════════════════════════════════════════ -->
+<div class="state-bar" role="navigation" aria-label="State selector">
+  <!-- Populated by app.js buildStateBar() -->
+  <div class="state-bar-inner" id="state-bar-inner"></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOME VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-home" class="view active">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-label" id="hero-label">Environmental Regulatory Navigator</div>
+      <h1>Find environmental<br><strong>regulations in seconds.</strong></h1>
+      <p class="hero-sub">
+        A curated index of state environmental regulations, guidance documents, and permits
+        for engineers and consultants — no government website digging required.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="total-docs">—</span>
+          <span class="stat-label">Documents</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Focus Areas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="hero-agency">—</span>
+          <span class="stat-label">Agency</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">V1</span>
+          <span class="stat-label">Beta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category cards -->
+  <div class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-title">Focus Areas</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="cat-grid">
+
+        <a class="cat-card remediation" onclick="showView('remediation')" href="#"
+           role="button" aria-label="Site Remediation documents">
+          <div class="cat-icon" aria-hidden="true">🌿</div>
+          <h3>Site Remediation</h3>
+          <p>Cleanup standards, regulatory framework, licensed professional programs, voluntary remediation, and document portals.</p>
+          <div class="cat-count mono" id="count-remediation">— documents</div>
+        </a>
+
+        <a class="cat-card stormwater" onclick="showView('stormwater')" href="#"
+           role="button" aria-label="Stormwater documents">
+          <div class="cat-icon" aria-hidden="true">💧</div>
+          <h3>Stormwater</h3>
+          <p>MS4 general permits, construction stormwater, industrial stormwater, and stormwater quality manuals.</p>
+          <div class="cat-count mono" id="count-stormwater">— documents</div>
+        </a>
+
+        <a class="cat-card assessment" onclick="showView('assessment')" href="#"
+           role="button" aria-label="Site Assessment documents">
+          <div class="cat-icon" aria-hidden="true">🔍</div>
+          <h3>Site Assessment</h3>
+          <p>Phase I &amp; II ESA guidance, site characterization, database search tools, and brownfield resources.</p>
+          <div class="cat-count mono" id="count-assessment">— documents</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent updates -->
+  <div class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-title">Recent Updates</span>
+        <div class="section-line"></div>
+      </div>
+      <!-- Populated by app.js renderRecentUpdates() -->
+      <div class="updates-grid" id="recent-updates-grid"></div>
+    </div>
+  </div>
+
+</div><!-- /view-home -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     REMEDIATION VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-remediation" class="view">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="#" onclick="showView('home')">Home</a>
+        <span>›</span>
+        <span>Site Remediation</span>
+      </div>
+      <div class="cat-header-bar color-green"></div>
+      <h1 class="page-title"><strong>Site Remediation</strong></h1>
+      <p class="page-desc">
+        Cleanup standards, regulatory frameworks, licensed professional program documents,
+        voluntary remediation programs, and document portals. All resources from the state environmental agency.
+      </p>
+    </div>
+    <!-- Filter bar populated by app.js buildFilterBar() -->
+    <div class="filter-bar" id="filter-remediation" role="toolbar" aria-label="Filter remediation documents"></div>
+    <!-- List populated by app.js renderCategoryList() -->
+    <div class="doc-list" id="list-remediation" role="list"></div>
+  </div>
+</div><!-- /view-remediation -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     STORMWATER VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-stormwater" class="view">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="#" onclick="showView('home')">Home</a>
+        <span>›</span>
+        <span>Stormwater</span>
+      </div>
+      <div class="cat-header-bar color-blue"></div>
+      <h1 class="page-title"><strong>Stormwater</strong></h1>
+      <p class="page-desc">
+        General permits and guidance for municipal (MS4), construction, and industrial stormwater discharges,
+        plus stormwater quality manuals and erosion &amp; sediment control guidelines.
+      </p>
+    </div>
+    <div class="filter-bar" id="filter-stormwater" role="toolbar" aria-label="Filter stormwater documents"></div>
+    <div class="doc-list" id="list-stormwater" role="list"></div>
+  </div>
+</div><!-- /view-stormwater -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SITE ASSESSMENT VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-assessment" class="view">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="#" onclick="showView('home')">Home</a>
+        <span>›</span>
+        <span>Site Assessment</span>
+      </div>
+      <div class="cat-header-bar color-amber"></div>
+      <h1 class="page-title"><strong>Site Assessment</strong></h1>
+      <p class="page-desc">
+        Guidance for Phase I, Phase II, and Phase III Environmental Site Assessments (ESAs),
+        including state-specific characterization frameworks, database search tools, and brownfield resources.
+      </p>
+    </div>
+    <div class="filter-bar" id="filter-assessment" role="toolbar" aria-label="Filter site assessment documents"></div>
+    <div class="doc-list" id="list-assessment" role="list"></div>
+  </div>
+</div><!-- /view-assessment -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEARCH RESULTS VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-search" class="view">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><span>Search Results</span></div>
+      <h1 class="page-title">Search Results</h1>
+    </div>
+    <div class="filter-bar">
+      <span id="search-result-label" class="result-count"></span>
+    </div>
+    <div class="doc-list" id="list-search" role="list"></div>
+  </div>
+</div><!-- /view-search -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      Enviro<span>Reg</span>Index
+      <span style="color:var(--text-muted);font-weight:400"> · Beta v1.1</span>
+    </div>
+    <p class="footer-note">
+      This tool is a curated navigation index only — not an official government resource.
+      Always verify current regulations directly with the relevant state environmental agency.
+      All document links go directly to official government sources.
+    </p>
+  </div>
+</footer>
+
+<!-- Application script -->
+<script src="app.js"></script>
+
+</body>
+</html>

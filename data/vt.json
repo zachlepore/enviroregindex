@@ -1,0 +1,57 @@
+{
+  "state": {
+    "code": "VT",
+    "name": "Vermont",
+    "agency": "VT DEC",
+    "agency_full": "Vermont Department of Environmental Conservation",
+    "agency_url": "https://dec.vermont.gov",
+    "status": "coming-soon"
+  },
+  "recent_updates": [],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "Cleanup Regulations",
+      "title": "Vermont Contaminated Sites Management Rule",
+      "description": "Primary Vermont regulation governing the investigation and cleanup of contaminated sites. Establishes risk-based cleanup standards, investigation requirements, and closure procedures.",
+      "source_url": "https://dec.vermont.gov/waste-management/contaminated-sites/regulations",
+      "document_type": "regulation",
+      "last_updated": "2020",
+      "tags": ["Vermont", "cleanup", "contaminated sites", "risk-based", "VT DEC"]
+    },
+    {
+      "id": 2,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "VT Construction Stormwater General Permit",
+      "description": "Vermont Agency of Natural Resources general permit for construction sites disturbing 1+ acres. Requires preparation and implementation of an Erosion Prevention and Sediment Control (EPSC) plan.",
+      "source_url": "https://dec.vermont.gov/watershed/stormwater/construction",
+      "document_type": "permit",
+      "last_updated": "2020",
+      "tags": ["construction stormwater", "EPSC", "Vermont", "erosion", "land disturbance", "permit"]
+    },
+    {
+      "id": 3,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "Vermont Stormwater Management Manual",
+      "description": "VT DEC guidance for post-construction stormwater management. Covers runoff volume reduction, water quality treatment, and LID design for new development and redevelopment.",
+      "source_url": "https://dec.vermont.gov/watershed/stormwater/stormwater-management-manual",
+      "document_type": "manual",
+      "last_updated": "2017",
+      "tags": ["stormwater manual", "Vermont", "BMP", "LID", "post-construction", "water quality"]
+    },
+    {
+      "id": 4,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Vermont Brownfields Program — Site Assessment",
+      "description": "Vermont Agency of Commerce and Community Development Brownfields Program resources, including Phase I and II ESA guidance, AAI compliance, and EPA Brownfields grant information.",
+      "source_url": "https://accd.vermont.gov/community-development/funding-incentives/brownfields",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["brownfields", "Phase I", "Phase II", "Vermont", "AAI", "site assessment"]
+    }
+  ]
+}

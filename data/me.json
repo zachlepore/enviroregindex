@@ -1,0 +1,68 @@
+{
+  "state": {
+    "code": "ME",
+    "name": "Maine",
+    "agency": "Maine DEP",
+    "agency_full": "Maine Department of Environmental Protection",
+    "agency_url": "https://www.maine.gov/dep",
+    "status": "coming-soon"
+  },
+  "recent_updates": [],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "VAHON",
+      "title": "Voluntary Response Action Program (VRAP) — Overview",
+      "description": "Maine DEP's voluntary cleanup program. Provides regulatory oversight and closure for contaminated sites not subject to enforcement action, including a No Further Action letter upon completion.",
+      "source_url": "https://www.maine.gov/dep/spills/vrap/",
+      "document_type": "policy",
+      "last_updated": "2022",
+      "tags": ["VRAP", "voluntary cleanup", "Maine DEP", "NFA", "remediation"]
+    },
+    {
+      "id": 2,
+      "category": "remediation",
+      "subcategory": "Cleanup Standards",
+      "title": "Maine Remedial Action Guidelines (RAGs)",
+      "description": "Maine DEP numeric soil and groundwater remediation criteria. Organized by land use category (residential, non-residential) and exposure pathway.",
+      "source_url": "https://www.maine.gov/dep/spills/publications/index.html",
+      "document_type": "guidance",
+      "last_updated": "2020",
+      "tags": ["RAG", "remedial action guidelines", "cleanup standards", "soil", "groundwater", "Maine"]
+    },
+    {
+      "id": 3,
+      "category": "stormwater",
+      "subcategory": "Construction Stormwater",
+      "title": "Maine Construction General Permit (CGP)",
+      "description": "Maine DEP general permit for construction sites disturbing 1+ acres. Requires a Stormwater Pollution Control Plan addressing erosion, sedimentation, and post-construction requirements.",
+      "source_url": "https://www.maine.gov/dep/water/stormwater/construction.html",
+      "document_type": "permit",
+      "last_updated": "2020",
+      "tags": ["CGP", "construction", "stormwater", "Maine DEP", "erosion", "NPDES"]
+    },
+    {
+      "id": 4,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "Maine MS4 General Permit",
+      "description": "EPA-delegated MS4 general permit for Maine municipalities. Requires Stormwater Management Programs addressing minimum control measures, annual reports, and illicit discharge elimination.",
+      "source_url": "https://www.maine.gov/dep/water/stormwater/ms4.html",
+      "document_type": "permit",
+      "last_updated": "2018",
+      "tags": ["MS4", "municipal stormwater", "NPDES", "Maine", "MCM"]
+    },
+    {
+      "id": 5,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "Maine Brownfields Program — Site Assessment Resources",
+      "description": "Maine DEP Brownfields Program resources for Phase I and II site assessments, including AAI compliance documentation, grant information, and links to EPA Region 1 brownfields support.",
+      "source_url": "https://www.maine.gov/dep/spills/brownfields/",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["brownfields", "Phase I", "Phase II", "Maine", "AAI", "site assessment"]
+    }
+  ]
+}

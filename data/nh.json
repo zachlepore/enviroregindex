@@ -1,0 +1,68 @@
+{
+  "state": {
+    "code": "NH",
+    "name": "New Hampshire",
+    "agency": "NHDES",
+    "agency_full": "New Hampshire Department of Environmental Services",
+    "agency_url": "https://www.des.nh.gov",
+    "status": "coming-soon"
+  },
+  "recent_updates": [],
+  "documents": [
+    {
+      "id": 1,
+      "category": "remediation",
+      "subcategory": "RSA 147-B",
+      "title": "Hazardous Waste Cleanup Fund (RSA 147-B) — Overview",
+      "description": "Primary New Hampshire statute governing cleanup of hazardous waste sites. Establishes responsible party obligations, NHDES oversight authority, and the Hazardous Waste Cleanup Fund.",
+      "source_url": "https://www.des.nh.gov/waste/hazardous-waste/remediation",
+      "document_type": "regulation",
+      "last_updated": "2022",
+      "tags": ["RSA 147-B", "hazardous waste", "cleanup", "NHDES", "remediation"]
+    },
+    {
+      "id": 2,
+      "category": "remediation",
+      "subcategory": "Soil Cleanup Guidelines",
+      "title": "NH Soil Cleanup Guidelines",
+      "description": "NHDES numeric soil cleanup criteria for residential and non-residential land uses. Used to evaluate site conditions and determine remediation objectives.",
+      "source_url": "https://www.des.nh.gov/waste/hazardous-waste/remediation/soil-cleanup-guidelines",
+      "document_type": "guidance",
+      "last_updated": "2020",
+      "tags": ["soil cleanup", "criteria", "residential", "commercial", "remediation", "NHDES"]
+    },
+    {
+      "id": 3,
+      "category": "stormwater",
+      "subcategory": "MS4",
+      "title": "NH MS4 General Permit (EPA-Administered)",
+      "description": "EPA-issued MS4 general permit for New Hampshire municipalities. NHDES serves as co-administrator. Requires Stormwater Management Plans and annual reporting.",
+      "source_url": "https://www.epa.gov/npdes/npdes-stormwater-program-new-hampshire",
+      "document_type": "permit",
+      "last_updated": "2017",
+      "tags": ["MS4", "NPDES", "municipal stormwater", "EPA", "New Hampshire"]
+    },
+    {
+      "id": 4,
+      "category": "stormwater",
+      "subcategory": "Post-Construction",
+      "title": "NH Stormwater Manual (2008)",
+      "description": "NHDES guidance document for post-construction stormwater management. Covers BMP selection, design sizing, and water quality standards for new development and redevelopment.",
+      "source_url": "https://www.des.nh.gov/water/wetlands/stormwater",
+      "document_type": "manual",
+      "last_updated": "2008",
+      "tags": ["stormwater manual", "BMP", "post-construction", "LID", "New Hampshire"]
+    },
+    {
+      "id": 5,
+      "category": "assessment",
+      "subcategory": "Phase I / II ESA",
+      "title": "NHDES Brownfields Program — Site Assessment Resources",
+      "description": "NHDES Brownfields Program resources for Phase I and Phase II ESAs, including AAI compliance, grant opportunities, and site assessment guidance for prospective purchasers.",
+      "source_url": "https://www.des.nh.gov/waste/hazardous-waste/brownfields",
+      "document_type": "guidance",
+      "last_updated": "2023",
+      "tags": ["brownfields", "Phase I", "Phase II", "AAI", "NHDES", "site assessment"]
+    }
+  ]
+}

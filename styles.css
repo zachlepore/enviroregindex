@@ -540,6 +540,15 @@ nav {
   letter-spacing: 0.03em;
 }
 
+/* Doc action buttons */
+.doc-actions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 /* Doc link button */
 .doc-link {
   flex-shrink: 0;
@@ -554,7 +563,6 @@ nav {
   color: var(--text-primary);
   text-decoration: none;
   transition: all 0.15s;
-  margin-top: 2px;
   white-space: nowrap;
   align-self: flex-start;
 }
@@ -563,6 +571,18 @@ nav {
   background: var(--text-primary);
   color: #FFFFFF;
   border-color: var(--text-primary);
+}
+
+.doc-link-primary {
+  background: var(--accent-green-light);
+  border-color: rgba(46, 125, 82, 0.28);
+  color: var(--accent-green);
+}
+
+.doc-link-primary:hover {
+  background: var(--accent-green);
+  color: #FFFFFF;
+  border-color: var(--accent-green);
 }
 
 .doc-link svg { width: 12px; height: 12px; }
@@ -864,6 +884,12 @@ footer {
   /* Badge sits on top in mobile stacked layout */
   .doc-type-badge { align-self: flex-start; }
 
+  .doc-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   /* Link becomes full-width on mobile */
   .doc-link {
     align-self: stretch;
@@ -909,3 +935,4 @@ footer {
   .hero h1 { font-size: 22px; }
   .state-btn { padding: 0 8px; font-size: 10px; }
 }
+

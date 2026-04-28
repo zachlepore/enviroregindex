@@ -65,6 +65,17 @@ function buildDocHTML(doc, q = '') {
   const descHL  = highlight(doc.description, q);
   const tagsHL  = doc.tags.map(t => `<span class="tag">${highlight(t, q)}</span>`).join('');
 
+  const quickGuideHTML = doc.detail_page
+    ? `
+      <a class="doc-link doc-link-primary" href="${doc.detail_page}">
+        Quick Guide
+        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 2H9M9 2V8M9 2L2 9" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>`
+    : '';
+
   return `
     <div class="doc-item" data-id="${doc.id}" data-cat="${doc.category}" data-subcat="${doc.subcategory}">
       <span class="doc-type-badge ${getBadgeClass(doc.document_type)}">${doc.document_type}</span>
@@ -79,13 +90,16 @@ function buildDocHTML(doc, q = '') {
         <p class="doc-desc">${descHL}</p>
         <div class="doc-tags">${tagsHL}</div>
       </div>
-      <a class="doc-link" href="${doc.source_url}" target="_blank" rel="noopener">
-        View Source
-        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 10L10 2M10 2H5M10 2V7" stroke="currentColor" stroke-width="1.5"
-            stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <div class="doc-actions">
+        ${quickGuideHTML}
+        <a class="doc-link" href="${doc.source_url}" target="_blank" rel="noopener">
+          View Source
+          <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 10L10 2M10 2H5M10 2V7" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>`;
 }
 

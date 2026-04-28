@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnviroRegIndex — Connecticut RSR Quick Guide</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../../styles.css">
+
+  <style>
+    .detail-shell {
+      padding: 32px 0 56px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .detail-main,
+    .detail-side {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .detail-main {
+      padding: 28px;
+    }
+
+    .detail-side {
+      padding: 20px;
+      position: sticky;
+      top: 88px;
+    }
+
+    .detail-section + .detail-section {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      color: var(--text-primary);
+    }
+
+    .detail-section p,
+    .detail-section li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .detail-section ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .detail-section li + li {
+      margin-top: 8px;
+    }
+
+    .detail-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-green-mid);
+      margin-bottom: 12px;
+    }
+
+    .detail-summary {
+      font-size: 15px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 760px;
+    }
+
+    .detail-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .detail-resource {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-decoration: none;
+      color: inherit;
+      background: var(--bg);
+      transition: all 0.15s;
+    }
+
+    .detail-resource:hover {
+      border-color: var(--border-strong);
+      background: #F0EEE8;
+    }
+
+    .detail-resource-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .detail-resource-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .side-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 14px;
+    }
+
+    .side-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .side-card {
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .side-card:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .side-card strong {
+      display: block;
+      font-size: 13px;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .side-card span {
+      display: block;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .detail-main a,
+    .detail-side a {
+      color: var(--accent-green-mid);
+      text-decoration: none;
+    }
+
+    .detail-main a:hover,
+    .detail-side a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-side {
+        position: static;
+      }
+
+      .detail-main,
+      .detail-side {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../../../index.html" class="nav-logo">Enviro<span>Reg</span>Index</a>
+  </div>
+</nav>
+
+<div class="state-bar" aria-hidden="true">
+  <div class="state-bar-inner">
+    <span class="state-bar-label">State</span>
+    <span class="state-btn active">Connecticut</span>
+  </div>
+</div>
+
+<div class="detail-shell">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../index.html">Home</a>
+        <span>›</span>
+        <span>Site Remediation</span>
+        <span>›</span>
+        <span>RSRs</span>
+      </div>
+      <div class="cat-header-bar color-green"></div>
+      <div class="detail-kicker">Connecticut Remediation Quick Guide</div>
+      <h1 class="page-title"><strong>Remediation Standard Regulations (RSRs)</strong></h1>
+      <p class="detail-summary">
+        Connecticut’s RSRs are the core cleanup standards used to evaluate whether soil and groundwater conditions are acceptable at a site. They establish the numeric criteria, exposure assumptions, and compliance pathways that environmental engineers, LEPs, and consultants rely on during investigation, remedy design, and closure.
+      </p>
+    </div>
+
+    <div class="detail-grid">
+      <main class="detail-main">
+        <section class="detail-section">
+          <h2>Plain-English Overview</h2>
+          <p>
+            The RSRs are Connecticut’s foundational cleanup regulations for contaminated property. In practice, they tell project teams what concentrations in soil and groundwater can remain, what exposure scenarios matter, and what additional controls may be needed when a site cannot achieve unrestricted cleanup.
+          </p>
+          <p>
+            Engineers use the RSRs to compare investigation data against applicable criteria, determine whether a release has been adequately addressed, and support remedial decisions that can be documented in a verification or regulatory submittal.
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2>Relationship to RBCRs</h2>
+          <p>
+            Connecticut’s Release-Based Cleanup Regulations (RBCRs), effective March 1, 2026, changed the program structure for reporting and managing releases, but they did not replace the technical role of the RSRs. The RSRs still function as the underlying cleanup standards used to evaluate soil and groundwater conditions.
+          </p>
+          <p>
+            A practical way to think about it is: RBCRs govern the release-based process and compliance framework, while the RSRs remain the core numeric and technical cleanup benchmark for many remediation decisions.
+          </p>
+        </section>
+
+        <section class="detail-section">
+          <h2>Core Links</h2>
+          <div class="detail-links">
+            <a class="detail-resource" href="https://portal.ct.gov/-/media/DEEP/site_clean_up/remediation_regulations/RSR_2-16-21-with-indents.pdf" target="_blank" rel="noopener">
+              <div>
+                <div class="detail-resource-title">Main RSR Framework</div>
+                <div class="detail-resource-note">Official regulation text used for cleanup determinations and compliance analysis.</div>
+              </div>
+              <span class="doc-link">Open</span>
+            </a>
+
+            <a class="detail-resource" href="https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/Remediation-Standard-Regulations-Fact-Sheet" target="_blank" rel="noopener">
+              <div>
+                <div class="detail-resource-title">Soil Remediation Standards</div>
+                <div class="detail-resource-note">Useful for plain-language context on how the RSR structure is applied in practice.</div>
+              </div>
+              <span class="doc-link">Open</span>
+            </a>
+
+            <a class="detail-resource" href="https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/1996-RSR-Criteria-Derivation" target="_blank" rel="noopener">
+              <div>
+                <div class="detail-resource-title">Groundwater Remediation Standards</div>
+                <div class="detail-resource-note">Technical support material used to understand the basis for groundwater-related criteria and derivation.</div>
+              </div>
+              <span class="doc-link">Open</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h2>When Engineers Use This</h2>
+          <ul>
+            <li>During Phase II and Phase III investigation work to compare analytical results against Connecticut cleanup criteria.</li>
+            <li>When evaluating whether impacted soil can remain in place, requires removal, or needs an engineered control or land use restriction strategy.</li>
+            <li>When assessing groundwater exceedances, pollutant mobility, and whether long-term remediation or variance pathways may be needed.</li>
+            <li>When preparing LEP verification packages, closure documentation, remedial action plans, or agency-facing technical memoranda.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section">
+          <h2>Common Questions</h2>
+          <ul>
+            <li>Are the RSRs still relevant after the RBCR rollout? Yes. They remain central to the technical cleanup analysis even though the broader program structure changed.</li>
+            <li>Do the RSRs only apply to soil? No. They address both soil and groundwater, including exposure and migration pathways.</li>
+            <li>Can a site move forward if it cannot meet every numeric criterion directly? Sometimes. Connecticut allows certain compliance mechanisms, including engineered controls and technical impracticability pathways, depending on site conditions and regulatory requirements.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section">
+          <h2>Related Connecticut Resources</h2>
+          <ul>
+            <li><a href="https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/release-based-cleanup-program" target="_blank" rel="noopener">Release-Based Cleanup Program</a></li>
+            <li><a href="https://portal.ct.gov/deep/remediation--site-clean-up/environmental-cleanup" target="_blank" rel="noopener">Environmental Cleanup / REACT Portal</a></li>
+            <li><a href="https://portal.ct.gov/deep/remediation--site-clean-up/remediation-standard-regulations/technical-impracticability-variance" target="_blank" rel="noopener">Technical Impracticability Variance</a></li>
+            <li><a href="https://portal.ct.gov/deep/remediation--site-clean-up/remediation-standard-regulations/engineered-control-variances" target="_blank" rel="noopener">Engineered Controls Overview</a></li>
+            <li><a href="https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program" target="_blank" rel="noopener">Licensed Environmental Professional Program</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="detail-side">
+        <h2 class="side-title">At A Glance</h2>
+        <div class="side-list">
+          <div class="side-card">
+            <strong>Primary Role</strong>
+            <span>Core cleanup standards for contaminated soil and groundwater in Connecticut.</span>
+          </div>
+          <div class="side-card">
+            <strong>Most Relevant Users</strong>
+            <span>Environmental engineers, LEPs, remediation consultants, due diligence teams, and brownfield practitioners.</span>
+          </div>
+          <div class="side-card">
+            <strong>Program Context</strong>
+            <span>Used within both historic remediation programs and the current RBCR framework.</span>
+          </div>
+          <div class="side-card">
+            <strong>Official Source</strong>
+            <span><a href="https://portal.ct.gov/-/media/DEEP/site_clean_up/remediation_regulations/RSR_2-16-21-with-indents.pdf" target="_blank" rel="noopener">Connecticut DEEP RSR text</a></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      Enviro<span>Reg</span>Index
+      <span style="color:var(--text-muted);font-weight:400"> · Beta v1.1</span>
+    </div>
+    <p class="footer-note">
+      This tool is a curated navigation index only — not an official government resource.
+      Always verify current regulations directly with the relevant state environmental agency.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

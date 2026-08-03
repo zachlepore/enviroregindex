@@ -524,10 +524,26 @@ nav {
   margin: 0 0 10px;
 }
 
+.doc-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .doc-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+.doc-verified {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.65;
+  white-space: nowrap;
 }
 
 .tag {
@@ -935,4 +951,3 @@ footer {
   .hero h1 { font-size: 22px; }
   .state-btn { padding: 0 8px; font-size: 10px; }
 }
-

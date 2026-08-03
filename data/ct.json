@@ -27,9 +27,9 @@
       "color": "#2E7D52"
     },
     {
-      "title": "CT Stormwater Quality Manual — Updated",
-      "description": "Revised manual incorporates updated LID guidance, new water quality storm sizing (1.3\"), and updated BMP performance criteria.",
-      "date": "2023",
+      "title": "Release Remediation Closure Report Guide — Published",
+      "description": "CT DEEP replaced its Verification Report Guidance Document with updated guidance for documenting release remediation closure and compliance across cleanup programs.",
+      "date": "June 15, 2026",
       "color": "#8B5E00"
     }
   ],
@@ -110,13 +110,13 @@
       "id": 9,
       "category": "remediation",
       "subcategory": "LEP Program",
-      "title": "Verification Report Guidance Document",
-      "description": "CT DEEP guidance on expectations for a Verification Report submitted by an LEP. Outlines required content, format, and checklist items consistent with RSR/RBCR requirements.",
-      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/licensed-environmental-professional-program/verification-report-guidance-document",
+      "title": "Release Remediation Closure Report Guide",
+      "description": "CT DEEP guidance for documenting closure after remediation or when characterization demonstrates that remediation is unnecessary. Covers conceptual site models, demonstrations of RBCR compliance, multiple releases, and program-specific closure reporting for release-based cleanup, property transfer, voluntary remediation, brownfields, and RCRA programs.",
+      "source_url": "https://portal.ct.gov/-/media/deep/site_clean_up/guidance/release-closure-report-guide.pdf?rev=c4e56f0b69004524853af96fd7d46dd4&hash=38D618CF133EC48744CF2AD6F3F3FE42",
       "document_type": "guidance",
-      "last_updated": "2021",
+      "last_updated": "June 15, 2026",
       "verified": "August 3, 2026",
-      "tags": ["LEP", "verification report", "closure", "guidance", "RSR"]
+      "tags": ["closure report", "RRCR", "RBCR", "conceptual site model", "CSM", "verification", "REACT", "LEP"]
     },
     {
       "id": 10,
@@ -141,18 +141,6 @@
       "last_updated": "March 2026",
       "verified": "August 3, 2026",
       "tags": ["forms", "ECAF", "REACT", "submittal", "LEP", "EC", "APS"]
-    },
-    {
-      "id": 12,
-      "category": "remediation",
-      "subcategory": "Technical Support",
-      "title": "Technical Support Documents — RSR Criteria Derivation",
-      "description": "Supporting documentation on how CT RSR soil and groundwater criteria were derived, including EPA IRIS toxicity values, exposure assumptions, and criteria for EPH/VPH/APH petroleum methods.",
-      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Remediation-Standard-Regulations/1996-RSR-Criteria-Derivation",
-      "document_type": "guidance",
-      "last_updated": "1996 (basis)",
-      "verified": "August 3, 2026",
-      "tags": ["RSR", "criteria derivation", "risk-based", "IRIS", "EPH", "VPH", "APH"]
     },
     {
       "id": 13,

@@ -6,10 +6,11 @@
 
 'use strict';
 
-// ── State Registry ───────────────────────────────────────────
-// Add new states here. "live" = data available; "coming-soon" = placeholder.
+// ── Jurisdiction Registry ───────────────────────────────────
+// Add new jurisdictions here. "live" = data available; "coming-soon" = placeholder.
 const STATE_REGISTRY = [
-  { code: 'ct', label: 'Connecticut', status: 'live'        },
+  { code: 'ct',  label: 'Connecticut',  status: 'live'        },
+  { code: 'epa', label: 'EPA / Federal', status: 'live'        },
   { code: 'ma', label: 'Massachusetts', status: 'coming-soon' },
   { code: 'ri', label: 'Rhode Island',  status: 'coming-soon' },
   { code: 'ny', label: 'New York',      status: 'coming-soon' },
@@ -88,7 +89,10 @@ function buildDocHTML(doc, q = '') {
         </div>
         <div class="doc-title">${titleHL}</div>
         <p class="doc-desc">${descHL}</p>
-        <div class="doc-tags">${tagsHL}</div>
+        <div class="doc-footer">
+          <div class="doc-tags">${tagsHL}</div>
+          ${doc.verified ? `<span class="doc-verified">Verified: ${doc.verified}</span>` : ''}
+        </div>
       </div>
       <div class="doc-actions">
         ${quickGuideHTML}
@@ -374,14 +378,14 @@ async function loadState(code) {
   }
 }
 
-// ── State selector bar ───────────────────────────────────────
+// ── Jurisdiction selector bar ───────────────────────────────
 function buildStateBar() {
   const inner = document.getElementById('state-bar-inner');
   if (!inner) return;
 
   // Clear any server-rendered placeholders
   inner.innerHTML = `
-    <span class="state-bar-label">State</span>`;
+    <span class="state-bar-label">Jurisdiction</span>`;
 
   STATE_REGISTRY.forEach(state => {
     const btn = document.createElement('button');

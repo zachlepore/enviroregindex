@@ -285,6 +285,126 @@
       "last_updated": "2024",
       "verified": "August 3, 2026",
       "tags": ["brownfields", "BRWP", "BEP", "liability", "prospective purchaser", "Phase I", "Phase II"]
+    },
+    {
+      "id": 31,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "Release-Based Cleanup Regulations — Official Regulatory Text",
+      "description": "Official Connecticut eRegulations text for the Release-Based Cleanup Regulations in RCSA sections 22a-134tt-1 through 22a-134tt-13. Provides the controlling requirements for reporting, characterizing, remediating, and closing releases.",
+      "source_url": "https://eregulations.ct.gov/eRegsPortal/Browse/RCSA/Title_22aSubtitle_22a-134tt/",
+      "document_type": "regulation",
+      "last_updated": "March 1, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["RBCR", "eRegulations", "RCSA", "22a-134tt", "release reporting", "cleanup"]
+    },
+    {
+      "id": 32,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "RBCR Cleanup Standards",
+      "description": "CT DEEP guidance on selecting and applying RBCR soil and groundwater cleanup standards. Covers groundwater classifications, land use, sensitive receptors, Direct Exposure Criteria, Pollutant Mobility Criteria, and requirements for determining when cleanup is complete.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/cleanup-standards",
+      "document_type": "guidance",
+      "last_updated": "April 13, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["RBCR", "cleanup standards", "soil", "groundwater", "DEC", "PMC", "criteria"]
+    },
+    {
+      "id": 33,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "RBCR Compliance Measures and Variances",
+      "description": "Overview of methods for demonstrating compliance with the RBCRs, including background concentrations, numeric criteria, statistical demonstrations, institutional controls, Environmental Use Restrictions, stewardship permits, engineered controls, and variances.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/rbcr-compliance-measures",
+      "document_type": "guidance",
+      "last_updated": "April 13, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["RBCR", "compliance", "variance", "EUR", "institutional control", "engineered control", "UCL"]
+    },
+    {
+      "id": 34,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "RBCR Release Tiers",
+      "description": "Explains Connecticut's risk-based release tier system, including Tier 1A, Tier 1B, Tier 2, and Tier 3 classifications, DEEP and LEP oversight, tier assignment and reassignment, characterization report submission, and applicable fees.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/tiers",
+      "document_type": "policy",
+      "last_updated": "May 6, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["RBCR", "tiers", "Tier 1A", "Tier 1B", "Tier 2", "Tier 3", "risk", "LEP"]
+    },
+    {
+      "id": 35,
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "Significant Existing Releases and Immediate Actions",
+      "description": "Requirements for historical releases that present increased short-term risks to human health or the environment. Covers Significant Existing Release reporting, Immediate Actions, drinking-water-well impacts, exposure controls, response deadlines, and transition to cleanup under the RBCRs.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/significant-existing-releases-and-immediate-actions",
+      "document_type": "policy",
+      "last_updated": "July 22, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["RBCR", "significant existing release", "SER", "immediate action", "drinking water", "reporting"]
+    },
+    {
+      "id": 36,
+      "category": "assessment",
+      "subcategory": "REACT / Database Search",
+      "title": "REACT Resources and Instructions",
+      "description": "Instructions and training resources for using REACT, including account creation, authenticated-user functions, property searches, case management, document uploads, and quick property search guidance.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/guidance/react-resources-and-instructions",
+      "document_type": "guidance",
+      "last_updated": "June 26, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["REACT", "user guide", "property search", "case management", "document upload", "training"]
+    },
+    {
+      "id": 37,
+      "category": "remediation",
+      "subcategory": "Environmental Use Restrictions",
+      "title": "Environmental Use Restrictions (EURs)",
+      "description": "Central CT DEEP resource for Environmental Use Restrictions, including recorded restrictions, Certificates of Title, land-record research, inspection and reporting obligations, permitted activities, releases, and related forms.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/environmental-use-restrictions/environmental-use-restrictions",
+      "document_type": "regulation",
+      "last_updated": "March 26, 2026",
+      "verified": "August 4, 2026",
+      "tags": ["EUR", "institutional control", "land records", "Certificate of Title", "inspection", "restriction"]
+    },
+    {
+      "id": 38,
+      "category": "assessment",
+      "subcategory": "REACT / Database Search",
+      "title": "Environmental Cleanup Comprehensive Map Viewer",
+      "description": "Interactive CT DEEP ArcGIS application for viewing mapped information associated with environmental cleanup properties and releases. Supports location-based records review, preliminary site research, and environmental due diligence.",
+      "source_url": "https://experience.arcgis.com/experience/82cf4f0c1c58446d80b1a5a9381b5e16",
+      "document_type": "policy",
+      "last_updated": "2026",
+      "verified": "August 4, 2026",
+      "tags": ["map viewer", "ArcGIS", "environmental cleanup", "property search", "releases", "due diligence"]
+    },
+    {
+      "id": 39,
+      "category": "remediation",
+      "subcategory": "Emerging Contaminants",
+      "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
+      "description": "CT DEEP's central PFAS resource covering environmental behavior, potential sources, and pathways through soil, groundwater, surface water, air, wastewater, firefighting foam, and waste-management systems, along with Connecticut response information.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/contaminants-of-emerging-concern/deep-pfas-homepage",
+      "document_type": "guidance",
+      "last_updated": "November 29, 2024",
+      "verified": "August 4, 2026",
+      "tags": ["PFAS", "PFOA", "PFOS", "emerging contaminants", "groundwater", "soil", "firefighting foam"]
+    },
+    {
+      "id": 40,
+      "category": "stormwater",
+      "subcategory": "Industrial Stormwater",
+      "title": "Industrial Stormwater SWPPP Template",
+      "description": "Downloadable CT DEEP framework for preparing a Stormwater Pollution Prevention Plan under the current Industrial Stormwater General Permit. Provides an editable structure for documenting facility controls, monitoring, inspections, and permit compliance.",
+      "source_url": "https://portal.ct.gov/-/media/deep/water_regulating_and_discharges/stormwater/industrial/2025-permit-documents/2025-10-01-igp-swppp-framework.docx?rev=6f63d31cc6e64754bf9970a030de27ab&hash=46424F29ADD2AF42964DB903C5158516",
+      "document_type": "form",
+      "last_updated": "October 1, 2025",
+      "verified": "August 4, 2026",
+      "tags": ["industrial stormwater", "SWPPP", "template", "IGP", "monitoring", "inspection", "compliance"]
     }
   ]
 }

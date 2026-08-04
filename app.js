@@ -88,7 +88,10 @@ function buildDocHTML(doc, q = '') {
         </div>
         <div class="doc-title">${titleHL}</div>
         <p class="doc-desc">${descHL}</p>
-        <div class="doc-tags">${tagsHL}</div>
+        <div class="doc-footer">
+          <div class="doc-tags">${tagsHL}</div>
+          ${doc.verified ? `<span class="doc-verified">Verified: ${doc.verified}</span>` : ''}
+        </div>
       </div>
       <div class="doc-actions">
         ${quickGuideHTML}

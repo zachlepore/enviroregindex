@@ -341,7 +341,7 @@ function renderRecentUpdates() {
 
 // ── Hero stats ───────────────────────────────────────────────
 function renderHeroStats() {
-  const totalEl = document.getElementById('total-docs');
+  const totalEl = document.getElementById('total-resources');
   const focusAreaCountEl = document.getElementById('focus-area-count');
   const agencyEl = document.getElementById('hero-agency');
   const lastQaEl = document.getElementById('last-qa');
@@ -398,7 +398,7 @@ function renderComingSoonState() {
       </div>`;
   });
 
-  const totalEl = document.getElementById('total-docs');
+  const totalEl = document.getElementById('total-resources');
   if (totalEl) totalEl.textContent = '—';
 }
 

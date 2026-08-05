@@ -259,6 +259,7 @@ function renderHeroStats() {
   const swEl    = document.getElementById('count-stormwater');
   const asEl    = document.getElementById('count-assessment');
   const agencyEl = document.getElementById('hero-agency');
+  const lastQaEl = document.getElementById('last-qa');
   const heroLabelEl = document.getElementById('hero-label');
 
   const remCount = DOCS.filter(d => d.category === 'remediation').length;
@@ -273,6 +274,9 @@ function renderHeroStats() {
   if (agencyEl && STATE_META.agency) {
     agencyEl.textContent = STATE_META.agency;
   }
+  if (lastQaEl) {
+    lastQaEl.textContent = formatMetadataDate(STATE_META.last_qa);
+  }
   if (heroLabelEl && STATE_META.name) {
     heroLabelEl.textContent = `${STATE_META.name} Environmental Regulatory Navigator`;
   }
@@ -281,6 +285,22 @@ function renderHeroStats() {
   if (STATE_META.name) {
     document.title = `EnviroRegIndex — ${STATE_META.name}`;
   }
+}
+
+function formatMetadataDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return '—';
+
+  const [year, month, day] = value.split('-').map(Number);
+  const parts = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  }).formatToParts(new Date(Date.UTC(year, month - 1, day)));
+  const getPart = type => parts.find(part => part.type === type)?.value;
+  const monthName = getPart('month');
+
+  return `${monthName === 'May' ? monthName : `${monthName}.`} ${getPart('day')}, ${getPart('year')}`;
 }
 
 // ── Coming-soon state view ───────────────────────────────────

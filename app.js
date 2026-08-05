@@ -6,16 +6,17 @@
 
 'use strict';
 
-// ── State Registry ───────────────────────────────────────────
-// Add new states here. "live" = data available; "coming-soon" = placeholder.
-const STATE_REGISTRY = [
-  { code: 'ct', label: 'Connecticut', status: 'live'        },
-  { code: 'ma', label: 'Massachusetts', status: 'coming-soon' },
-  { code: 'ri', label: 'Rhode Island',  status: 'coming-soon' },
-  { code: 'ny', label: 'New York',      status: 'coming-soon' },
-  { code: 'nh', label: 'New Hampshire', status: 'coming-soon' },
-  { code: 'vt', label: 'Vermont',       status: 'coming-soon' },
-  { code: 'me', label: 'Maine',         status: 'coming-soon' },
+// ── Jurisdiction Registry ───────────────────────────────────
+// Add new jurisdictions here. "live" = data available; "coming-soon" = placeholder.
+const JURISDICTION_REGISTRY = [
+  { code: 'ct',  label: 'Connecticut',  type: 'state',   status: 'live'        },
+  { code: 'epa', label: 'EPA / Federal', type: 'federal', status: 'live'        },
+  { code: 'ma',  label: 'Massachusetts', type: 'state',   status: 'coming-soon' },
+  { code: 'ri',  label: 'Rhode Island',  type: 'state',   status: 'coming-soon' },
+  { code: 'ny',  label: 'New York',      type: 'state',   status: 'coming-soon' },
+  { code: 'nh',  label: 'New Hampshire', type: 'state',   status: 'coming-soon' },
+  { code: 'vt',  label: 'Vermont',       type: 'state',   status: 'coming-soon' },
+  { code: 'me',  label: 'Maine',         type: 'state',   status: 'coming-soon' },
 ];
 
 // ── App State ────────────────────────────────────────────────
@@ -23,7 +24,7 @@ let DOCS            = [];           // currently loaded documents
 let STATE_META      = {};           // state metadata from JSON
 let RECENT_UPDATES  = [];           // recent updates from JSON
 let currentView     = 'home';
-let currentState    = 'ct';         // default state
+let currentJurisdiction = 'ct';     // default jurisdiction
 let searchQuery     = '';
 let activeFilters   = { remediation: 'all', stormwater: 'all', assessment: 'all' };
 
@@ -88,7 +89,10 @@ function buildDocHTML(doc, q = '') {
         </div>
         <div class="doc-title">${titleHL}</div>
         <p class="doc-desc">${descHL}</p>
-        <div class="doc-tags">${tagsHL}</div>
+        <div class="doc-footer">
+          <div class="doc-tags">${tagsHL}</div>
+          ${doc.verified ? `<span class="doc-verified">Verified: ${doc.verified}</span>` : ''}
+        </div>
       </div>
       <div class="doc-actions">
         ${quickGuideHTML}
@@ -255,6 +259,7 @@ function renderHeroStats() {
   const swEl    = document.getElementById('count-stormwater');
   const asEl    = document.getElementById('count-assessment');
   const agencyEl = document.getElementById('hero-agency');
+  const lastQaEl = document.getElementById('last-qa');
   const heroLabelEl = document.getElementById('hero-label');
 
   const remCount = DOCS.filter(d => d.category === 'remediation').length;
@@ -269,6 +274,9 @@ function renderHeroStats() {
   if (agencyEl && STATE_META.agency) {
     agencyEl.textContent = STATE_META.agency;
   }
+  if (lastQaEl) {
+    lastQaEl.textContent = formatMetadataDate(STATE_META.last_qa);
+  }
   if (heroLabelEl && STATE_META.name) {
     heroLabelEl.textContent = `${STATE_META.name} Environmental Regulatory Navigator`;
   }
@@ -277,6 +285,22 @@ function renderHeroStats() {
   if (STATE_META.name) {
     document.title = `EnviroRegIndex — ${STATE_META.name}`;
   }
+}
+
+function formatMetadataDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return '—';
+
+  const [year, month, day] = value.split('-').map(Number);
+  const parts = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  }).formatToParts(new Date(Date.UTC(year, month - 1, day)));
+  const getPart = type => parts.find(part => part.type === type)?.value;
+  const monthName = getPart('month');
+
+  return `${monthName === 'May' ? monthName : `${monthName}.`} ${getPart('day')}, ${getPart('year')}`;
 }
 
 // ── Coming-soon state view ───────────────────────────────────
@@ -306,24 +330,35 @@ function renderComingSoonState() {
   if (totalEl) totalEl.textContent = '—';
 }
 
-// ── State loading ────────────────────────────────────────────
+// ── Jurisdiction loading ─────────────────────────────────────
 function setLoadingIndicator(visible) {
   const el = document.getElementById('state-loading');
   if (!el) return;
   el.classList.toggle('visible', visible);
 }
 
-async function loadState(code) {
+function syncJurisdictionControls(code) {
+  const jurisdiction = JURISDICTION_REGISTRY.find(item => item.code === code);
+  const federalButton = document.getElementById('federal-jurisdiction-btn');
+  const stateSelect = document.getElementById('state-select');
+  const isFederal = jurisdiction?.type === 'federal';
+
+  if (federalButton) {
+    federalButton.classList.toggle('active', isFederal);
+    federalButton.setAttribute('aria-pressed', String(isFederal));
+  }
+  if (stateSelect) {
+    stateSelect.value = isFederal ? '' : code;
+  }
+}
+
+async function loadJurisdiction(code) {
   code = code.toLowerCase();
-  if (code === currentState && DOCS.length > 0) return; // already loaded
+  if (code === currentJurisdiction && DOCS.length > 0) return; // already loaded
 
   // Optimistic UI: switch view, show loading
-  currentState = code;
-
-  // Highlight active state button
-  document.querySelectorAll('.state-btn').forEach(b => {
-    b.classList.toggle('active', b.getAttribute('data-state') === code);
-  });
+  currentJurisdiction = code;
+  syncJurisdictionControls(code);
 
   setLoadingIndicator(true);
 
@@ -365,7 +400,7 @@ async function loadState(code) {
   } catch (err) {
     console.error(`Failed to load data/${code}.json:`, err);
     DOCS = [];
-    STATE_META = STATE_REGISTRY.find(s => s.code === code) || { code, name: code.toUpperCase() };
+    STATE_META = JURISDICTION_REGISTRY.find(item => item.code === code) || { code, name: code.toUpperCase() };
     STATE_META.status = 'coming-soon';
     renderComingSoonState();
     showView('home');
@@ -374,35 +409,61 @@ async function loadState(code) {
   }
 }
 
-// ── State selector bar ───────────────────────────────────────
+// ── Jurisdiction selector bar ───────────────────────────────
 function buildStateBar() {
   const inner = document.getElementById('state-bar-inner');
   if (!inner) return;
 
   // Clear any server-rendered placeholders
-  inner.innerHTML = `
-    <span class="state-bar-label">State</span>`;
+  inner.innerHTML = `<span class="state-bar-label">Jurisdiction</span>`;
 
-  STATE_REGISTRY.forEach(state => {
-    const btn = document.createElement('button');
-    btn.className = 'state-btn';
-    btn.setAttribute('data-state', state.code);
-    btn.setAttribute('aria-label', `Switch to ${state.label}`);
+  const controls = document.createElement('div');
+  controls.className = 'jurisdiction-controls';
 
-    if (state.status === 'coming-soon') {
-      btn.classList.add('coming-soon');
-      btn.innerHTML = `${state.label} <span class="state-coming-tag">Soon</span>`;
-      btn.title = `${state.label} — coming soon`;
-      // Still clickable to preview the coming-soon state
-      btn.onclick = () => loadState(state.code);
-    } else {
-      btn.textContent = state.label;
-      btn.onclick = () => loadState(state.code);
-    }
+  const federal = JURISDICTION_REGISTRY.find(item => item.type === 'federal');
+  if (federal) {
+    const federalButton = document.createElement('button');
+    federalButton.id = 'federal-jurisdiction-btn';
+    federalButton.className = 'federal-jurisdiction-btn';
+    federalButton.type = 'button';
+    federalButton.textContent = federal.label;
+    federalButton.setAttribute('aria-label', `Switch to ${federal.label}`);
+    federalButton.onclick = () => loadJurisdiction(federal.code);
+    controls.appendChild(federalButton);
+  }
 
-    if (state.code === currentState) btn.classList.add('active');
-    inner.appendChild(btn);
-  });
+  const selectLabel = document.createElement('label');
+  selectLabel.className = 'state-select-label';
+  selectLabel.htmlFor = 'state-select';
+  selectLabel.innerHTML = '<span>State:</span>';
+
+  const stateSelect = document.createElement('select');
+  stateSelect.id = 'state-select';
+  stateSelect.className = 'state-select';
+  stateSelect.setAttribute('aria-label', 'Select a state jurisdiction');
+
+  const prompt = document.createElement('option');
+  prompt.value = '';
+  prompt.textContent = 'Select a state';
+  prompt.disabled = true;
+  stateSelect.appendChild(prompt);
+
+  JURISDICTION_REGISTRY
+    .filter(item => item.type === 'state')
+    .sort((a, b) => a.label.localeCompare(b.label))
+    .forEach(state => {
+      const option = document.createElement('option');
+      option.value = state.code;
+      option.textContent = state.status === 'coming-soon'
+        ? `${state.label} (Coming soon)`
+        : state.label;
+      stateSelect.appendChild(option);
+    });
+
+  stateSelect.onchange = event => loadJurisdiction(event.target.value);
+  selectLabel.appendChild(stateSelect);
+  controls.appendChild(selectLabel);
+  inner.appendChild(controls);
 
   // Loading indicator
   const loadingEl = document.createElement('div');
@@ -410,6 +471,7 @@ function buildStateBar() {
   loadingEl.className = 'state-loading';
   loadingEl.innerHTML = `<div class="state-loading-dot"></div><span>Loading…</span>`;
   inner.appendChild(loadingEl);
+  syncJurisdictionControls(currentJurisdiction);
 }
 
 // ── Expose globals needed by inline HTML event handlers ─────
@@ -420,5 +482,5 @@ window.handleGlobalSearch = handleGlobalSearch;
 // ── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   buildStateBar();
-  loadState('ct'); // Default state
+  loadJurisdiction('ct'); // Default jurisdiction
 });

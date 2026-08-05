@@ -23,10 +23,11 @@ const JURISDICTION_REGISTRY = [
 let DOCS            = [];           // currently loaded documents
 let STATE_META      = {};           // state metadata from JSON
 let RECENT_UPDATES  = [];           // recent updates from JSON
+let FOCUS_AREAS     = [];           // jurisdiction-defined program areas
 let currentView     = 'home';
 let currentJurisdiction = 'ct';     // default jurisdiction
 let searchQuery     = '';
-let activeFilters   = { remediation: 'all', stormwater: 'all', assessment: 'all' };
+let activeFilters   = {};
 
 // ── Badge helpers ────────────────────────────────────────────
 function getBadgeClass(type) {
@@ -107,6 +108,92 @@ function buildDocHTML(doc, q = '') {
     </div>`;
 }
 
+// ── Focus areas ───────────────────────────────────────────────
+const FOCUS_THEMES = ['green', 'blue', 'amber'];
+
+function getVisibleFocusAreas() {
+  const seen = new Set();
+  return FOCUS_AREAS
+    .filter(area => area && area.name && area.slug && area.description && area.icon)
+    .sort((a, b) => (a.order || 0) - (b.order || 0))
+    .filter(area => {
+      if (seen.has(area.slug) || !DOCS.some(doc => doc.category === area.slug)) return false;
+      seen.add(area.slug);
+      return true;
+    });
+}
+
+function renderFocusAreas() {
+  const areas = getVisibleFocusAreas();
+  const grid = document.getElementById('focus-area-grid');
+  const views = document.getElementById('focus-area-views');
+  const nav = document.querySelector('.nav-tabs');
+  const searchTab = document.getElementById('tab-search');
+
+  if (grid) {
+    grid.innerHTML = areas.map((area, index) => {
+      const count = DOCS.filter(doc => doc.category === area.slug).length;
+      return `
+        <a class="cat-card focus-theme-${index % FOCUS_THEMES.length}" href="#"
+           data-focus-area="${area.slug}" aria-label="${area.name} documents">
+          <div class="cat-icon" aria-hidden="true">${area.icon}</div>
+          <h3>${area.name}</h3>
+          <p>${area.description}</p>
+          <div class="cat-count mono">${count} document${count !== 1 ? 's' : ''}</div>
+        </a>`;
+    }).join('');
+    grid.querySelectorAll('[data-focus-area]').forEach(card => {
+      card.addEventListener('click', event => {
+        event.preventDefault();
+        showView(card.dataset.focusArea);
+      });
+    });
+  }
+
+  if (nav) {
+    nav.querySelectorAll('.focus-nav-tab').forEach(tab => tab.remove());
+    areas.forEach(area => {
+      const tab = document.createElement('button');
+      tab.className = 'nav-tab focus-nav-tab';
+      tab.id = `tab-${area.slug}`;
+      tab.type = 'button';
+      tab.setAttribute('role', 'tab');
+      tab.textContent = area.name;
+      tab.onclick = () => showView(area.slug);
+      nav.insertBefore(tab, searchTab);
+    });
+  }
+
+  if (views) {
+    views.innerHTML = areas.map((area, index) => {
+      const theme = FOCUS_THEMES[index % FOCUS_THEMES.length];
+      return `
+        <div id="view-${area.slug}" class="view">
+          <div class="container">
+            <div class="page-header">
+              <div class="breadcrumb">
+                <a href="#" data-home-link>Home</a>
+                <span>›</span>
+                <span>${area.name}</span>
+              </div>
+              <div class="cat-header-bar color-${theme}"></div>
+              <h1 class="page-title"><strong>${area.name}</strong></h1>
+              <p class="page-desc">${area.description}</p>
+            </div>
+            <div class="filter-bar" id="filter-${area.slug}" role="toolbar" aria-label="Filter ${area.name} documents"></div>
+            <div class="doc-list" id="list-${area.slug}" role="list"></div>
+          </div>
+        </div>`;
+    }).join('');
+    views.querySelectorAll('[data-home-link]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        showView('home');
+      });
+    });
+  }
+}
+
 // ── Filter bar ───────────────────────────────────────────────
 function buildFilterBar(cat) {
   const containerId = `filter-${cat}`;
@@ -150,7 +237,7 @@ function setFilter(cat, value, clickedBtn) {
 
 // ── Category list renderer ───────────────────────────────────
 function renderCategoryList(cat) {
-  const filter = activeFilters[cat];
+  const filter = activeFilters[cat] || 'all';
   const listEl = document.getElementById(`list-${cat}`);
   if (!listEl) return;
 
@@ -255,21 +342,13 @@ function renderRecentUpdates() {
 // ── Hero stats ───────────────────────────────────────────────
 function renderHeroStats() {
   const totalEl = document.getElementById('total-docs');
-  const remEl   = document.getElementById('count-remediation');
-  const swEl    = document.getElementById('count-stormwater');
-  const asEl    = document.getElementById('count-assessment');
+  const focusAreaCountEl = document.getElementById('focus-area-count');
   const agencyEl = document.getElementById('hero-agency');
   const lastQaEl = document.getElementById('last-qa');
   const heroLabelEl = document.getElementById('hero-label');
 
-  const remCount = DOCS.filter(d => d.category === 'remediation').length;
-  const swCount  = DOCS.filter(d => d.category === 'stormwater').length;
-  const asCount  = DOCS.filter(d => d.category === 'assessment').length;
-
   if (totalEl)  totalEl.textContent  = DOCS.length;
-  if (remEl)    remEl.textContent    = `${remCount} document${remCount !== 1 ? 's' : ''}`;
-  if (swEl)     swEl.textContent     = `${swCount} document${swCount !== 1 ? 's' : ''}`;
-  if (asEl)     asEl.textContent     = `${asCount} document${asCount !== 1 ? 's' : ''}`;
+  if (focusAreaCountEl) focusAreaCountEl.textContent = getVisibleFocusAreas().length;
 
   if (agencyEl && STATE_META.agency) {
     agencyEl.textContent = STATE_META.agency;
@@ -305,9 +384,8 @@ function formatMetadataDate(value) {
 
 // ── Coming-soon state view ───────────────────────────────────
 function renderComingSoonState() {
-  const cats = ['remediation', 'stormwater', 'assessment'];
-  cats.forEach(cat => {
-    const listEl = document.getElementById(`list-${cat}`);
+  getVisibleFocusAreas().forEach(area => {
+    const listEl = document.getElementById(`list-${area.slug}`);
     if (!listEl) return;
     listEl.innerHTML = `
       <div class="coming-soon-state">
@@ -318,12 +396,6 @@ function renderComingSoonState() {
            Check back soon, or <a href="${STATE_META.agency_url || '#'}" target="_blank" rel="noopener"
            style="color:var(--accent-green-mid)">visit ${STATE_META.agency || 'the agency'} directly</a>.</p>
       </div>`;
-  });
-
-  // Update home category counts
-  ['remediation','stormwater','assessment'].forEach(cat => {
-    const el = document.getElementById(`count-${cat}`);
-    if (el) el.textContent = 'Coming soon';
   });
 
   const totalEl = document.getElementById('total-docs');
@@ -370,24 +442,26 @@ async function loadJurisdiction(code) {
 
     STATE_META     = data.state     || {};
     RECENT_UPDATES = data.recent_updates || [];
+    FOCUS_AREAS    = data.focus_areas || [];
     DOCS           = data.documents || [];
 
     // Reset filters
-    activeFilters = { remediation: 'all', stormwater: 'all', assessment: 'all' };
+    activeFilters = Object.fromEntries(getVisibleFocusAreas().map(area => [area.slug, 'all']));
 
     // Re-render everything
+    renderFocusAreas();
     renderHeroStats();
 
     if (STATE_META.status === 'coming-soon') {
       renderComingSoonState();
+    } else {
+      getVisibleFocusAreas().forEach(area => {
+        buildFilterBar(area.slug);
+        renderCategoryList(area.slug);
+      });
     }
 
     renderRecentUpdates();
-
-    ['remediation', 'stormwater', 'assessment'].forEach(cat => {
-      buildFilterBar(cat);
-      renderCategoryList(cat);
-    });
 
     // Re-run search if one is active
     if (searchQuery.length >= 2) {

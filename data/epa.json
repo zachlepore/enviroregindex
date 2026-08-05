@@ -8,6 +8,50 @@
     "last_qa": "2026-08-05",
     "status": "live"
   },
+  "focus_areas": [
+    {
+      "name": "Oil Pollution Prevention",
+      "slug": "oil-pollution-prevention",
+      "description": "SPCC applicability, planning, inspections, secondary containment, and official federal oil pollution prevention requirements.",
+      "icon": "🛢️",
+      "order": 1
+    },
+    {
+      "name": "NPDES / Water",
+      "slug": "npdes-water",
+      "description": "Federal NPDES permitting and compliance guidance for industrial stormwater and water discharges.",
+      "icon": "💧",
+      "order": 2
+    },
+    {
+      "name": "Hazardous Waste",
+      "slug": "hazardous-waste",
+      "description": "Federal RCRA hazardous waste identification, management, compliance, and regulatory resources.",
+      "icon": "⚠️",
+      "order": 3
+    },
+    {
+      "name": "Superfund",
+      "slug": "superfund",
+      "description": "CERCLA authorities, cleanup processes, liability, and the federal Superfund remediation program.",
+      "icon": "🏭",
+      "order": 4
+    },
+    {
+      "name": "TSCA / PCBs",
+      "slug": "tsca-pcbs",
+      "description": "Federal requirements and guidance for polychlorinated biphenyl management, cleanup, and disposal.",
+      "icon": "🧪",
+      "order": 5
+    },
+    {
+      "name": "EPCRA",
+      "slug": "epcra",
+      "description": "Emergency planning, community right-to-know, and federal chemical reporting requirements.",
+      "icon": "🚨",
+      "order": 6
+    }
+  ],
   "recent_updates": [
     {
       "title": "EPA / Federal Resources Added",
@@ -19,7 +63,7 @@
   "documents": [
     {
       "id": 1,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "SPCC Rule Overview",
       "description": "EPA overview of the Spill Prevention, Control, and Countermeasure rule, including the federal oil pollution prevention purpose, regulated facility concepts, SPCC Plan requirements, and core compliance obligations under 40 CFR Part 112.",
@@ -31,7 +75,7 @@
     },
     {
       "id": 2,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "SPCC Applicability — Who Is Covered",
       "description": "EPA applicability guide for determining whether the SPCC rule applies to a facility based on non-transportation-related operations, oil storage capacity, oil-related activities, and the reasonable expectation of discharge to navigable waters or adjoining shorelines.",
@@ -43,7 +87,7 @@
     },
     {
       "id": 3,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "40 CFR Part 112 — Oil Pollution Prevention",
       "description": "Official eCFR regulatory text for federal Oil Pollution Prevention requirements, including SPCC Plans, Facility Response Plan provisions, secondary containment, inspections, training, and discharge reporting obligations.",
@@ -54,7 +98,7 @@
     },
     {
       "id": 4,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "Facility Owner/Operator's Guide to Oil Pollution Prevention",
       "description": "Plain-language EPA SPCC guide for facility owners and operators covering applicability, oil storage, SPCC Plan development, certification, inspections, secondary containment, training, and implementation responsibilities.",
@@ -66,7 +110,7 @@
     },
     {
       "id": 5,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "Tier I Qualified Facility SPCC Plan Template",
       "description": "EPA template for eligible Tier I qualified facilities to prepare and self-certify an SPCC Plan. Useful for smaller regulated facilities that meet EPA's qualified-facility criteria.",
@@ -78,7 +122,7 @@
     },
     {
       "id": 6,
-      "category": "stormwater",
+      "category": "oil-pollution-prevention",
       "subcategory": "Oil Pollution Prevention / SPCC",
       "title": "SPCC Secondary Containment Calculation Worksheets",
       "description": "EPA worksheets and examples for calculating secondary-containment capacity for oil storage areas and documenting containment design assumptions for SPCC compliance.",
@@ -90,7 +134,7 @@
     },
     {
       "id": 7,
-      "category": "stormwater",
+      "category": "npdes-water",
       "subcategory": "Stormwater / NPDES",
       "title": "Industrial Stormwater Guidance",
       "description": "EPA industrial stormwater guidance hub for NPDES stormwater requirements, regulated industrial activities, permitting resources, sector-specific guidance, and SWPPP-related compliance assistance.",
@@ -102,7 +146,7 @@
     },
     {
       "id": 8,
-      "category": "remediation",
+      "category": "hazardous-waste",
       "subcategory": "RCRA / Hazardous Waste",
       "title": "Learn the Basics of Hazardous Waste",
       "description": "EPA overview of the Resource Conservation and Recovery Act hazardous waste program, including waste identification, generator requirements, transportation, treatment, storage, disposal, and cradle-to-grave management concepts.",
@@ -114,7 +158,7 @@
     },
     {
       "id": 9,
-      "category": "remediation",
+      "category": "superfund",
       "subcategory": "CERCLA / Superfund",
       "title": "Superfund: CERCLA Overview",
       "description": "EPA overview of CERCLA and the Superfund cleanup program, including contaminated site response authorities, cleanup process concepts, liability framework, and federal site remediation program structure.",
@@ -126,7 +170,7 @@
     },
     {
       "id": 10,
-      "category": "assessment",
+      "category": "tsca-pcbs",
       "subcategory": "TSCA / PCBs",
       "title": "Learn About Polychlorinated Biphenyls (PCBs)",
       "description": "EPA resource explaining PCBs under TSCA, including PCB uses, health and environmental concerns, cleanup and disposal context, and federal PCB regulatory program information.",
@@ -138,7 +182,7 @@
     },
     {
       "id": 11,
-      "category": "assessment",
+      "category": "epcra",
       "subcategory": "EPCRA / Emergency Planning and Reporting",
       "title": "What Is EPCRA?",
       "description": "EPA overview of the Emergency Planning and Community Right-to-Know Act, including emergency planning, chemical inventory reporting, toxic release reporting, and public access to chemical hazard information.",

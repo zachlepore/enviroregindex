@@ -39,9 +39,7 @@
 
     <div class="nav-tabs" role="tablist">
       <button class="nav-tab active" id="tab-home"        role="tab" onclick="showView('home')">Home</button>
-      <button class="nav-tab"        id="tab-remediation" role="tab" onclick="showView('remediation')">Remediation</button>
-      <button class="nav-tab"        id="tab-stormwater"  role="tab" onclick="showView('stormwater')">Stormwater</button>
-      <button class="nav-tab"        id="tab-assessment"  role="tab" onclick="showView('assessment')">Site Assessment</button>
+      <!-- Focus-area tabs inserted by app.js -->
       <button class="nav-tab"        id="tab-search"      role="tab" style="display:none">Search</button>
     </div>
   </div>
@@ -76,7 +74,7 @@
           <span class="stat-label">Documents</span>
         </div>
         <div class="stat">
-          <span class="stat-num">3</span>
+          <span class="stat-num" id="focus-area-count">—</span>
           <span class="stat-label">Focus Areas</span>
         </div>
         <div class="stat">
@@ -98,33 +96,7 @@
         <span class="section-title">Focus Areas</span>
         <div class="section-line"></div>
       </div>
-      <div class="cat-grid">
-
-        <a class="cat-card remediation" onclick="showView('remediation')" href="#"
-           role="button" aria-label="Site Remediation documents">
-          <div class="cat-icon" aria-hidden="true">🌿</div>
-          <h3>Site Remediation</h3>
-          <p>Cleanup standards, regulatory framework, licensed professional programs, voluntary remediation, and document portals.</p>
-          <div class="cat-count mono" id="count-remediation">— documents</div>
-        </a>
-
-        <a class="cat-card stormwater" onclick="showView('stormwater')" href="#"
-           role="button" aria-label="Stormwater documents">
-          <div class="cat-icon" aria-hidden="true">💧</div>
-          <h3>Stormwater</h3>
-          <p>MS4 general permits, construction stormwater, industrial stormwater, and stormwater quality manuals.</p>
-          <div class="cat-count mono" id="count-stormwater">— documents</div>
-        </a>
-
-        <a class="cat-card assessment" onclick="showView('assessment')" href="#"
-           role="button" aria-label="Site Assessment documents">
-          <div class="cat-icon" aria-hidden="true">🔍</div>
-          <h3>Site Assessment</h3>
-          <p>Phase I &amp; II ESA guidance, site characterization, database search tools, and brownfield resources.</p>
-          <div class="cat-count mono" id="count-assessment">— documents</div>
-        </a>
-
-      </div>
+      <div class="cat-grid" id="focus-area-grid"></div>
     </div>
   </div>
 
@@ -143,78 +115,8 @@
 </div><!-- /view-home -->
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     REMEDIATION VIEW
-═══════════════════════════════════════════════════════════ -->
-<div id="view-remediation" class="view">
-  <div class="container">
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="#" onclick="showView('home')">Home</a>
-        <span>›</span>
-        <span>Site Remediation</span>
-      </div>
-      <div class="cat-header-bar color-green"></div>
-      <h1 class="page-title"><strong>Site Remediation</strong></h1>
-      <p class="page-desc">
-        Cleanup standards, regulatory frameworks, licensed professional program documents,
-        voluntary remediation programs, and document portals. All resources from the state environmental agency.
-      </p>
-    </div>
-    <!-- Filter bar populated by app.js buildFilterBar() -->
-    <div class="filter-bar" id="filter-remediation" role="toolbar" aria-label="Filter remediation documents"></div>
-    <!-- List populated by app.js renderCategoryList() -->
-    <div class="doc-list" id="list-remediation" role="list"></div>
-  </div>
-</div><!-- /view-remediation -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     STORMWATER VIEW
-═══════════════════════════════════════════════════════════ -->
-<div id="view-stormwater" class="view">
-  <div class="container">
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="#" onclick="showView('home')">Home</a>
-        <span>›</span>
-        <span>Stormwater</span>
-      </div>
-      <div class="cat-header-bar color-blue"></div>
-      <h1 class="page-title"><strong>Stormwater</strong></h1>
-      <p class="page-desc">
-        General permits and guidance for municipal (MS4), construction, and industrial stormwater discharges,
-        plus stormwater quality manuals and erosion &amp; sediment control guidelines.
-      </p>
-    </div>
-    <div class="filter-bar" id="filter-stormwater" role="toolbar" aria-label="Filter stormwater documents"></div>
-    <div class="doc-list" id="list-stormwater" role="list"></div>
-  </div>
-</div><!-- /view-stormwater -->
-
-
-<!-- ═══════════════════════════════════════════════════════════
-     SITE ASSESSMENT VIEW
-═══════════════════════════════════════════════════════════ -->
-<div id="view-assessment" class="view">
-  <div class="container">
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="#" onclick="showView('home')">Home</a>
-        <span>›</span>
-        <span>Site Assessment</span>
-      </div>
-      <div class="cat-header-bar color-amber"></div>
-      <h1 class="page-title"><strong>Site Assessment</strong></h1>
-      <p class="page-desc">
-        Guidance for Phase I, Phase II, and Phase III Environmental Site Assessments (ESAs),
-        including state-specific characterization frameworks, database search tools, and brownfield resources.
-      </p>
-    </div>
-    <div class="filter-bar" id="filter-assessment" role="toolbar" aria-label="Filter site assessment documents"></div>
-    <div class="doc-list" id="list-assessment" role="list"></div>
-  </div>
-</div><!-- /view-assessment -->
+<!-- Focus-area views populated by app.js -->
+<div id="focus-area-views"></div>
 
 
 <!-- ═══════════════════════════════════════════════════════════

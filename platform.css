@@ -83,7 +83,7 @@ body {
 
 .platform-intro {
   max-width: 720px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .eyebrow {
@@ -104,6 +104,8 @@ body {
   letter-spacing: -0.035em;
 }
 
+.platform-intro h1 { margin-top: 0; }
+
 .platform-intro > p,
 .placeholder-panel > p {
   margin: 0;
@@ -120,7 +122,7 @@ body {
 }
 
 .experience-card {
-  min-height: 370px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
   padding: 36px;
@@ -174,36 +176,10 @@ body {
 
 .experience-examples,
 .experience-tags {
-  margin: 25px 0 28px;
+  margin: 24px 0 28px;
 }
 
-.experience-examples ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 11px 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.experience-examples li {
-  position: relative;
-  padding-left: 15px;
-  font-size: 13px;
-  color: #4E4E49;
-}
-
-.experience-examples li::before {
-  content: '';
-  position: absolute;
-  top: 0.55em;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--platform-green-dark);
-}
-
+.experience-examples ul,
 .experience-tags {
   display: flex;
   flex-wrap: wrap;
@@ -211,6 +187,13 @@ body {
   gap: 8px;
 }
 
+.experience-examples ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-examples li,
 .experience-tags span {
   padding: 6px 10px;
   border: 1px solid #E1DDD4;
@@ -327,7 +310,6 @@ body {
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card { min-height: 0; padding: 28px 25px; }
   .experience-description { min-height: 0; }
-  .experience-examples ul { grid-template-columns: 1fr; gap: 10px; }
   .platform-button { margin-top: 26px; }
   .platform-footer-inner {
     min-height: 110px;

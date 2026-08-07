@@ -60,6 +60,7 @@
   "documents": [
     {
       "id": 3,
+      "qc_id": "CT1",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Release-Based Cleanup Regulations (RBCRs) — Main Page",
@@ -72,6 +73,7 @@
     },
     {
       "id": 4,
+      "qc_id": "CT2",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Environmental Cleanup — REACT Portal & Overview",
@@ -84,6 +86,7 @@
     },
     {
       "id": 5,
+      "qc_id": "CT3",
       "category": "remediation",
       "subcategory": "Variances & Engineered Controls",
       "title": "Technical Impracticability (TI) Variance",
@@ -96,6 +99,7 @@
     },
     {
       "id": 6,
+      "qc_id": "CT4",
       "category": "remediation",
       "subcategory": "Variances & Engineered Controls",
       "title": "Engineered Controls (ECs) — Overview",
@@ -108,6 +112,7 @@
     },
     {
       "id": 7,
+      "qc_id": "CT5",
       "category": "remediation",
       "subcategory": "LEP Program",
       "title": "Licensed Environmental Professional (LEP) Program",
@@ -120,6 +125,7 @@
     },
     {
       "id": 8,
+      "qc_id": "CT6",
       "category": "remediation",
       "subcategory": "LEP Program",
       "title": "LEP Verifications — Forms & Instructions",
@@ -132,6 +138,7 @@
     },
     {
       "id": 9,
+      "qc_id": "CT7",
       "category": "remediation",
       "subcategory": "LEP Program",
       "title": "Release Remediation Closure Report Guide",
@@ -144,6 +151,7 @@
     },
     {
       "id": 10,
+      "qc_id": "CT8",
       "category": "remediation",
       "subcategory": "Voluntary Remediation",
       "title": "Voluntary Remediation Programs — Overview",
@@ -156,6 +164,7 @@
     },
     {
       "id": 11,
+      "qc_id": "CT9",
       "category": "remediation",
       "subcategory": "Forms & Submittals",
       "title": "Remediation Forms — Central Repository",
@@ -168,6 +177,7 @@
     },
     {
       "id": 13,
+      "qc_id": "CT10",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "MS4 General Permit — Current (Effective Oct 1, 2023)",
@@ -180,6 +190,7 @@
     },
     {
       "id": 14,
+      "qc_id": "CT11",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "MS4 General Permit — 2025 Draft Reissuance",
@@ -192,6 +203,7 @@
     },
     {
       "id": 15,
+      "qc_id": "CT12",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "Construction Stormwater General Permit (CGP)",
@@ -204,6 +216,7 @@
     },
     {
       "id": 16,
+      "qc_id": "CT13",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "CT Guidelines for Soil Erosion and Sediment Control (2023)",
@@ -216,6 +229,7 @@
     },
     {
       "id": 17,
+      "qc_id": "CT14",
       "category": "stormwater",
       "subcategory": "Industrial Stormwater",
       "title": "Industrial Stormwater General Permit (IGP)",
@@ -228,6 +242,7 @@
     },
     {
       "id": 18,
+      "qc_id": "CT15",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "CT Stormwater Quality Manual",
@@ -240,6 +255,7 @@
     },
     {
       "id": 19,
+      "qc_id": "CT16",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "CT Stormwater Quality Manual - Online Interactive Version",
@@ -252,6 +268,7 @@
     },
     {
       "id": 20,
+      "qc_id": "CT17",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "Stormwater — CT DEEP Main Page",
@@ -264,6 +281,7 @@
     },
     {
       "id": 23,
+      "qc_id": "CT18",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "Site Characterization Guidance — DEEP Guidance Page",
@@ -276,6 +294,7 @@
     },
     {
       "id": 24,
+      "qc_id": "CT19",
       "category": "assessment",
       "subcategory": "REACT / Database Search",
       "title": "REACT — Release, Environmental Assessment & Cleanup Tracker",
@@ -288,6 +307,7 @@
     },
     {
       "id": 27,
+      "qc_id": "CT20",
       "category": "assessment",
       "subcategory": "LEP Program",
       "title": "LEP Program — Overview for Site Assessment",
@@ -300,6 +320,7 @@
     },
     {
       "id": 30,
+      "qc_id": "CT21",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "Brownfields Program — Main Page",
@@ -312,6 +333,7 @@
     },
     {
       "id": 31,
+      "qc_id": "CT22",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Release-Based Cleanup Regulations — Official Regulatory Text",
@@ -324,6 +346,7 @@
     },
     {
       "id": 32,
+      "qc_id": "CT23",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "RBCR Cleanup Standards",
@@ -336,6 +359,7 @@
     },
     {
       "id": 33,
+      "qc_id": "CT24",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "RBCR Compliance Measures and Variances",
@@ -348,6 +372,7 @@
     },
     {
       "id": 34,
+      "qc_id": "CT25",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "RBCR Release Tiers",
@@ -360,6 +385,7 @@
     },
     {
       "id": 35,
+      "qc_id": "CT26",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Significant Existing Releases and Immediate Actions",
@@ -372,6 +398,7 @@
     },
     {
       "id": 36,
+      "qc_id": "CT27",
       "category": "assessment",
       "subcategory": "REACT / Database Search",
       "title": "REACT Resources and Instructions",
@@ -384,6 +411,7 @@
     },
     {
       "id": 37,
+      "qc_id": "CT28",
       "category": "remediation",
       "subcategory": "Environmental Use Restrictions",
       "title": "Environmental Use Restrictions (EURs)",
@@ -396,6 +424,7 @@
     },
     {
       "id": 38,
+      "qc_id": "CT29",
       "category": "assessment",
       "subcategory": "REACT / Database Search",
       "title": "Environmental Cleanup Comprehensive Map Viewer",
@@ -408,6 +437,7 @@
     },
     {
       "id": 39,
+      "qc_id": "CT30",
       "category": "remediation",
       "subcategory": "Emerging Contaminants",
       "title": "Per- and Polyfluoroalkyl Substances (PFAS)",
@@ -420,6 +450,7 @@
     },
     {
       "id": 40,
+      "qc_id": "CT31",
       "category": "stormwater",
       "subcategory": "Industrial Stormwater",
       "title": "Industrial Stormwater SWPPP Template",

@@ -34,6 +34,7 @@
   "documents": [
     {
       "id": 1,
+      "qc_id": "VT1",
       "category": "remediation",
       "subcategory": "Cleanup Regulations",
       "title": "Vermont Contaminated Sites Management Rule",
@@ -45,6 +46,7 @@
     },
     {
       "id": 2,
+      "qc_id": "VT2",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "VT Construction Stormwater General Permit",
@@ -56,6 +58,7 @@
     },
     {
       "id": 3,
+      "qc_id": "VT3",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "Vermont Stormwater Management Manual",
@@ -67,6 +70,7 @@
     },
     {
       "id": 4,
+      "qc_id": "VT4",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "Vermont Brownfields Program — Site Assessment",

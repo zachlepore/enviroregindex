@@ -34,6 +34,7 @@
   "documents": [
     {
       "id": 1,
+      "qc_id": "NH1",
       "category": "remediation",
       "subcategory": "RSA 147-B",
       "title": "Hazardous Waste Cleanup Fund (RSA 147-B) — Overview",
@@ -45,6 +46,7 @@
     },
     {
       "id": 2,
+      "qc_id": "NH2",
       "category": "remediation",
       "subcategory": "Soil Cleanup Guidelines",
       "title": "NH Soil Cleanup Guidelines",
@@ -56,6 +58,7 @@
     },
     {
       "id": 3,
+      "qc_id": "NH3",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "NH MS4 General Permit (EPA-Administered)",
@@ -67,6 +70,7 @@
     },
     {
       "id": 4,
+      "qc_id": "NH4",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "NH Stormwater Manual (2008)",
@@ -78,6 +82,7 @@
     },
     {
       "id": 5,
+      "qc_id": "NH5",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "NHDES Brownfields Program — Site Assessment Resources",

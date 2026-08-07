@@ -34,6 +34,7 @@
   "documents": [
     {
       "id": 1,
+      "qc_id": "RI1",
       "category": "remediation",
       "subcategory": "RICRR",
       "title": "Remediation Regulations (RICRR 250-RICR-140-10-1)",
@@ -45,6 +46,7 @@
     },
     {
       "id": 2,
+      "qc_id": "RI2",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "RI MS4 General Permit",
@@ -56,6 +58,7 @@
     },
     {
       "id": 3,
+      "qc_id": "RI3",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "Construction General Permit (CGP) — Rhode Island",
@@ -67,6 +70,7 @@
     },
     {
       "id": 4,
+      "qc_id": "RI4",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "RI Brownfields Program — Site Assessment Guidance",

@@ -78,7 +78,7 @@ body {
   flex: 1;
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 42px 0 64px;
+  padding: 38px 0 56px;
 }
 
 .platform-intro {
@@ -122,21 +122,24 @@ body {
 }
 
 .experience-card {
-  min-height: 360px;
+  position: relative;
+  min-height: 348px;
   display: flex;
   flex-direction: column;
-  padding: 36px;
+  padding: 34px;
   background: var(--platform-card);
   border: 1px solid var(--platform-border);
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(25,25,23,0.045);
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.experience-card:hover {
-  transform: translateY(-2px);
-  border-color: #C4BFB4;
-  box-shadow: 0 16px 42px rgba(25,25,23,0.075);
+.experience-card:hover,
+.experience-card:focus-within {
+  transform: translateY(-3px);
+  border-color: #B9B4A9;
+  box-shadow: 0 18px 46px rgba(25,25,23,0.09);
 }
 
 .experience-card-top {
@@ -176,7 +179,7 @@ body {
 
 .experience-examples,
 .experience-tags {
-  margin: 24px 0 28px;
+  margin: 22px 0 26px;
 }
 
 .experience-examples ul,
@@ -195,13 +198,14 @@ body {
 
 .experience-examples li,
 .experience-tags span {
-  padding: 6px 10px;
-  border: 1px solid #E1DDD4;
+  padding: 7px 11px;
+  border: 1px solid #D1CCC1;
   border-radius: 999px;
   background: transparent;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  color: #747169;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5F5D57;
 }
 
 .platform-button {
@@ -224,8 +228,21 @@ body {
   transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
 
+.platform-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
 .platform-button:hover,
 .platform-button:focus-visible {
+  color: var(--platform-dark);
+  background: var(--platform-green);
+  border-color: var(--platform-green);
+}
+
+.experience-card:hover .platform-button {
   color: var(--platform-dark);
   background: var(--platform-green);
   border-color: var(--platform-green);
@@ -303,12 +320,12 @@ body {
 
   .platform-header-inner { min-height: 58px; }
   .platform-label { display: none; }
-  .platform-main { padding: 32px 0 48px; }
+  .platform-main { padding: 30px 0 44px; }
   .platform-intro { margin-bottom: 24px; }
   .platform-intro h1 { font-size: 42px; }
   .platform-intro > p { font-size: 16px; }
   .experience-grid { grid-template-columns: 1fr; }
-  .experience-card { min-height: 0; padding: 28px 25px; }
+  .experience-card { min-height: 0; padding: 27px 25px; }
   .experience-description { min-height: 0; }
   .platform-button { margin-top: 26px; }
   .platform-footer-inner {

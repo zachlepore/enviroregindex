@@ -11,8 +11,6 @@ const searchInput = document.getElementById('workflow-search');
 const businessLineGrid = document.getElementById('business-line-grid');
 const resultsSection = document.getElementById('workflow-results');
 const resultsHeading = document.getElementById('workflow-results-heading');
-const resultsContext = document.getElementById('workflow-results-context');
-const resultCount = document.getElementById('workflow-result-count');
 const workflowList = document.getElementById('workflow-list');
 const jurisdictionSection = document.getElementById('jurisdiction-workflows');
 const jurisdictionHeading = document.getElementById('jurisdiction-workflows-heading');
@@ -49,9 +47,6 @@ function renderBusinessLines() {
     .map(line => {
       const count = available.filter(workflow => workflow.businessLine === line.id).length;
       const disabled = !workflowState.jurisdiction || count === 0;
-      const countLabel = workflowState.jurisdiction
-        ? `${count} ${count === 1 ? 'workflow' : 'workflows'}`
-        : 'Select a jurisdiction';
       return `
         <button class="business-line-card${workflowState.businessLine === line.id ? ' active' : ''}"
           type="button" data-business-line="${line.id}" ${disabled ? 'disabled' : ''}>
@@ -60,7 +55,6 @@ function renderBusinessLines() {
             <strong>${line.title}</strong>
             <span>${line.description}</span>
           </span>
-          <span class="business-line-count">${countLabel}<span aria-hidden="true"> →</span></span>
         </button>`;
     }).join('');
 }
@@ -78,11 +72,9 @@ function renderResults() {
     .filter(workflow => !workflowState.businessLine || workflow.businessLine === workflowState.businessLine)
     .filter(workflow => matchesWorkflowSearch(workflow, workflowState.query));
 
-  resultsContext.textContent = getJurisdictionLabel(workflowState.jurisdiction);
   resultsHeading.textContent = workflowState.query.trim()
     ? `Results for “${workflowState.query.trim()}”`
     : activeLine?.title || 'Workflows';
-  resultCount.textContent = `${matches.length} ${matches.length === 1 ? 'workflow' : 'workflows'}`;
   workflowList.innerHTML = matches.length
     ? matches.map(workflow => `
         <button class="workflow-row" type="button" data-workflow-id="${workflow.id}" aria-label="Open ${workflow.title} placeholder">
@@ -104,7 +96,7 @@ function renderJurisdictionWorkflows() {
     return;
   }
 
-  jurisdictionHeading.textContent = `${getJurisdictionLabel(workflowState.jurisdiction)}-Specific Workflows`;
+  jurisdictionHeading.textContent = `${getJurisdictionLabel(workflowState.jurisdiction)} Programs & Processes`;
   jurisdictionGrid.innerHTML = records.map(workflow => `
     <button class="jurisdiction-workflow-card" type="button" data-workflow-id="${workflow.id}" aria-label="Open ${workflow.title} placeholder">
       <strong>${workflow.title}</strong>

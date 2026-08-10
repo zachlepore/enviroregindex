@@ -134,19 +134,6 @@
   font-size: 14px;
 }
 
-.workflow-context,
-.workflow-result-count {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--platform-green-dark);
-}
-
-.workflow-context { display: block; margin-bottom: 7px; }
-.workflow-result-count { color: var(--platform-muted); }
-
 .business-line-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -154,10 +141,9 @@
 }
 
 .business-line-card {
-  min-height: 168px;
+  min-height: 142px;
   display: grid;
   grid-template-columns: 38px 1fr;
-  grid-template-rows: 1fr auto;
   gap: 14px;
   padding: 22px;
   border: 1px solid var(--platform-border);
@@ -195,13 +181,6 @@
 .business-line-copy { display: flex; flex-direction: column; gap: 7px; }
 .business-line-copy strong { font-size: 17px; letter-spacing: -0.015em; }
 .business-line-copy > span { color: var(--platform-muted); font-size: 13px; line-height: 1.45; }
-
-.business-line-count {
-  grid-column: 2;
-  color: var(--platform-green-dark);
-  font: 600 10px 'IBM Plex Mono', monospace;
-  letter-spacing: 0.025em;
-}
 
 .workflow-list {
   overflow: hidden;
@@ -293,7 +272,7 @@
   .workflow-controls { grid-template-columns: 1fr; margin-top: 28px; padding: 17px; }
   .workflow-section, .workflow-results { margin-top: 42px; }
   .business-line-grid, .jurisdiction-workflow-grid { grid-template-columns: 1fr; }
-  .business-line-card { min-height: 142px; }
+  .business-line-card { min-height: 126px; }
   .workflow-section-heading { align-items: flex-start; }
   .workflow-row { min-height: 96px; padding: 17px; }
 }

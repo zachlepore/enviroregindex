@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find environmental regulatory workflows by jurisdiction and area of work.">
+  <title>Workflow Explorer — EnviroRegIndex</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="platform.css">
+  <link rel="stylesheet" href="workflow.css">
+</head>
+<body class="platform-page workflow-page">
+  <header class="platform-header">
+    <div class="platform-header-inner">
+      <a class="platform-logo" href="/" aria-label="EnviroRegIndex platform home">
+        Enviro<span>Reg</span>Index
+      </a>
+      <span class="workflow-header-label">Workflow Explorer</span>
+    </div>
+  </header>
+
+  <main class="workflow-main">
+    <section class="workflow-hero" aria-labelledby="workflow-heading">
+      <h1 id="workflow-heading">What are you trying to accomplish?</h1>
+      <p>Select a jurisdiction, then browse or search workflows by area of work.</p>
+    </section>
+
+    <section class="workflow-controls" aria-label="Workflow jurisdiction and search">
+      <div class="workflow-field">
+        <label for="workflow-jurisdiction">Jurisdiction</label>
+        <div class="workflow-select-wrap">
+          <select id="workflow-jurisdiction">
+            <option value="">Select a jurisdiction</option>
+          </select>
+        </div>
+      </div>
+      <div class="workflow-field workflow-search-field">
+        <label for="workflow-search">Search workflows</label>
+        <div class="workflow-search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="workflow-search" type="search" autocomplete="off"
+            placeholder="Search by goal, project type, or keyword..." disabled>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-section" aria-labelledby="business-lines-heading">
+      <div class="workflow-section-heading">
+        <div>
+          <h2 id="business-lines-heading">Browse by area of work</h2>
+          <p>Choose an area to see relevant workflows.</p>
+        </div>
+      </div>
+      <div class="business-line-grid" id="business-line-grid"></div>
+    </section>
+
+    <section class="workflow-results" id="workflow-results" aria-live="polite" aria-labelledby="workflow-results-heading" hidden>
+      <div class="workflow-section-heading">
+        <div>
+          <span class="workflow-context" id="workflow-results-context"></span>
+          <h2 id="workflow-results-heading">Workflows</h2>
+        </div>
+        <span class="workflow-result-count" id="workflow-result-count"></span>
+      </div>
+      <div class="workflow-list" id="workflow-list"></div>
+    </section>
+
+    <section class="workflow-section jurisdiction-workflows" id="jurisdiction-workflows" aria-labelledby="jurisdiction-workflows-heading" hidden>
+      <div class="workflow-section-heading">
+        <div>
+          <h2 id="jurisdiction-workflows-heading"></h2>
+          <p>Programs and processes unique to this jurisdiction.</p>
+        </div>
+      </div>
+      <div class="jurisdiction-workflow-grid" id="jurisdiction-workflow-grid"></div>
+    </section>
+  </main>
+
+  <footer class="platform-footer">
+    <div class="platform-footer-inner">
+      <div class="platform-footer-logo">Enviro<span>Reg</span>Index</div>
+      <p>Official government resources. Curated for faster navigation.</p>
+    </div>
+  </footer>
+
+  <script src="jurisdictions.js"></script>
+  <script src="workflow-data.placeholder.js"></script>
+  <script src="workflows.js"></script>
+</body>
+</html>

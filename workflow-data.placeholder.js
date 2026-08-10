@@ -1,0 +1,39 @@
+/*
+ * Temporary demonstration data for the Workflow Explorer UI shell.
+ * Replace this module when the permanent workflow schema and data service exist.
+ */
+'use strict';
+
+const PLACEHOLDER_WORKFLOW_DATA = Object.freeze({
+  businessLines: [
+    { id: 'site-assessment', title: 'Site Assessment', description: 'Phase I & II ESAs, due diligence, and site investigations.', icon: '⌕', order: 1 },
+    { id: 'remediation', title: 'Remediation', description: 'Cleanup planning, closure, and contaminated-site programs.', icon: '◇', order: 2 },
+    { id: 'stormwater', title: 'Stormwater', description: 'Construction, industrial, and municipal stormwater compliance.', icon: '≋', order: 3 },
+    { id: 'waste-materials', title: 'Waste & Materials', description: 'Waste characterization, handling, recycling, and disposal.', icon: '▣', order: 4 },
+    { id: 'tanks-oil', title: 'Tanks & Oil', description: 'Storage tanks, spill prevention, and oil management.', icon: '◉', order: 5 },
+    { id: 'water', title: 'Water', description: 'Water quality, discharges, wetlands, and permitting.', icon: '≈', order: 6 },
+    { id: 'natural-resources', title: 'Natural Resources', description: 'Habitat, wildlife, forestry, and resource review.', icon: '⌁', order: 7 },
+    { id: 'coastal', title: 'Coastal', description: 'Coastal development, resilience, and shoreline permitting.', icon: '∿', order: 8 },
+    { id: 'air', title: 'Air', description: 'Emissions, permitting, monitoring, and air-quality compliance.', icon: '○', order: 9 },
+  ],
+  workflows: [
+    { id: 'phase-i-esa', title: 'Phase I Environmental Site Assessment', description: 'Evaluate environmental conditions and potential liability before a transaction.', businessLine: 'site-assessment', jurisdictions: ['all'], keywords: ['due diligence', 'property', 'transaction'], synonyms: ['phase one', 'aai'] },
+    { id: 'phase-ii-esa', title: 'Phase II Environmental Site Assessment', description: 'Plan sampling to evaluate recognized environmental conditions.', businessLine: 'site-assessment', jurisdictions: ['all'], keywords: ['sampling', 'investigation', 'soil', 'groundwater'], synonyms: ['phase two'] },
+    { id: 'vapor-intrusion', title: 'Vapor Intrusion Investigation', description: 'Evaluate vapor migration and potential indoor-air exposure pathways.', businessLine: 'site-assessment', jurisdictions: ['all'], keywords: ['vapor', 'indoor air', 'sub-slab'], synonyms: ['vi investigation'] },
+    { id: 'brownfield-investigation', title: 'Brownfield Site Investigation', description: 'Assess environmental conditions to support reuse and redevelopment.', businessLine: 'site-assessment', jurisdictions: ['all'], keywords: ['brownfield', 'redevelopment'], synonyms: ['site characterization'] },
+    { id: 'cleanup-plan', title: 'Develop a Remedial Action Plan', description: 'Organize cleanup objectives, methods, controls, and documentation.', businessLine: 'remediation', jurisdictions: ['all'], keywords: ['cleanup', 'remediation', 'closure'], synonyms: ['rap', 'remediation plan'] },
+    { id: 'construction-swppp', title: 'Prepare a Construction SWPPP', description: 'Develop a stormwater pollution prevention plan for construction activity.', businessLine: 'stormwater', jurisdictions: ['all'], keywords: ['swppp', 'construction', 'erosion'], synonyms: ['stormwater plan'] },
+    { id: 'industrial-swppp', title: 'Prepare an Industrial SWPPP', description: 'Document industrial stormwater controls, monitoring, and inspections.', businessLine: 'stormwater', jurisdictions: ['all'], keywords: ['swppp', 'industrial', 'npdes'], synonyms: ['stormwater plan'] },
+    { id: 'waste-characterization', title: 'Characterize a Waste Stream', description: 'Determine waste classification and appropriate management requirements.', businessLine: 'waste-materials', jurisdictions: ['all'], keywords: ['hazardous waste', 'sampling', 'disposal'], synonyms: ['waste determination'] },
+    { id: 'spcc-plan', title: 'Develop an SPCC Plan', description: 'Evaluate applicability and document oil-spill prevention measures.', businessLine: 'tanks-oil', jurisdictions: ['all'], keywords: ['oil', 'storage', 'secondary containment'], synonyms: ['spill plan', '40 cfr 112'] },
+    { id: 'discharge-permit', title: 'Evaluate a Wastewater Discharge Permit', description: 'Identify discharge pathways and applicable water permitting requirements.', businessLine: 'water', jurisdictions: ['all'], keywords: ['water', 'discharge', 'permit'], synonyms: ['npdes'] },
+    { id: 'habitat-review', title: 'Complete a Natural Resource Review', description: 'Identify habitat, wildlife, and natural-resource constraints.', businessLine: 'natural-resources', jurisdictions: ['all'], keywords: ['habitat', 'wildlife', 'species'], synonyms: ['ecological review'] },
+    { id: 'coastal-review', title: 'Evaluate Coastal Development Requirements', description: 'Screen a project for coastal siting and shoreline requirements.', businessLine: 'coastal', jurisdictions: ['all'], keywords: ['coastal', 'shoreline', 'resilience'], synonyms: ['coastal permit'] },
+    { id: 'air-permit', title: 'Evaluate Air Permit Applicability', description: 'Screen emissions sources for air permitting and registration requirements.', businessLine: 'air', jurisdictions: ['all'], keywords: ['air', 'emissions', 'permit'], synonyms: ['source registration'] },
+
+    { id: 'ct-rbcr', title: 'Release-Based Cleanup Regulations', description: 'Navigate Connecticut release reporting, characterization, tiering, and cleanup obligations.', businessLine: 'remediation', jurisdictions: ['ct'], keywords: ['rbcr', 'release', 'cleanup'], synonyms: ['release-based cleanup'], jurisdictionSpecific: true },
+    { id: 'ct-lep-verification', title: 'LEP Verification', description: 'Prepare and document a Connecticut LEP verification.', businessLine: 'remediation', jurisdictions: ['ct'], keywords: ['lep', 'verification', 'closure'], synonyms: ['licensed environmental professional'], jurisdictionSpecific: true },
+    { id: 'ct-seh', title: 'Significant Environmental Hazard', description: 'Evaluate and respond to Connecticut significant environmental hazard conditions.', businessLine: 'remediation', jurisdictions: ['ct'], keywords: ['seh', 'hazard', 'notification'], synonyms: ['significant environmental hazard'], jurisdictionSpecific: true },
+    { id: 'ct-react', title: 'REACT', description: 'Use Connecticut’s release, environmental assessment, and cleanup tracker.', businessLine: 'remediation', jurisdictions: ['ct'], keywords: ['react', 'portal', 'submission'], synonyms: ['cleanup tracker'], jurisdictionSpecific: true },
+  ],
+});

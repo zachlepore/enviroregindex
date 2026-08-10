@@ -132,20 +132,17 @@ nav {
 .nav-tab:hover { color: #FFFFFF; background: rgba(255,255,255,0.08); }
 .nav-tab.active { color: #5CCE8A; background: rgba(92,206,138,0.1); }
 
-/* ── State Selector ─────────────────────────────────────────── */
+/* ── Jurisdiction Selector ──────────────────────────────────── */
 /*
  * Sits below the nav. Visually consistent with existing design language:
  * monospace labels, border-based, dark background strip.
  */
 .state-bar {
   background: #222220;
-  border-bottom: 1px solid #2E2E2A;
+  border-top: 1px solid rgba(92,206,138,0.22);
+  border-bottom: 1px solid #34342F;
   padding: 0;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;
 }
-.state-bar::-webkit-scrollbar { display: none; }
 
 .state-bar-inner {
   max-width: 1200px;
@@ -153,8 +150,8 @@ nav {
   padding: 0 24px;
   display: flex;
   align-items: center;
-  gap: 0;
-  height: 38px;
+  gap: 18px;
+  min-height: 54px;
 }
 
 .state-bar-label {
@@ -163,67 +160,77 @@ nav {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  padding-right: 16px;
-  border-right: 1px solid rgba(255,255,255,0.08);
-  margin-right: 12px;
+  color: rgba(255,255,255,0.55);
+  padding-right: 18px;
+  border-right: 1px solid rgba(255,255,255,0.12);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
-.state-btn {
+.jurisdiction-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.federal-jurisdiction-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 3px;
+  padding: 0 12px;
+  height: 30px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.federal-jurisdiction-btn:hover {
+  color: #FFFFFF;
+  border-color: rgba(92,206,138,0.5);
+}
+
+.federal-jurisdiction-btn.active {
+  color: #5CCE8A;
+  background: rgba(92,206,138,0.1);
+  border-color: rgba(92,206,138,0.55);
+}
+
+.federal-jurisdiction-btn:focus-visible,
+.state-select:focus-visible {
+  outline: 2px solid #5CCE8A;
+  outline-offset: 2px;
+}
+
+.state-select-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.state-select {
+  min-width: 190px;
+  height: 30px;
+  padding: 0 30px 0 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  color: rgba(255,255,255,0.4);
-  background: none;
-  border: none;
-  padding: 0 12px;
-  height: 38px;
+  color: rgba(255,255,255,0.85);
+  background: #292927;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 3px;
   cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-  position: relative;
-}
-
-.state-btn:hover { color: rgba(255,255,255,0.8); }
-
-.state-btn.active {
-  color: #5CCE8A;
-}
-
-.state-btn.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 12px;
-  right: 12px;
-  height: 2px;
-  background: #5CCE8A;
-  border-radius: 1px 1px 0 0;
-}
-
-.state-btn.coming-soon {
-  color: rgba(255,255,255,0.2);
-  cursor: default;
-}
-
-.state-btn.coming-soon::before {
-  content: '';
-}
-
-.state-coming-tag {
-  font-size: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.25);
-  border-radius: 2px;
-  padding: 1px 4px;
-  margin-left: 5px;
-  vertical-align: middle;
-  font-family: 'IBM Plex Mono', monospace;
+  color-scheme: dark;
 }
 
 /* State loading indicator */
@@ -384,9 +391,9 @@ nav {
   height: 3px;
 }
 
-.cat-card.remediation::before { background: var(--accent-green-mid); }
-.cat-card.stormwater::before  { background: var(--accent-blue); }
-.cat-card.assessment::before  { background: var(--accent-amber); }
+.cat-card.focus-theme-0::before { background: var(--accent-green-mid); }
+.cat-card.focus-theme-1::before { background: var(--accent-blue); }
+.cat-card.focus-theme-2::before { background: var(--accent-amber); }
 
 .cat-card:hover {
   border-color: var(--border-strong);
@@ -405,9 +412,9 @@ nav {
   margin-bottom: 14px;
 }
 
-.cat-card.remediation .cat-icon { background: var(--accent-green-light); }
-.cat-card.stormwater  .cat-icon { background: var(--accent-blue-light); }
-.cat-card.assessment  .cat-icon { background: var(--accent-amber-light); }
+.cat-card.focus-theme-0 .cat-icon { background: var(--accent-green-light); }
+.cat-card.focus-theme-1 .cat-icon { background: var(--accent-blue-light); }
+.cat-card.focus-theme-2 .cat-icon { background: var(--accent-amber-light); }
 
 .cat-card h3 {
   font-size: 16px;
@@ -524,10 +531,26 @@ nav {
   margin: 0 0 10px;
 }
 
+.doc-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .doc-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+.doc-verified {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.65;
+  white-space: nowrap;
 }
 
 .tag {
@@ -839,9 +862,8 @@ footer {
 /* ── Responsive / Mobile ────────────────────────────────────── */
 
 /* Tablet */
-@media (max-width: 900px) {
-  .nav-tabs { gap: 0; }
-  .nav-tab  { padding: 6px 10px; font-size: 11px; }
+@media (max-width: 1100px) {
+  .nav-tabs { display: none; }
 }
 
 /* Mobile */
@@ -852,8 +874,28 @@ footer {
   .nav-tabs  { display: none; }
   .nav-search-wrap { max-width: none; }
 
-  /* State bar */
-  .state-bar-inner { padding: 0 16px; }
+  /* Jurisdiction bar */
+  .state-bar-inner {
+    padding: 10px 16px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .state-bar-label {
+    padding: 0;
+    border: 0;
+  }
+  .jurisdiction-controls {
+    width: 100%;
+    gap: 10px;
+  }
+  .state-select-label {
+    flex: 1;
+  }
+  .state-select {
+    min-width: 0;
+    width: 100%;
+  }
 
   /* Hero */
   .hero { padding: 32px 0 36px; }
@@ -933,6 +975,7 @@ footer {
 /* Very small phones */
 @media (max-width: 380px) {
   .hero h1 { font-size: 22px; }
-  .state-btn { padding: 0 8px; font-size: 10px; }
+  .federal-jurisdiction-btn { padding: 0 9px; font-size: 10px; }
+  .state-select-label { gap: 5px; }
+  .state-select { padding-left: 7px; font-size: 10px; }
 }
-

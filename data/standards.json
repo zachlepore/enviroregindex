@@ -1,0 +1,27 @@
+{
+  "collection": {
+    "code": "STD",
+    "name": "Authoritative Standards",
+    "description": "Authoritative non-government standards and professional references.",
+    "status": "live"
+  },
+  "documents": [
+    {
+      "id": 1,
+      "qc_id": "STD1",
+      "resource_id": "std-astm-e1527-21",
+      "category": "site-assessment",
+      "subcategory": "Professional Standards",
+      "title": "ASTM E1527-21",
+      "description": "Official ASTM International product page for ASTM E1527-21, the nationally applicable professional practice standard associated with Phase I Environmental Site Assessments.",
+      "source_url": "https://www.astm.org/e1527-21.html",
+      "document_type": "standard",
+      "publisher": "ASTM International",
+      "source_type": "standards-body",
+      "last_updated": "2021 edition",
+      "verification_status": "blocked",
+      "verification_note": "Official ASTM product URL returned HTTP 403 during automated and browser-based QA on August 11, 2026.",
+      "tags": ["ASTM E1527-21", "Phase I", "environmental site assessment", "professional standard", "due diligence"]
+    }
+  ]
+}

@@ -112,6 +112,14 @@ function renderWorkflowExplorer() {
   renderJurisdictionWorkflows();
 }
 
+function openWorkflow(event) {
+  const workflowElement = event.target.closest('[data-workflow-id]');
+  if (!workflowElement) return;
+  const workflow = PLACEHOLDER_WORKFLOW_DATA.workflows.find(item => item.id === workflowElement.dataset.workflowId);
+  const destination = workflow?.detailPages?.[workflowState.jurisdiction];
+  if (destination) window.location.href = destination;
+}
+
 JURISDICTION_REGISTRY.forEach(jurisdiction => {
   const option = document.createElement('option');
   option.value = jurisdiction.code;
@@ -143,5 +151,8 @@ businessLineGrid.addEventListener('click', event => {
   renderWorkflowExplorer();
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+workflowList.addEventListener('click', openWorkflow);
+jurisdictionGrid.addEventListener('click', openWorkflow);
 
 renderWorkflowExplorer();

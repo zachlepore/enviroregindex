@@ -5,7 +5,7 @@
     "agency": "EPA",
     "agency_full": "United States Environmental Protection Agency",
     "agency_url": "https://www.epa.gov/",
-    "last_qa": "2026-08-05",
+    "last_qa": "2026-08-11",
     "status": "live"
   },
   "focus_areas": [
@@ -202,6 +202,22 @@
       "last_updated": "EPA EPCRA overview",
       "verified": "August 4, 2026",
       "tags": ["EPCRA", "emergency planning", "Tier II", "TRI", "chemical reporting", "EPA"]
+    },
+    {
+      "id": 12,
+      "qc_id": "EPA12",
+      "resource_id": "epa-all-appropriate-inquiries",
+      "category": "superfund",
+      "subcategory": "Brownfields / Site Assessment",
+      "title": "All Appropriate Inquiries",
+      "description": "EPA's primary resource for the federal All Appropriate Inquiries framework, including the final rule and official supporting materials relevant to environmental due diligence.",
+      "source_url": "https://www.epa.gov/brownfields/brownfields-all-appropriate-inquiries",
+      "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA guidance",
+      "verified": "August 11, 2026",
+      "tags": ["All Appropriate Inquiries", "AAI", "Phase I", "environmental due diligence", "brownfields", "CERCLA"]
     }
   ]
 }

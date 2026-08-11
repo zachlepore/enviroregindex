@@ -25,6 +25,7 @@ function getBadgeClass(type) {
     policy:     'badge-policy',
     form:       'badge-form',
     manual:     'badge-manual',
+    database:   'badge-policy',
   };
   return map[type] || 'badge-form';
 }

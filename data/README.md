@@ -18,6 +18,7 @@ with no separator:
 - New Hampshire: `NH1`, `NH2`, ...
 - Vermont: `VT1`, `VT2`, ...
 - Maine: `ME1`, `ME2`, ...
+- Authoritative standards: `STD1`, `STD2`, ...
 
 ### Never recycle a QC ID
 
@@ -31,16 +32,31 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 
 | Jurisdiction | Prefix | Highest issued |
 | --- | --- | ---: |
-| Connecticut | `CT` | 31 |
-| EPA / Federal | `EPA` | 11 |
+| Connecticut | `CT` | 36 |
+| EPA / Federal | `EPA` | 12 |
 | Massachusetts | `MA` | 8 |
 | Rhode Island | `RI` | 4 |
 | New York | `NY` | 7 |
 | New Hampshire | `NH` | 5 |
 | Vermont | `VT` | 4 |
 | Maine | `ME` | 5 |
+| Authoritative standards | `STD` | 1 |
 
 Before committing a new resource, confirm that its `qc_id` is unique across
 all files in this directory and that its number is greater than the recorded
 high-water mark. The existing numeric `id` field remains unchanged and serves
 a separate purpose.
+
+## Software resource identifiers
+
+Resources referenced by workflows have an immutable string `resource_id`.
+Unlike `qc_id`, this field is an application identifier rather than a label for
+human QA communication.
+
+- A `resource_id` must be globally unique across every resource collection.
+- A `resource_id` must not change when a resource is reordered, renamed, or
+  moved between display sections.
+- A retired `resource_id` must never be recycled.
+- Workflows must reference `resource_id`, never `qc_id` or the numeric `id`.
+- Source URLs, canonical titles, directory descriptions, publisher metadata,
+  and verification metadata remain owned by the canonical resource record.

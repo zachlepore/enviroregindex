@@ -4,14 +4,14 @@
     "title": "Phase I Environmental Site Assessment",
     "business_line": "site-assessment",
     "business_line_label": "Site Assessment",
-    "description": "Primary regulatory, records, database, mapping, and technical resources commonly used to support environmental due diligence in Connecticut.",
+    "description": "Regulatory, records, database, mapping, and technical resources commonly used to support environmental due diligence in Connecticut.",
     "keywords": ["Phase I", "environmental site assessment", "environmental due diligence", "records review", "AAI"],
     "synonyms": ["Phase One ESA", "Phase 1 ESA", "All Appropriate Inquiries"],
     "supported_jurisdictions": ["ct"],
     "resource_collections": ["epa", "standards", "ct"]
   },
   "sections": [
-    { "section_id": "start-here", "title": "Start Here", "display_order": 1 },
+    { "section_id": "start-here", "title": "Core References", "display_order": 1 },
     { "section_id": "records-databases", "title": "Records & Databases", "display_order": 2 },
     { "section_id": "mapping-supporting", "title": "Mapping & Supporting Resources", "display_order": 3 },
     { "section_id": "related-workflows", "title": "Related Workflows", "display_order": 4 }

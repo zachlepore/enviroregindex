@@ -14,6 +14,17 @@ function sourceTypeLabel(value) {
   return labels[value] || 'Authoritative source';
 }
 
+function publisherDisplayLabel(resource) {
+  const shortLabels = {
+    'Connecticut Department of Energy and Environmental Protection': 'CT DEEP',
+    'United States Environmental Protection Agency': 'EPA',
+  };
+  const publisher = shortLabels[resource.publisher] || resource.publisher;
+  return resource.source_type === 'standards-body'
+    ? `${publisher} · ${sourceTypeLabel(resource.source_type)}`
+    : publisher;
+}
+
 function escapeHTML(value) {
   return String(value || '')
     .replaceAll('&', '&amp;')
@@ -51,7 +62,7 @@ function renderResource(relationship, resource) {
   return `
     <article class="workflow-resource">
       <div class="workflow-resource-copy">
-        <div class="workflow-resource-source">${escapeHTML(resource.publisher)} · ${escapeHTML(sourceTypeLabel(resource.source_type))}</div>
+        <div class="workflow-resource-source">${escapeHTML(publisherDisplayLabel(resource))}</div>
         <h3>${escapeHTML(resource.title)}</h3>
         <p>${escapeHTML(relationship.workflow_note)}</p>
       </div>

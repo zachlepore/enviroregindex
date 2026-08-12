@@ -218,6 +218,22 @@
       "last_updated": "Current EPA guidance",
       "verified": "August 11, 2026",
       "tags": ["All Appropriate Inquiries", "AAI", "Phase I", "environmental due diligence", "brownfields", "CERCLA"]
+    },
+    {
+      "id": 13,
+      "qc_id": "EPA13",
+      "resource_id": "epa-low-flow-groundwater-sampling",
+      "category": "superfund",
+      "subcategory": "Site Investigation / Sampling",
+      "title": "Low-Flow (Minimal Drawdown) Ground-Water Sampling Procedures",
+      "description": "EPA technical guidance on low-flow groundwater sampling procedures intended to minimize drawdown and disturbance during sample collection.",
+      "source_url": "https://www.epa.gov/remedytech/low-flow-minimal-drawdown-ground-water-sampling-procedures",
+      "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA technical guidance",
+      "verified": "August 12, 2026",
+      "tags": ["groundwater sampling", "low flow", "minimal drawdown", "site investigation", "Phase II", "EPA"]
     }
   ]
 }

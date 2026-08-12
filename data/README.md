@@ -32,15 +32,15 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 
 | Jurisdiction | Prefix | Highest issued |
 | --- | --- | ---: |
-| Connecticut | `CT` | 36 |
-| EPA / Federal | `EPA` | 12 |
+| Connecticut | `CT` | 39 |
+| EPA / Federal | `EPA` | 13 |
 | Massachusetts | `MA` | 8 |
 | Rhode Island | `RI` | 4 |
 | New York | `NY` | 7 |
 | New Hampshire | `NH` | 5 |
 | Vermont | `VT` | 4 |
 | Maine | `ME` | 5 |
-| Authoritative standards | `STD` | 1 |
+| Authoritative standards | `STD` | 2 |
 
 Before committing a new resource, confirm that its `qc_id` is unique across
 all files in this directory and that its number is greater than the recorded

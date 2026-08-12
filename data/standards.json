@@ -22,6 +22,22 @@
       "verification_status": "blocked",
       "verification_note": "Official ASTM product URL returned HTTP 403 during automated and browser-based QA on August 11, 2026.",
       "tags": ["ASTM E1527-21", "Phase I", "environmental site assessment", "professional standard", "due diligence"]
+    },
+    {
+      "id": 2,
+      "qc_id": "STD2",
+      "resource_id": "std-astm-e1903-19",
+      "category": "site-assessment",
+      "subcategory": "Professional Standards",
+      "title": "ASTM E1903-19",
+      "description": "Official ASTM International product page for ASTM E1903-19, the nationally applicable professional practice standard associated with the Phase II Environmental Site Assessment process.",
+      "source_url": "https://store.astm.org/e1903-19.html",
+      "document_type": "standard",
+      "publisher": "ASTM International",
+      "source_type": "standards-body",
+      "last_updated": "2019 edition",
+      "verified": "August 12, 2026",
+      "tags": ["ASTM E1903-19", "Phase II", "environmental site assessment", "site investigation", "professional standard"]
     }
   ]
 }

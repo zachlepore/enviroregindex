@@ -282,15 +282,18 @@
     {
       "id": 23,
       "qc_id": "CT18",
+      "resource_id": "ct-release-characterization-guidance",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
-      "title": "Site Characterization Guidance — DEEP Guidance Page",
-      "description": "CT DEEP landing page for site cleanup and characterization guidance documents, including links to the SCGD, expedited site assessment guidance, and supplemental technical documents.",
-      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Guidance",
+      "title": "Release Characterization Guidance",
+      "description": "Current CT DEEP guidance for characterizing releases, including conceptual site models, investigation design, and evaluation of affected environmental media.",
+      "source_url": "https://portal.ct.gov/-/media/deep/site_clean_up/guidance/release-characterization-guidance.pdf?rev=35628d59faac44289fa305f4d1323630&hash=823A15CB954B613DDCBDE815A09D13A9",
       "document_type": "guidance",
-      "last_updated": "2024",
-      "verified": "August 3, 2026",
-      "tags": ["SCGD", "site characterization", "guidance", "Phase II", "expedited", "ESA"]
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "December 15, 2025",
+      "verified": "August 12, 2026",
+      "tags": ["release characterization", "site characterization", "conceptual site model", "investigation", "soil", "groundwater", "soil vapor", "Phase II", "ESA"]
     },
     {
       "id": 24,
@@ -337,12 +340,15 @@
     {
       "id": 31,
       "qc_id": "CT22",
+      "resource_id": "ct-rbcr-official-regulations",
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Release-Based Cleanup Regulations — Official Regulatory Text",
       "description": "Official Connecticut eRegulations text for the Release-Based Cleanup Regulations in RCSA sections 22a-134tt-1 through 22a-134tt-13. Provides the controlling requirements for reporting, characterizing, remediating, and closing releases.",
       "source_url": "https://eregulations.ct.gov/eRegsPortal/Browse/RCSA/Title_22aSubtitle_22a-134tt/",
       "document_type": "regulation",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
       "last_updated": "March 1, 2026",
       "verified": "August 4, 2026",
       "tags": ["RBCR", "eRegulations", "RCSA", "22a-134tt", "release reporting", "cleanup"]
@@ -546,6 +552,54 @@
       "last_updated": "Current CT DEEP inventory",
       "verified": "August 11, 2026",
       "tags": ["brownfields", "inventory", "redevelopment", "property search", "Phase I", "due diligence"]
+    },
+    {
+      "id": 46,
+      "qc_id": "CT37",
+      "resource_id": "ct-deep-quality-assurance-quality-control",
+      "category": "assessment",
+      "subcategory": "Laboratory / Data Quality",
+      "title": "Quality Assurance and Quality Control",
+      "description": "CT DEEP's central laboratory QA/QC resource for Reasonable Confidence Protocols, supporting forms, field quality-control information, and method-specific materials.",
+      "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/guidance/quality-assurance-and-quality-control",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current CT DEEP guidance",
+      "verified": "August 12, 2026",
+      "tags": ["quality assurance", "quality control", "QA/QC", "reasonable confidence", "RCP", "laboratory", "Phase II", "data quality"]
+    },
+    {
+      "id": 47,
+      "qc_id": "CT38",
+      "resource_id": "ct-data-quality-assessment-usability-evaluation",
+      "category": "assessment",
+      "subcategory": "Laboratory / Data Quality",
+      "title": "Data Quality Assessment and Data Usability Evaluation Guidance Document",
+      "description": "CT DEEP guidance for assessing laboratory data quality and evaluating whether analytical data are usable for their intended purpose.",
+      "source_url": "https://portal.ct.gov/-/media/deep/site_clean_up/guidance/qaqc/dqadueguidancepdf.pdf?rev=48d9eede9f5948dba2fa2469494e2a34&hash=28B1C03950885DE452E57D0BC5D67FFA",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Revision 4.0 — June 2026",
+      "verified": "August 12, 2026",
+      "tags": ["data quality assessment", "data usability evaluation", "DQA", "DUE", "laboratory data", "QA/QC", "Phase II"]
+    },
+    {
+      "id": 48,
+      "qc_id": "CT39",
+      "resource_id": "ct-environmental-laboratory-certification",
+      "category": "assessment",
+      "subcategory": "Laboratory / Data Quality",
+      "title": "Environmental Laboratory Certification",
+      "description": "Connecticut Department of Public Health resource for environmental laboratory certification, approved laboratory lists, analyte and matrix information, and related program materials.",
+      "source_url": "https://portal.ct.gov/dph/environmental-health/environmental-laboratory-certification/environmental-laboratory-certification",
+      "document_type": "database",
+      "publisher": "Connecticut Department of Public Health",
+      "source_type": "government-agency",
+      "last_updated": "Current CT DPH certification program",
+      "verified": "August 12, 2026",
+      "tags": ["environmental laboratory", "laboratory certification", "approved laboratories", "analytical laboratory", "Phase II", "Connecticut DPH"]
     }
   ]
 }

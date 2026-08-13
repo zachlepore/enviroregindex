@@ -278,14 +278,18 @@
     {
       "id": 17,
       "qc_id": "CT14",
+      "resource_id": "ct-industrial-stormwater-program",
       "category": "stormwater",
       "subcategory": "Industrial Stormwater",
-      "title": "Industrial Stormwater General Permit (IGP)",
-      "description": "NPDES General Permit for Discharge of Stormwater Associated with Industrial Activity. Covers a wide range of industrial sectors; requires Stormwater Pollution Prevention Plans, monitoring, and benchmarks.",
+      "title": "Industrial Stormwater General Permit — Program Gateway",
+      "description": "CT DEEP's current gateway to the Industrial Stormwater General Permit, registration and no-exposure filing paths, permit documents, application materials, SWPPP resources, and compliance guidance.",
       "source_url": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Industrial-Stormwater-GP",
-      "document_type": "permit",
-      "last_updated": "2011 (with modifications)",
-      "verified": "August 3, 2026",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current 2025 Industrial Stormwater General Permit program",
+      "verified": "August 13, 2026",
+      "verification_note": "The gateway identifies the permit issued October 1, 2025, links the live ezFile route and current permit materials, and retains a passed April 1, 2026 transition deadline; permanent ERI copy does not present that deadline as upcoming.",
       "tags": ["industrial", "IGP", "NPDES", "SWPPP", "monitoring", "benchmark"]
     },
     {
@@ -517,14 +521,18 @@
     {
       "id": 40,
       "qc_id": "CT31",
+      "resource_id": "ct-industrial-stormwater-swppp-framework",
       "category": "stormwater",
       "subcategory": "Industrial Stormwater",
-      "title": "Industrial Stormwater SWPPP Template",
-      "description": "Downloadable CT DEEP framework for preparing a Stormwater Pollution Prevention Plan under the current Industrial Stormwater General Permit. Provides an editable structure for documenting facility controls, monitoring, inspections, and permit compliance.",
+      "title": "Industrial Stormwater Pollution Prevention Plan (SWPPP) Framework",
+      "description": "CT DEEP's editable framework for organizing a facility SWPPP under the current Industrial Stormwater General Permit, including applicable controls, inspections, monitoring, corrective actions, and records.",
       "source_url": "https://portal.ct.gov/-/media/deep/water_regulating_and_discharges/stormwater/industrial/2025-permit-documents/2025-10-01-igp-swppp-framework.docx?rev=6f63d31cc6e64754bf9970a030de27ab&hash=46424F29ADD2AF42964DB903C5158516",
       "document_type": "form",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
       "last_updated": "October 1, 2025",
-      "verified": "August 4, 2026",
+      "verified": "August 13, 2026",
+      "verification_note": "The current CT DEEP program and compliance gateways link this October 2025 editable framework for the 2025 Industrial Stormwater General Permit.",
       "tags": ["industrial stormwater", "SWPPP", "template", "IGP", "monitoring", "inspection", "compliance"]
     },
     {
@@ -941,6 +949,7 @@
       "qc_id": "CT57",
       "resource_id": "ct-netdmr",
       "category": "water-wastewater",
+      "focus_areas": ["stormwater"],
       "subcategory": "Monitoring / Electronic Reporting",
       "title": "NetDMR in Connecticut",
       "description": "CT DEEP's current gateway for Connecticut NetDMR enrollment, subscriber agreements, user guidance, EPA CDX access, and electronic discharge-monitoring report support.",
@@ -1333,6 +1342,40 @@
         "tidal wetland boundary",
         "regulatory jurisdiction"
       ]
+    },
+    {
+      "id": 85,
+      "qc_id": "CT76",
+      "resource_id": "ct-industrial-stormwater-general-permit",
+      "category": "stormwater",
+      "subcategory": "Industrial Stormwater / Controlling Permit",
+      "title": "General Permit for the Discharge of Stormwater Associated with Industrial Activity",
+      "description": "Connecticut's controlling general permit for covered stormwater discharges associated with industrial activity, including registration and no-exposure provisions, SWPPP requirements, sector conditions, inspections, monitoring, corrective actions, reporting, and records.",
+      "source_url": "https://portal.ct.gov/-/media/deep/water_regulating_and_discharges/stormwater/industrial/2025-permit-documents/2025-industrial-stormwater-general-permit-part-1--2erc.pdf?rev=e07e4c0e8e9942cfb424954fe5bc89e5&hash=CFF6E87399495EA4981CB0C8949F43CD",
+      "document_type": "permit",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Issued October 1, 2025; effective November 1, 2025; expires September 30, 2030",
+      "verified": "August 13, 2026",
+      "verification_note": "The permit linked by CT DEEP was reviewed for its issue, effective, and expiration dates and its current registration, no-exposure, SWPPP, monitoring, corrective-action, and reporting framework.",
+      "tags": ["industrial stormwater", "general permit", "NPDES", "industrial activity", "no exposure", "SWPPP", "benchmark monitoring"]
+    },
+    {
+      "id": 86,
+      "qc_id": "CT77",
+      "resource_id": "ct-industrial-stormwater-compliance-assistance",
+      "category": "stormwater",
+      "subcategory": "Industrial Stormwater / Compliance",
+      "title": "Industrial GP Compliance Assistance",
+      "description": "CT DEEP's current implementation gateway for industrial stormwater SWPPP and BMP resources, inspections, monitoring, corrective actions, reporting instructions, sector DMR forms, and compliance assistance.",
+      "source_url": "https://portal.ct.gov/deep/water-regulating-and-discharges/stormwater/industrial-stormwater-gp/industrial-gp-compliance-assistance",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "July 22, 2026",
+      "verified": "August 13, 2026",
+      "verification_note": "The current page distinguishes reporting procedures before and after notice of coverage and links current inspection, monitoring, reporting, SWPPP, and sector DMR materials; ERI does not infer which requirements apply to a facility.",
+      "tags": ["industrial stormwater", "compliance assistance", "inspection", "monitoring", "DMR", "corrective action", "annual report"]
     }
   ]
 }

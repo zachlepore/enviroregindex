@@ -158,14 +158,17 @@
     {
       "id": 7,
       "qc_id": "EPA7",
+      "resource_id": "epa-industrial-stormwater-guidance",
       "category": "npdes-water",
       "subcategory": "Stormwater / NPDES",
       "title": "Industrial Stormwater Guidance",
       "description": "EPA industrial stormwater guidance hub for NPDES stormwater requirements, regulated industrial activities, permitting resources, sector-specific guidance, and SWPPP-related compliance assistance.",
       "source_url": "https://www.epa.gov/npdes/industrial-stormwater-guidance",
       "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
       "last_updated": "EPA NPDES guidance",
-      "verified": "August 4, 2026",
+      "verified": "August 13, 2026",
       "tags": ["NPDES", "industrial stormwater", "SWPPP", "stormwater", "EPA", "federal"]
     },
     {

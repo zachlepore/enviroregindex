@@ -5,7 +5,7 @@
     "agency": "CT DEEP",
     "agency_full": "Connecticut Department of Energy and Environmental Protection",
     "agency_url": "https://portal.ct.gov/DEEP",
-    "last_qa": "2026-08-11",
+    "last_qa": "2026-08-13",
     "status": "live"
   },
   "focus_areas": [
@@ -778,6 +778,22 @@
       "last_updated": "Current Connecticut guidance",
       "verified": "August 13, 2026",
       "tags": ["Connecticut-regulated waste", "non-RCRA hazardous waste", "CR02", "CR04", "CR05", "state requirements", "waste management"]
+    },
+    {
+      "id": 59,
+      "qc_id": "CT50",
+      "resource_id": "ct-spill-reporting-requirements",
+      "category": "waste-materials",
+      "subcategory": "Emergency Response / Spill Reporting",
+      "title": "Reporting Requirements for Spill Incidents",
+      "description": "CT DEEP's authoritative gateway to Connecticut spill-notification requirements, the current statutory source, and agency-maintained reporting contacts.",
+      "source_url": "https://portal.ct.gov/DEEP/Emergency-Response-and-Spill-Prevention/Spill-Reporting/Reporting-Requirements-for-Spill-Incidents",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut spill-reporting gateway",
+      "verified": "August 13, 2026",
+      "tags": ["spill reporting", "oil discharge", "Connecticut", "CGS 22a-450", "emergency response", "SPCC"]
     }
   ]
 }

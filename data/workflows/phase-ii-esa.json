@@ -1,0 +1,77 @@
+{
+  "workflow": {
+    "workflow_id": "phase-ii-esa",
+    "title": "Phase II Environmental Site Assessment",
+    "business_line": "site-assessment",
+    "business_line_label": "Site Assessment",
+    "description": "Regulatory, technical, sampling, laboratory, and supporting resources commonly used to investigate recognized environmental conditions in Connecticut.",
+    "keywords": ["Phase II", "environmental site assessment", "site investigation", "soil sampling", "groundwater sampling", "laboratory", "data quality"],
+    "synonyms": ["Phase Two ESA", "Phase 2 ESA", "subsurface investigation", "environmental investigation"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["standards", "ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "core-framework", "title": "Core Framework", "display_order": 1 },
+    { "section_id": "investigation-sampling", "title": "Investigation & Sampling", "display_order": 2 },
+    { "section_id": "laboratory-data-quality", "title": "Laboratory & Data Quality", "display_order": 3 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "std-astm-e1903-19",
+      "section": "core-framework",
+      "workflow_note": "Open the authoritative ASTM product page for the professional practice standard associated with the Phase II Environmental Site Assessment process.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "ct-release-characterization-guidance",
+      "section": "core-framework",
+      "workflow_note": "Use when developing the investigation approach and considering Connecticut guidance for characterizing soil, groundwater, vapor, and other affected media.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "ct-rbcr-official-regulations",
+      "section": "core-framework",
+      "workflow_note": "Consult when investigation activities concern a release subject to Connecticut's current reporting and characterization framework.",
+      "display_order": 3,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "epa-low-flow-groundwater-sampling",
+      "section": "investigation-sampling",
+      "workflow_note": "Use as a technical reference when low-flow groundwater sample collection is appropriate to the investigation.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "ct-deep-quality-assurance-quality-control",
+      "section": "laboratory-data-quality",
+      "workflow_note": "Use to access Connecticut laboratory QA/QC expectations, Reasonable Confidence Protocols, forms, and method-specific supporting material.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "ct-data-quality-assessment-usability-evaluation",
+      "section": "laboratory-data-quality",
+      "workflow_note": "Use when reviewing laboratory deliverables and evaluating whether analytical data are suitable for their intended investigative use.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-ii-esa",
+      "resource_id": "ct-environmental-laboratory-certification",
+      "section": "laboratory-data-quality",
+      "workflow_note": "Use to confirm current Connecticut laboratory certification information and access approved environmental laboratory lists.",
+      "display_order": 3,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

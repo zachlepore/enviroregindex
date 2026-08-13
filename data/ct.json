@@ -1148,6 +1148,148 @@
         "permit by rule",
         "submission"
       ]
+    },
+    {
+      "id": 79,
+      "qc_id": "CT70",
+      "resource_id": "ct-coastal-permit-program-overview",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Program Gateway",
+      "title": "Overview of the Connecticut Coastal Permit Program",
+      "description": "CT DEEP's program overview for activities in tidal wetlands and tidal, coastal, or navigable waters, including individual permits, Certificates of Permission, general-permit pathways, review considerations, and pre-application coordination.",
+      "source_url": "https://portal.ct.gov/deep/coastal-resources/coastal-permitting/overview-of-the-connecticut-coastal-permit-program",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut coastal permit program overview",
+      "verified": "August 13, 2026",
+      "tags": [
+        "coastal permit",
+        "tidal wetlands",
+        "tidal waters",
+        "structures",
+        "dredging",
+        "fill",
+        "Certificate of Permission"
+      ]
+    },
+    {
+      "id": 80,
+      "qc_id": "CT71",
+      "resource_id": "ct-licenses-activities-tidal-waters",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Applications",
+      "title": "Licenses for Activities in Tidal Waters",
+      "description": "CT DEEP's maintained application gateway for individual coastal permits, Certificates of Permission, coastal general-permit pathways, supporting materials, and electronic filing instructions.",
+      "source_url": "https://portal.ct.gov/deep/permits-and-licenses/lwrd-permit-app/tidal-coastal-permits",
+      "document_type": "form",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut tidal and coastal application gateway",
+      "verified": "August 13, 2026",
+      "verification_note": "CT DEEP continues to present Forms C and D and the linked coastal general-permit pathways through this current gateway. The Coastal Maintenance and Minor Coastal Structures general permits state expiration dates of October 26, 2035; ERI does not determine eligibility for any permit path.",
+      "tags": [
+        "tidal waters",
+        "coastal permit application",
+        "Certificate of Permission",
+        "general permit",
+        "ezFile",
+        "Form C",
+        "Form D"
+      ]
+    },
+    {
+      "id": 81,
+      "qc_id": "CT72",
+      "resource_id": "ct-lwrd-forms-instructions",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Forms and Instructions",
+      "title": "LWRD Forms and Instructions",
+      "description": "CT DEEP's maintained gateway for Land and Water Resources Division transmittal materials, coastal application attachments, project documentation, consultation forms, and technical references.",
+      "source_url": "https://portal.ct.gov/deep/permits-and-licenses/lwrd-permit-app/lwrd-forms-and-instructions",
+      "document_type": "form",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Updated July 30, 2026",
+      "verified": "August 13, 2026",
+      "verification_note": "The current gateway identifies the LWRD transmittal dated May 1, 2025 and continues to link Forms C and D, supporting attachments, and ezFile instructions.",
+      "tags": [
+        "LWRD",
+        "coastal forms",
+        "permit application",
+        "transmittal",
+        "supporting documents",
+        "consultation"
+      ]
+    },
+    {
+      "id": 82,
+      "qc_id": "CT73",
+      "resource_id": "ct-tidal-wetlands-act",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Statutory Framework",
+      "title": "Connecticut Tidal Wetlands Act",
+      "description": "The Connecticut General Assembly's current Chapter 440 statutory framework for tidal-wetland definitions, mapping, regulated activities, permits, and enforcement under CGS Sections 22a-28 through 22a-35.",
+      "source_url": "https://prdext3.cga.ct.gov/current/pub/chap_440.htm#sec_22a-28",
+      "document_type": "regulation",
+      "publisher": "Connecticut General Assembly",
+      "source_type": "government-agency",
+      "last_updated": "Current Chapter 440 with applicable 2026 supplement",
+      "verified": "August 13, 2026",
+      "verification_note": "The official current Chapter 440 text and 2026 supplement were reviewed together; the supplement includes an amendment to Section 22a-32 within the Tidal Wetlands Act.",
+      "tags": [
+        "Tidal Wetlands Act",
+        "CGS 22a-28",
+        "CGS 22a-35",
+        "tidal wetlands",
+        "regulated activity"
+      ]
+    },
+    {
+      "id": 83,
+      "qc_id": "CT74",
+      "resource_id": "ct-structures-dredging-fill-statutes",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Statutory Framework",
+      "title": "Connecticut Structures, Dredging and Fill Statutes",
+      "description": "The Connecticut General Assembly's current Chapter 446i statutory framework for structures, dredging, fill, obstructions, encroachments, and mooring areas in tidal, coastal, or navigable waters under CGS Sections 22a-359 through 22a-363h.",
+      "source_url": "https://prdext3.cga.ct.gov/current/pub/chap_446i.htm#sec_22a-359",
+      "document_type": "regulation",
+      "publisher": "Connecticut General Assembly",
+      "source_type": "government-agency",
+      "last_updated": "Current Chapter 446i with applicable 2026 supplement",
+      "verified": "August 13, 2026",
+      "verification_note": "The official current Chapter 446i text and 2026 supplement were reviewed together; the supplement includes an amendment to Section 22a-361 within the approved statutory range.",
+      "tags": [
+        "structures dredging and fill",
+        "CGS 22a-359",
+        "CGS 22a-363h",
+        "coastal waters",
+        "navigable waters"
+      ]
+    },
+    {
+      "id": 84,
+      "qc_id": "CT75",
+      "resource_id": "ct-regulatory-jurisdiction-tidal-waters-wetlands",
+      "category": "coastal",
+      "subcategory": "Coastal Permitting / Regulatory Jurisdiction",
+      "title": "Reference for Regulatory Jurisdiction in Tidal Waters and Wetlands",
+      "description": "CT DEEP's professional reference distinguishing the Coastal Jurisdiction Line, mean high water in specified settings, and tidal-wetland boundaries within Connecticut's state regulatory framework.",
+      "source_url": "https://portal.ct.gov/-/media/deep/permits_and_licenses/land_use_permits/lwrd/referenceregulatoryjurisdictionpdf.pdf?rev=e98493bdc40743928207358cff987d12&hash=1BB2598F5759D58185A9AAE7822F62F8",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Revised August 24, 2023",
+      "verified": "August 13, 2026",
+      "verification_note": "The current LWRD forms gateway links this three-page reference. It describes state regulatory limits and tidal-wetland boundary concepts but does not substitute for a project-specific survey, delineation, or jurisdictional determination.",
+      "tags": [
+        "Coastal Jurisdiction Line",
+        "CJL",
+        "mean high water",
+        "tidal wetland boundary",
+        "regulatory jurisdiction"
+      ]
     }
   ]
 }

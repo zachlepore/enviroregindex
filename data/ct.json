@@ -1007,6 +1007,147 @@
       "verified": "August 13, 2026",
       "verification_note": "The layer metadata credits USDA NRCS source data and states that mapped units can contain inclusions; on-site investigation is necessary to determine wetland-soil presence or absence.",
       "tags": ["inland wetland soils", "GIS", "screening", "soil survey", "mapped wetlands", "NRCS"]
+    },
+    {
+      "id": 73,
+      "qc_id": "CT64",
+      "resource_id": "ct-air-permitting-inventory",
+      "category": "air",
+      "subcategory": "Stationary Sources / Program Gateway",
+      "title": "Air Permitting and Inventory",
+      "description": "CT DEEP's program gateway for stationary-source air permitting, regulations, application resources, permitting assistance, operating permits, modeling, and source-emissions monitoring.",
+      "source_url": "https://portal.ct.gov/deep/air/permits/air-permits",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut air permitting gateway",
+      "verified": "August 13, 2026",
+      "tags": [
+        "air permit",
+        "stationary source",
+        "emissions unit",
+        "New Source Review",
+        "NSR",
+        "air authorization"
+      ]
+    },
+    {
+      "id": 74,
+      "qc_id": "CT65",
+      "resource_id": "ct-abatement-air-pollution-regulations",
+      "category": "air",
+      "subcategory": "Stationary Sources / Regulations",
+      "title": "Connecticut Abatement of Air Pollution Regulations",
+      "description": "CT DEEP's maintained gateway to Connecticut's air-pollution-control regulations and related current regulatory materials.",
+      "source_url": "https://portal.ct.gov/deep/air/planning/regulations/air-regulations",
+      "document_type": "regulation",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut regulatory gateway",
+      "verified": "August 13, 2026",
+      "tags": [
+        "air regulations",
+        "RCSA 22a-174",
+        "stationary source",
+        "emissions",
+        "air pollution control"
+      ]
+    },
+    {
+      "id": 75,
+      "qc_id": "CT66",
+      "resource_id": "ct-rcsa-22a-174-3a",
+      "category": "air",
+      "subcategory": "Stationary Sources / New Source Review",
+      "title": "RCSA §22a-174-3a — Permit Applicability and New Source Review",
+      "description": "Connecticut's controlling regulatory text for air-permit applicability and New Source Review of stationary sources and emissions units.",
+      "source_url": "https://eregulations.ct.gov/eRegsPortal/Browse/RCSA/Title_22aSubtitle_22a-174Section_22a-174-3a/",
+      "document_type": "regulation",
+      "publisher": "Connecticut Office of the Secretary of the State",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut eRegulations text",
+      "verified": "August 13, 2026",
+      "verification_note": "The live eRegulations text and CT DEEP's current links to Sections 22a-174-3a, -3b, and -3c were reviewed together; ERI does not encode an applicability conclusion.",
+      "tags": [
+        "RCSA 22a-174-3a",
+        "New Source Review",
+        "NSR",
+        "permit applicability",
+        "new source",
+        "modified source"
+      ]
+    },
+    {
+      "id": 76,
+      "qc_id": "CT67",
+      "resource_id": "ct-air-permits-faq",
+      "category": "air",
+      "subcategory": "Stationary Sources / Applicability Guidance",
+      "title": "Air Permits — Frequently Asked Questions",
+      "description": "CT DEEP guidance addressing New Source Review, alternative authorization mechanisms, operating permits, application administration, and common stationary-source permitting questions.",
+      "source_url": "https://portal.ct.gov/deep/air/permits/air-permits--frequently-asked-questions",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut permitting guidance",
+      "verified": "August 13, 2026",
+      "verification_note": "The page includes time-sensitive nonattainment material; the canonical description intentionally does not reproduce temporary classifications, dates, or thresholds.",
+      "tags": [
+        "air permit FAQ",
+        "NSR",
+        "permit by rule",
+        "exemption",
+        "registration",
+        "Title V"
+      ]
+    },
+    {
+      "id": 77,
+      "qc_id": "CT68",
+      "resource_id": "ct-air-permitting-assistance",
+      "category": "air",
+      "subcategory": "Stationary Sources / Professional Tools",
+      "title": "Air Permitting Assistance",
+      "description": "CT DEEP's professional gateway to pre-application support, the Air Permit Wizard, emissions tools, control-technology resources, and state and federal regulatory references.",
+      "source_url": "https://portal.ct.gov/deep/air/permits/air-permitting-assistance",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut permitting assistance gateway",
+      "verified": "August 13, 2026",
+      "verification_note": "The current gateway states that the downloadable desktop-Excel Air Permit Wizard covers RCSA Sections 22a-174-3a, -3b, -3c, and -42; the workbook did not expose a conclusive human-readable revision date in this environment.",
+      "tags": [
+        "Air Permit Wizard",
+        "permit applicability",
+        "emissions calculator",
+        "BACT",
+        "stationary source",
+        "pre-application"
+      ]
+    },
+    {
+      "id": 78,
+      "qc_id": "CT69",
+      "resource_id": "ct-air-emissions-permits-forms",
+      "category": "air",
+      "subcategory": "Stationary Sources / Applications",
+      "title": "Air Emissions Permits and General Permits",
+      "description": "CT DEEP's maintained gateway for current New Source Review applications, permit revisions and modifications, permit-by-rule notifications, instructions, and related air authorization forms.",
+      "source_url": "https://portal.ct.gov/deep/permits-and-licenses/air-emissions-permits-and-general-permits",
+      "document_type": "form",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut forms and filing gateway",
+      "verified": "August 13, 2026",
+      "verification_note": "CT DEEP identifies the former General Permit to Limit Potential to Emit as expired and not reissued, with its concepts incorporated into RCSA Sections 22a-174-33a and -33b. The gateway currently directs standard air applications to hard-copy and electronic-copy submission rather than ezFile.",
+      "tags": [
+        "air permit application",
+        "NSR forms",
+        "permit modification",
+        "permit revision",
+        "permit by rule",
+        "submission"
+      ]
     }
   ]
 }

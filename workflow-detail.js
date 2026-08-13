@@ -3,6 +3,7 @@
 const collectionUrls = {
   ct: 'data/ct.json',
   epa: 'data/epa.json',
+  federal: 'data/federal.json',
   standards: 'data/standards.json',
 };
 

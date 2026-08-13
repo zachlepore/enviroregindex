@@ -12,6 +12,7 @@ with no separator:
 
 - Connecticut: `CT1`, `CT2`, ...
 - EPA / Federal: `EPA1`, `EPA2`, ...
+- Non-EPA federal agencies: `FED1`, `FED2`, ...
 - Massachusetts: `MA1`, `MA2`, ...
 - Rhode Island: `RI1`, `RI2`, ...
 - New York: `NY1`, `NY2`, ...
@@ -32,8 +33,9 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 
 | Jurisdiction | Prefix | Highest issued |
 | --- | --- | ---: |
-| Connecticut | `CT` | 57 |
+| Connecticut | `CT` | 63 |
 | EPA / Federal | `EPA` | 17 |
+| Non-EPA federal agencies | `FED` | 1 |
 | Massachusetts | `MA` | 8 |
 | Rhode Island | `RI` | 4 |
 | New York | `NY` | 7 |
@@ -41,6 +43,14 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 | Vermont | `VT` | 4 |
 | Maine | `ME` | 5 |
 | Authoritative standards | `STD` | 2 |
+
+## Canonical collection ownership
+
+Canonical ownership follows the resource's actual publisher or authority, not
+the jurisdiction of a workflow that uses it. EPA resources belong in
+`epa.json`; resources from other U.S. federal agencies belong in
+`federal.json`; external standards-body resources belong in `standards.json`;
+and state resources belong in the applicable state collection.
 
 Before committing a new resource, confirm that its `qc_id` is unique across
 all files in this directory and that its number is greater than the recorded

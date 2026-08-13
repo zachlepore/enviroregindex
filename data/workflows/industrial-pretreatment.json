@@ -1,0 +1,85 @@
+{
+  "workflow": {
+    "workflow_id": "industrial-pretreatment",
+    "title": "Industrial Pretreatment Permitting & Compliance",
+    "business_line": "water",
+    "business_line_label": "Water & Wastewater",
+    "description": "Permit-selection, application, controlling-permit, and electronic-reporting resources for industrial wastewater discharges to POTWs in Connecticut.",
+    "keywords": ["industrial wastewater", "pretreatment", "SIU", "significant industrial user", "Non-SIU", "categorical industrial user", "CIU", "POTW", "sanitary sewer", "industrial discharge", "wastewater discharge", "categorical standards", "NetDMR", "pretreatment permit"],
+    "synonyms": ["industrial pretreatment", "sewer discharge", "publicly owned treatment works"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "framework-permit-selection", "title": "Framework & Permit Selection", "display_order": 1 },
+    { "section_id": "permit-paths-applications", "title": "Permit Paths & Applications", "display_order": 2 },
+    { "section_id": "monitoring-reporting", "title": "Monitoring & Reporting", "display_order": 3 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-industrial-pretreatment-program",
+      "section": "framework-permit-selection",
+      "workflow_note": "Use to review Connecticut's pretreatment scope, regulated industrial-user categories, and available permit paths for discharges to POTWs.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-pretreatment-permit-decision-chart",
+      "section": "framework-permit-selection",
+      "workflow_note": "Consult when evaluating whether the SIU, Non-SIU, or individual pretreatment permit path may be relevant.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "epa-categorical-pretreatment-standards",
+      "section": "framework-permit-selection",
+      "workflow_note": "Use to locate federal industry-category standards that may affect an indirect industrial discharge and its permitting path.",
+      "display_order": 3,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-siu-general-permit-program",
+      "section": "permit-paths-applications",
+      "workflow_note": "Open for current SIU permit status, industrial-user application materials, filing instructions, and supporting guidance.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-siu-general-permit",
+      "section": "permit-paths-applications",
+      "workflow_note": "Consult the controlling general-permit requirements applicable to covered significant industrial-user discharges.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-non-siu-general-permit-program",
+      "section": "permit-paths-applications",
+      "workflow_note": "Open for current Non-SIU permit status, notification materials, submission access, and supporting guidance.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-non-siu-general-permit",
+      "section": "permit-paths-applications",
+      "workflow_note": "Consult the controlling general-permit requirements applicable to covered non-significant industrial-user discharges.",
+      "display_order": 4,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-pretreatment",
+      "resource_id": "ct-netdmr",
+      "section": "monitoring-reporting",
+      "workflow_note": "Use for Connecticut-specific NetDMR enrollment and electronic discharge-monitoring reporting where required by the applicable authorization.",
+      "display_order": 1,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

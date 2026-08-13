@@ -1,0 +1,86 @@
+{
+  "workflow": {
+    "workflow_id": "spcc-plan",
+    "title": "SPCC Plan Development & Compliance",
+    "business_line": "tanks-oil",
+    "business_line_label": "Tanks & Oil",
+    "description": "Federal regulatory, applicability, planning, implementation, and discharge-reporting resources for SPCC compliance at facilities in Connecticut.",
+    "keywords": ["SPCC", "Spill Prevention Control and Countermeasure", "spill prevention", "oil storage", "bulk oil storage", "AST", "aboveground storage tank", "secondary containment", "qualified facility", "Tier I", "Tier II", "oil discharge", "40 CFR Part 112"],
+    "synonyms": ["SPCC Plan", "oil spill prevention", "oil facility", "self-certification"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["epa", "ct"]
+  },
+  "sections": [
+    { "section_id": "regulatory-framework", "title": "Regulatory Framework", "display_order": 1 },
+    { "section_id": "applicability-plan-development", "title": "Applicability & Plan Development", "display_order": 2 },
+    { "section_id": "implementation-tools", "title": "Implementation Tools", "display_order": 3 },
+    { "section_id": "discharge-reporting", "title": "Discharge Reporting", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-40-cfr-part-112",
+      "section": "regulatory-framework",
+      "workflow_note": "Consult the controlling federal requirements for SPCC applicability, Plan content, certification, containment, inspections, amendments, and applicable reporting.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-spcc-applicability",
+      "section": "applicability-plan-development",
+      "workflow_note": "Use when evaluating whether a facility and its oil-storage activities may be subject to the SPCC rule.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-spcc-owner-operator-guide",
+      "section": "applicability-plan-development",
+      "workflow_note": "Consult for EPA's professional overview of SPCC Plan preparation, certification, implementation, review, and maintenance.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-spcc-qualified-facility-determination",
+      "section": "applicability-plan-development",
+      "workflow_note": "Use when evaluating whether the Tier I or Tier II qualified-facility provisions and self-certification pathway may apply.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-tier-i-spcc-plan-template",
+      "section": "applicability-plan-development",
+      "workflow_note": "Open the official EPA Plan template when an eligible facility will use the Tier I qualified-facility option.",
+      "display_order": 4,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-spcc-secondary-containment-worksheets",
+      "section": "implementation-tools",
+      "workflow_note": "Use as a supporting tool when documenting secondary-containment capacity for an applicable simplified facility configuration.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "epa-oil-discharge-reporting-requirements",
+      "section": "discharge-reporting",
+      "workflow_note": "Consult for the federal National Response Center and EPA reporting frameworks associated with applicable oil discharges.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "spcc-plan",
+      "resource_id": "ct-spill-reporting-requirements",
+      "section": "discharge-reporting",
+      "workflow_note": "Consult for Connecticut's separate spill-notification requirements and current CT DEEP reporting destination.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

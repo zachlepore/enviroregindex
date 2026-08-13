@@ -29,6 +29,13 @@
       "description": "Site characterization guidance, environmental assessment resources, database search tools, and brownfield programs.",
       "icon": "🔍",
       "order": 3
+    },
+    {
+      "name": "Waste & Materials",
+      "slug": "waste-materials",
+      "description": "Hazardous waste requirements, generator compliance resources, waste determinations, reporting, and materials management.",
+      "icon": "▣",
+      "order": 4
     }
   ],
   "recent_updates": [
@@ -673,6 +680,104 @@
       "last_updated": "March 2026",
       "verified": "August 12, 2026",
       "tags": ["construction dewatering", "turbidity monitoring", "inspection", "construction stormwater", "CGP", "reporting"]
+    },
+    {
+      "id": 53,
+      "qc_id": "CT44",
+      "resource_id": "ct-hazardous-waste-regulations",
+      "category": "waste-materials",
+      "subcategory": "Hazardous Waste / RCRA",
+      "title": "Connecticut Hazardous Waste Regulations",
+      "description": "CT DEEP's authoritative gateway to Connecticut hazardous waste statutes and regulations, including state provisions that incorporate federal RCRA requirements and impose additional Connecticut requirements.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste-regs/hazardous-waste-regulations",
+      "document_type": "regulation",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut regulatory gateway",
+      "verified": "August 13, 2026",
+      "tags": ["hazardous waste regulations", "RCRA", "Connecticut hazardous waste", "generator requirements", "RCSA", "40 CFR"]
+    },
+    {
+      "id": 54,
+      "qc_id": "CT45",
+      "resource_id": "ct-rcra-help",
+      "category": "waste-materials",
+      "subcategory": "Hazardous Waste Generators",
+      "title": "RCRA Help",
+      "description": "CT DEEP's generator-oriented compliance gateway for Connecticut hazardous waste requirements, generator categories, category worksheets, and related management resources.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste/rcra-help",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut CESQG / SQG / LQG framework",
+      "verified": "August 13, 2026",
+      "tags": ["RCRA", "hazardous waste generator", "CESQG", "VSQG", "SQG", "LQG", "generator category", "generator requirements"]
+    },
+    {
+      "id": 55,
+      "qc_id": "CT46",
+      "resource_id": "ct-hazardous-waste-determinations",
+      "category": "waste-materials",
+      "subcategory": "Waste Determination",
+      "title": "Hazardous Waste Determinations and Knowledge of Process",
+      "description": "CT DEEP guidance on hazardous waste determinations, use of process knowledge, supporting evaluation methods, documentation, and recordkeeping under Connecticut requirements.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste/hazardous-waste-determinations",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut guidance",
+      "verified": "August 13, 2026",
+      "tags": ["hazardous waste determination", "waste classification", "knowledge of process", "recordkeeping", "RCRA", "generator"]
+    },
+    {
+      "id": 56,
+      "qc_id": "CT47",
+      "resource_id": "ct-hazardous-waste-manifest-requirements",
+      "category": "waste-materials",
+      "subcategory": "Manifests / Shipments",
+      "title": "Hazardous Waste Manifest Requirements",
+      "description": "CT DEEP guidance on Connecticut hazardous waste manifest applicability, preparation, distribution, records, and exception-reporting requirements.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste/manifest-requirements",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut manifest implementation guidance",
+      "verified": "August 13, 2026",
+      "verification_note": "The authoritative CT DEEP page remains operative but contains historical text describing e-Manifest as a future launch; the canonical description does not repeat that stale wording.",
+      "tags": ["hazardous waste manifest", "e-Manifest", "shipment", "exception report", "RCRA", "generator"]
+    },
+    {
+      "id": 57,
+      "qc_id": "CT48",
+      "resource_id": "ct-biennial-hazardous-waste-reporting",
+      "category": "waste-materials",
+      "subcategory": "Reporting",
+      "title": "Biennial Hazardous Waste Reporting",
+      "description": "CT DEEP's reporting gateway for hazardous waste generators and facilities subject to biennial reporting, including Connecticut guidance and access to EPA's RCRAInfo reporting application.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste/biennial-reporting",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut reporting gateway",
+      "verified": "August 13, 2026",
+      "verification_note": "The page remains the current CT DEEP reporting gateway but still identifies the completed 2025 reporting cycle's March 1, 2026 deadline as the next due date.",
+      "tags": ["biennial report", "hazardous waste reporting", "LQG", "RCRAInfo", "generator", "RCRA"]
+    },
+    {
+      "id": 58,
+      "qc_id": "CT49",
+      "resource_id": "ct-connecticut-regulated-waste",
+      "category": "waste-materials",
+      "subcategory": "Connecticut-Regulated Waste",
+      "title": "Connecticut-Regulated Waste",
+      "description": "CT DEEP guidance on non-RCRA hazardous wastes that remain subject to Connecticut management, transporter, facility, and disposal controls under state law.",
+      "source_url": "https://portal.ct.gov/deep/waste-management-and-disposal/hazardous-waste/connecticut-regulated-waste",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut guidance",
+      "verified": "August 13, 2026",
+      "tags": ["Connecticut-regulated waste", "non-RCRA hazardous waste", "CR02", "CR04", "CR05", "state requirements", "waste management"]
     }
   ]
 }

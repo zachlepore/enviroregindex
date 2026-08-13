@@ -32,8 +32,8 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 
 | Jurisdiction | Prefix | Highest issued |
 | --- | --- | ---: |
-| Connecticut | `CT` | 43 |
-| EPA / Federal | `EPA` | 13 |
+| Connecticut | `CT` | 49 |
+| EPA / Federal | `EPA` | 14 |
 | Massachusetts | `MA` | 8 |
 | Rhode Island | `RI` | 4 |
 | New York | `NY` | 7 |

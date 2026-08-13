@@ -234,6 +234,22 @@
       "last_updated": "Current EPA technical guidance",
       "verified": "August 12, 2026",
       "tags": ["groundwater sampling", "low flow", "minimal drawdown", "site investigation", "Phase II", "EPA"]
+    },
+    {
+      "id": 14,
+      "qc_id": "EPA14",
+      "resource_id": "epa-rcrainfo-industry-applications",
+      "category": "hazardous-waste",
+      "subcategory": "RCRA / Professional Tools",
+      "title": "RCRAInfo Industry Applications",
+      "description": "EPA's professional system for regulated hazardous waste sites to submit and maintain site notifications through myRCRAid, manage e-Manifest records, and prepare applicable Biennial Reports.",
+      "source_url": "https://rcrainfo.epa.gov/rcrainfoprod/action/secured/login",
+      "document_type": "database",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA production system",
+      "verified": "August 13, 2026",
+      "tags": ["RCRAInfo", "myRCRAid", "e-Manifest", "Biennial Report", "EPA ID", "hazardous waste reporting", "professional tool"]
     }
   ]
 }

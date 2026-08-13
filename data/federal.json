@@ -1,0 +1,28 @@
+{
+  "collection": {
+    "code": "FED",
+    "name": "U.S. Federal Agencies",
+    "description": "Authoritative resources published by U.S. federal agencies other than EPA.",
+    "last_qa": "2026-08-13",
+    "status": "live"
+  },
+  "documents": [
+    {
+      "id": 1,
+      "qc_id": "FED1",
+      "resource_id": "fed-usace-connecticut-aquatic-resource-permits",
+      "category": "aquatic-resources",
+      "subcategory": "Connecticut / Federal Permitting",
+      "title": "Connecticut Aquatic Resource Permit Gateway",
+      "description": "The U.S. Army Corps of Engineers New England District gateway to current federal aquatic-resource permitting materials applicable in Connecticut.",
+      "source_url": "https://www.nae.usace.army.mil/Missions/Regulatory/State-General-Permits/Connecticut-General-Permit/",
+      "document_type": "guidance",
+      "publisher": "U.S. Army Corps of Engineers",
+      "source_type": "government-agency",
+      "last_updated": "Current Connecticut federal permitting gateway",
+      "verified": "August 13, 2026",
+      "verification_note": "The authoritative USACE gateway and indexed 2026 Connecticut implementation materials were confirmed, but direct automated access returned HTTP 403 due to site access controls.",
+      "tags": ["USACE", "Connecticut", "aquatic resources", "Section 404", "federal permit", "Nationwide Permit"]
+    }
+  ]
+}

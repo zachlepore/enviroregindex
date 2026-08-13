@@ -7,10 +7,34 @@
     "agency_url": "https://www.maine.gov/dep",
     "status": "coming-soon"
   },
+  "focus_areas": [
+    {
+      "name": "Site Remediation",
+      "slug": "remediation",
+      "description": "Cleanup standards, regulatory frameworks, licensed professional programs, voluntary remediation, and document portals.",
+      "icon": "🌿",
+      "order": 1
+    },
+    {
+      "name": "Stormwater",
+      "slug": "stormwater",
+      "description": "Permits and guidance for municipal, construction, and industrial stormwater, plus stormwater quality resources.",
+      "icon": "💧",
+      "order": 2
+    },
+    {
+      "name": "Site Assessment",
+      "slug": "assessment",
+      "description": "Site characterization guidance, environmental assessment resources, database search tools, and brownfield programs.",
+      "icon": "🔍",
+      "order": 3
+    }
+  ],
   "recent_updates": [],
   "documents": [
     {
       "id": 1,
+      "qc_id": "ME1",
       "category": "remediation",
       "subcategory": "VAHON",
       "title": "Voluntary Response Action Program (VRAP) — Overview",
@@ -22,6 +46,7 @@
     },
     {
       "id": 2,
+      "qc_id": "ME2",
       "category": "remediation",
       "subcategory": "Cleanup Standards",
       "title": "Maine Remedial Action Guidelines (RAGs)",
@@ -33,6 +58,7 @@
     },
     {
       "id": 3,
+      "qc_id": "ME3",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "Maine Construction General Permit (CGP)",
@@ -44,6 +70,7 @@
     },
     {
       "id": 4,
+      "qc_id": "ME4",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "Maine MS4 General Permit",
@@ -55,6 +82,7 @@
     },
     {
       "id": 5,
+      "qc_id": "ME5",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "Maine Brownfields Program — Site Assessment Resources",

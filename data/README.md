@@ -33,7 +33,7 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 
 | Jurisdiction | Prefix | Highest issued |
 | --- | --- | ---: |
-| Connecticut | `CT` | 77 |
+| Connecticut | `CT` | 78 |
 | EPA / Federal | `EPA` | 17 |
 | Non-EPA federal agencies | `FED` | 1 |
 | Massachusetts | `MA` | 8 |
@@ -43,6 +43,15 @@ ID. Git history and this table provide the audit trail for retired identifiers.
 | Vermont | `VT` | 4 |
 | Maine | `ME` | 5 |
 | Authoritative standards | `STD` | 2 |
+
+### Retired identifiers
+
+Retired identifiers remain unavailable for reuse even when their records are
+removed from the current collection.
+
+| Jurisdiction | QC ID | Numeric ID | Retirement note |
+| --- | --- | ---: | --- |
+| Connecticut | `CT20` | 27 | Duplicate LEP Program record retired in favor of `CT5` / `ct-lep-program`; Site Assessment remains an additional Directory assignment on the surviving canonical record. |
 
 ## Canonical collection ownership
 

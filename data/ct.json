@@ -76,7 +76,7 @@
   "recent_updates": [
     {
       "title": "Release-Based Cleanup Regs (RBCRs) — Effective",
-      "description": "RBCRs took effect March 1, 2026, replacing the CT Property Transfer Act with a release-based reporting and cleanup system.",
+      "description": "RBCRs took effect March 1, 2026, establishing Connecticut’s release-based reporting and cleanup system while preserving applicable transition pathways for existing cleanup programs.",
       "date": "March 1, 2026",
       "color": "#E65100"
     },
@@ -105,13 +105,17 @@
       "qc_id": "CT1",
       "category": "remediation",
       "subcategory": "RBCRs",
-      "title": "Release-Based Cleanup Regulations (RBCRs) — Main Page",
-      "description": "The new CT cleanup regulatory framework effective March 1, 2026. Replaces the Property Transfer Act. Describes requirements to report, characterize, and remediate releases. Incorporates the RSRs.",
+      "title": "Release-Based Cleanup Program",
+      "description": "CT DEEP's current gateway for Connecticut's release-based reporting, characterization, cleanup, tiering, professional-role, and implementation resources, including links to the controlling regulations and current program guidance.",
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/release-based-cleanup-program",
-      "document_type": "regulation",
-      "last_updated": "March 1, 2026",
-      "verified": "August 3, 2026",
-      "tags": ["RBCR", "release-based", "cleanup", "Transfer Act", "2026", "LEP"]
+      "document_type": "guidance",
+      "last_updated": "Updated July 22, 2026; RBCRs effective March 1, 2026",
+      "verified": "August 13, 2026",
+      "tags": ["RBCR", "release-based", "cleanup", "Transfer Act", "2026", "LEP"],
+      "resource_id": "ct-release-based-cleanup-program",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "verification_note": "The RBCRs establish the current general release-based framework. Existing Property Transfer and other program obligations may continue or transition under applicable provisions; ERI does not describe those obligations as categorically replaced."
     },
     {
       "id": 4,
@@ -132,12 +136,14 @@
       "category": "remediation",
       "subcategory": "Variances & Engineered Controls",
       "title": "Technical Impracticability (TI) Variance",
-      "description": "Remedial option under the RSRs when NAPL cannot be contained or removed per RSR requirements and remediation has been conducted to the extent technically practicable.",
+      "description": "CT DEEP guidance for the current RBCR technical-impracticability variance used to manage qualifying chronic groundwater impacts where applicable criteria cannot be achieved with readily available technology within a reasonable timeframe.",
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/remediation-standard-regulations/technical-impracticability-variance",
-      "document_type": "regulation",
-      "last_updated": "2021",
-      "verified": "August 3, 2026",
-      "tags": ["TI variance", "NAPL", "RSR", "groundwater", "compliance measure"]
+      "document_type": "guidance",
+      "last_updated": "Current RCSA Section 22a-134tt-10(e) process",
+      "verified": "August 13, 2026",
+      "tags": ["TI variance", "NAPL", "RBCR", "groundwater", "compliance measure", "long-term stewardship"],
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency"
     },
     {
       "id": 6,
@@ -145,12 +151,14 @@
       "category": "remediation",
       "subcategory": "Variances & Engineered Controls",
       "title": "Engineered Controls (ECs) — Overview",
-      "description": "Permanent physical structures used to isolate pollutants that cannot meet RSR direct cleanup criteria. Application requirements, financial assurance forms, and completion statements available here.",
+      "description": "CT DEEP guidance and application materials for engineered controls used under the current RBCR framework to prevent exposure to polluted soil or minimize pollutant migration, including applicable variance, stewardship, financial-assurance, and completion requirements.",
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/remediation-standard-regulations/engineered-control-variances",
-      "document_type": "regulation",
-      "last_updated": "2021",
-      "verified": "August 3, 2026",
-      "tags": ["engineered control", "EC", "RSR", "variance", "financial assurance"]
+      "document_type": "guidance",
+      "last_updated": "Current RBCR engineered-control process",
+      "verified": "August 13, 2026",
+      "tags": ["engineered control", "EC", "RBCR", "variance", "financial assurance", "long-term stewardship"],
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency"
     },
     {
       "id": 7,
@@ -158,12 +166,17 @@
       "category": "remediation",
       "subcategory": "LEP Program",
       "title": "Licensed Environmental Professional (LEP) Program",
-      "description": "Overview of the CT LEP licensure system. LEPs verify site investigations and remediation under the RSRs/RBCRs. Includes program description, LEP roster link, exam applications, and renewal forms.",
+      "description": "CT DEEP's official Licensed Environmental Professional program gateway for licensure, professional standards, verification and audit information, applications, renewals, and related program resources.",
       "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program",
       "document_type": "policy",
-      "last_updated": "2025",
-      "verified": "August 3, 2026",
-      "tags": ["LEP", "licensed professional", "verification", "roster", "license"]
+      "last_updated": "Current LEP program gateway",
+      "verified": "August 13, 2026",
+      "tags": ["LEP", "licensed professional", "verification", "roster", "license"],
+      "resource_id": "ct-lep-program",
+      "focus_areas": ["assessment"],
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "verification_note": "This canonical program resource does not imply that an LEP is required for every environmental assessment or Phase II investigation."
     },
     {
       "id": 8,
@@ -197,12 +210,15 @@
       "category": "remediation",
       "subcategory": "Voluntary Remediation",
       "title": "Voluntary Remediation Programs — Overview",
-      "description": "Overview of CT DEEP's voluntary remediation programs, including program options for investigating and remediating contaminated property under LEP oversight.",
+      "description": "CT DEEP's current gateway distinguishing the narrowed CGS Section 22a-133x pathway, the Release-Based Cleanup Program's Voluntary Parcel-Wide Cleanup Program, and requirements for sites that entered the legacy Section 22a-133y program before it closed to new enrollment on March 1, 2026.",
       "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Voluntary-Remediation-Program/Voluntary-Remediation-Programs",
       "document_type": "guidance",
-      "last_updated": "March 2023",
-      "verified": "August 3, 2026",
-      "tags": ["VRP", "ECAF", "voluntary", "22a-133x", "brownfields", "LEP"]
+      "last_updated": "Updated April 13, 2026",
+      "verified": "August 13, 2026",
+      "tags": ["VRP", "ECAF", "voluntary", "22a-133x", "brownfields", "LEP"],
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "verification_note": "The page maintains current and legacy program information together; ERI does not infer which voluntary or transition pathway applies to a property."
     },
     {
       "id": 11,
@@ -356,8 +372,9 @@
       "publisher": "Connecticut Department of Energy and Environmental Protection",
       "source_type": "government-agency",
       "last_updated": "December 15, 2025",
-      "verified": "August 12, 2026",
-      "tags": ["release characterization", "site characterization", "conceptual site model", "investigation", "soil", "groundwater", "soil vapor", "Phase II", "ESA"]
+      "verified": "August 13, 2026",
+      "tags": ["release characterization", "site characterization", "conceptual site model", "investigation", "soil", "groundwater", "soil vapor", "Phase II", "ESA"],
+      "verification_note": "The current CT DEEP guidance gateway continues to link this December 15, 2025 release-characterization guide; the downloaded 47-page PDF was verified during final QA."
     },
     {
       "id": 24,
@@ -367,27 +384,15 @@
       "focus_areas": ["remediation"],
       "subcategory": "REACT / Database Search",
       "title": "REACT — Release, Environmental Assessment & Cleanup Tracker",
-      "description": "CT DEEP's new online portal for searching properties with known releases, tracking cleanup progress, and submitting environmental documents. Replaces the legacy Online Document Search Portal for post-February 2026 submissions.",
+      "description": "CT DEEP's current online system for searching properties and releases, tracking cleanup progress, managing cases, paying applicable fees, and submitting environmental documents.",
       "source_url": "https://deep-react.service.ct.gov/s/",
       "document_type": "policy",
       "publisher": "Connecticut Department of Energy and Environmental Protection",
       "source_type": "government-agency",
-      "last_updated": "2026",
-      "verified": "August 3, 2026",
-      "tags": ["REACT", "database", "property search", "Phase I", "records review", "document search"]
-    },
-    {
-      "id": 27,
-      "qc_id": "CT20",
-      "category": "assessment",
-      "subcategory": "LEP Program",
-      "title": "LEP Program — Overview for Site Assessment",
-      "description": "Licensed Environmental Professionals (LEPs) in CT are required to supervise Phase II investigations and verify site conditions under the RSRs and RBCRs. Includes LEP roster and audit program information.",
-      "source_url": "https://portal.ct.gov/DEEP/Remediation--Site-Clean-Up/Licensed-Environmental-Professional-Program",
-      "document_type": "policy",
-      "last_updated": "2025",
-      "verified": "August 3, 2026",
-      "tags": ["LEP", "Phase II", "licensed professional", "verification", "audit"]
+      "last_updated": "Current 2026 REACT system",
+      "verified": "August 13, 2026",
+      "tags": ["REACT", "database", "property search", "Phase I", "records review", "document search"],
+      "verification_note": "CT DEEP directs current Remediation Division and Release-Based Cleanup Program submissions to REACT and directs documents submitted before February 2026 to the legacy Online Document Search Portal."
     },
     {
       "id": 30,
@@ -415,8 +420,9 @@
       "publisher": "Connecticut Department of Energy and Environmental Protection",
       "source_type": "government-agency",
       "last_updated": "March 1, 2026",
-      "verified": "August 4, 2026",
-      "tags": ["RBCR", "eRegulations", "RCSA", "22a-134tt", "release reporting", "cleanup"]
+      "verified": "August 13, 2026",
+      "tags": ["RBCR", "eRegulations", "RCSA", "22a-134tt", "release reporting", "cleanup"],
+      "verification_note": "The current eRegulations destination and CT DEEP program gateway were reverified. CT DEEP identifies March 1, 2026 as the RBCR effective date; no superseding official text was identified during final QA."
     },
     {
       "id": 32,
@@ -449,13 +455,17 @@
       "qc_id": "CT25",
       "category": "remediation",
       "subcategory": "RBCRs",
-      "title": "RBCR Release Tiers",
-      "description": "Explains Connecticut's risk-based release tier system, including Tier 1A, Tier 1B, Tier 2, and Tier 3 classifications, DEEP and LEP oversight, tier assignment and reassignment, characterization report submission, and applicable fees.",
+      "title": "Release Tiers",
+      "description": "CT DEEP's current gateway for the RBCR tier-assignment and reassignment framework, characterization-report and REACT submission steps, oversight structure, fees, extensions, and movement toward release closure.",
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/tiers",
-      "document_type": "policy",
+      "document_type": "guidance",
       "last_updated": "May 6, 2026",
-      "verified": "August 4, 2026",
-      "tags": ["RBCR", "tiers", "Tier 1A", "Tier 1B", "Tier 2", "Tier 3", "risk", "LEP"]
+      "verified": "August 13, 2026",
+      "tags": ["RBCR", "tiers", "Tier 1A", "Tier 1B", "Tier 2", "Tier 3", "risk", "LEP"],
+      "resource_id": "ct-rbcr-release-tiers",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "verification_note": "The maintained page was updated May 6, 2026. ERI does not determine which tier applies or reproduce project-specific deadlines."
     },
     {
       "id": 35,
@@ -463,12 +473,16 @@
       "category": "remediation",
       "subcategory": "RBCRs",
       "title": "Significant Existing Releases and Immediate Actions",
-      "description": "Requirements for historical releases that present increased short-term risks to human health or the environment. Covers Significant Existing Release reporting, Immediate Actions, drinking-water-well impacts, exposure controls, response deadlines, and transition to cleanup under the RBCRs.",
+      "description": "CT DEEP's current gateway for the RBCR framework addressing historical releases with increased short-term risk, including Significant Existing Release reporting, Immediate Action planning and reporting, transition points, and REACT submissions.",
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/significant-existing-releases-and-immediate-actions",
-      "document_type": "policy",
+      "document_type": "guidance",
       "last_updated": "July 22, 2026",
-      "verified": "August 4, 2026",
-      "tags": ["RBCR", "significant existing release", "SER", "immediate action", "drinking water", "reporting"]
+      "verified": "August 13, 2026",
+      "tags": ["RBCR", "significant existing release", "SER", "immediate action", "drinking water", "reporting"],
+      "resource_id": "ct-significant-existing-releases-immediate-actions",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "verification_note": "The maintained page was updated July 22, 2026 and was reviewed with CT DEEP’s current SEH transition page. ERI does not determine SER status or whether an Immediate Action applies."
     },
     {
       "id": 36,
@@ -480,8 +494,9 @@
       "source_url": "https://portal.ct.gov/deep/remediation--site-clean-up/guidance/react-resources-and-instructions",
       "document_type": "guidance",
       "last_updated": "June 26, 2026",
-      "verified": "August 4, 2026",
-      "tags": ["REACT", "user guide", "property search", "case management", "document upload", "training"]
+      "verified": "August 13, 2026",
+      "tags": ["REACT", "user guide", "property search", "case management", "document upload", "training"],
+      "focus_areas": ["remediation"]
     },
     {
       "id": 37,
@@ -1384,6 +1399,23 @@
       "verified": "August 13, 2026",
       "verification_note": "The current page distinguishes reporting procedures before and after notice of coverage and links current inspection, monitoring, reporting, SWPPP, and sector DMR materials; ERI does not infer which requirements apply to a facility.",
       "tags": ["industrial stormwater", "compliance assistance", "inspection", "monitoring", "DMR", "corrective action", "annual report"]
+    },
+    {
+      "id": 87,
+      "qc_id": "CT78",
+      "resource_id": "ct-rbcr-faqs",
+      "category": "remediation",
+      "subcategory": "RBCRs",
+      "title": "Release-Based Cleanup FAQs",
+      "description": "CT DEEP’s current FAQ addressing RBCR implementation, release discovery and reporting, immediate actions, tiers, professional roles, closure, audits, and transitions involving existing cleanup programs.",
+      "source_url": "https://portal.ct.gov/-/media/deep/site_clean_up/release-based/rbcr-faqs.pdf?rev=c136553b53194b7ab7df6e525ca3cfce&hash=DC1D33F51006B496B2F47BEAFCC1A1F3",
+      "document_type": "guidance",
+      "publisher": "Connecticut Department of Energy and Environmental Protection",
+      "source_type": "government-agency",
+      "last_updated": "Revised June 2026",
+      "verified": "August 13, 2026",
+      "verification_note": "The current program gateway links this 12-page June 2026 FAQ. It provides implementation and transition context but does not replace the controlling regulations.",
+      "tags": ["RBCR", "FAQ", "release reporting", "tiers", "LEP", "PEP", "Property Transfer Program", "SEH", "SER", "transition"]
     }
   ]
 }

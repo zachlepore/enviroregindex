@@ -36,6 +36,41 @@
       "description": "Hazardous waste requirements, generator compliance resources, waste determinations, reporting, and materials management.",
       "icon": "▣",
       "order": 4
+    },
+    {
+      "name": "Tanks & Oil",
+      "slug": "tanks-oil",
+      "description": "Storage tanks, petroleum releases, spill reporting, and oil-management resources.",
+      "icon": "◉",
+      "order": 5
+    },
+    {
+      "name": "Water & Wastewater",
+      "slug": "water-wastewater",
+      "description": "Industrial wastewater, pretreatment, discharge authorization, monitoring, and reporting resources.",
+      "icon": "≈",
+      "order": 6
+    },
+    {
+      "name": "Natural Resources",
+      "slug": "natural-resources",
+      "description": "Inland wetlands, watercourses, habitat, and natural-resource permitting resources.",
+      "icon": "⌁",
+      "order": 7
+    },
+    {
+      "name": "Coastal",
+      "slug": "coastal",
+      "description": "Tidal wetlands, coastal waters, shoreline structures, permitting, and jurisdiction resources.",
+      "icon": "∿",
+      "order": 8
+    },
+    {
+      "name": "Air",
+      "slug": "air",
+      "description": "Stationary-source permitting, air regulations, applications, and professional tools.",
+      "icon": "○",
+      "order": 9
     }
   ],
   "recent_updates": [
@@ -300,6 +335,7 @@
       "qc_id": "CT18",
       "resource_id": "ct-release-characterization-guidance",
       "category": "assessment",
+      "focus_areas": ["remediation"],
       "subcategory": "Phase I / II ESA",
       "title": "Release Characterization Guidance",
       "description": "Current CT DEEP guidance for characterizing releases, including conceptual site models, investigation design, and evaluation of affected environmental media.",
@@ -316,6 +352,7 @@
       "qc_id": "CT19",
       "resource_id": "ct-react-tracker",
       "category": "assessment",
+      "focus_areas": ["remediation"],
       "subcategory": "REACT / Database Search",
       "title": "REACT — Release, Environmental Assessment & Cleanup Tracker",
       "description": "CT DEEP's new online portal for searching properties with known releases, tracking cleanup progress, and submitting environmental documents. Replaces the legacy Online Document Search Portal for post-February 2026 submissions.",
@@ -452,6 +489,7 @@
       "qc_id": "CT29",
       "resource_id": "ct-environmental-cleanup-map-viewer",
       "category": "assessment",
+      "focus_areas": ["remediation"],
       "subcategory": "REACT / Database Search",
       "title": "Environmental Cleanup Comprehensive Map Viewer",
       "description": "Interactive CT DEEP ArcGIS application for viewing mapped information associated with environmental cleanup properties and releases. Supports location-based records review, preliminary site research, and environmental due diligence.",
@@ -494,6 +532,7 @@
       "qc_id": "CT32",
       "resource_id": "ct-contaminated-sites-dataset",
       "category": "assessment",
+      "focus_areas": ["remediation"],
       "subcategory": "Environmental Records",
       "title": "Contaminated or Potentially Contaminated Sites",
       "description": "Searchable and downloadable Connecticut dataset of properties identified through DEEP records as contaminated or potentially contaminated. The dataset is generated from environmental cleanup information maintained in REACT.",
@@ -526,6 +565,7 @@
       "qc_id": "CT34",
       "resource_id": "ct-ust-facility-tank-details",
       "category": "assessment",
+      "focus_areas": ["tanks-oil"],
       "subcategory": "Tank Records",
       "title": "Underground Storage Tanks — Facility and Tank Details",
       "description": "Searchable Connecticut dataset with current and historical commercial underground storage tank facility and tank details, including registered systems that remain in use and systems no longer active.",
@@ -542,6 +582,7 @@
       "qc_id": "CT35",
       "resource_id": "ct-ust-release-records",
       "category": "assessment",
+      "focus_areas": ["tanks-oil", "remediation"],
       "subcategory": "Tank Records",
       "title": "Releases from Federally Regulated Underground Storage Tank Systems",
       "description": "Searchable Connecticut dataset of releases from federally regulated underground storage tank systems reported by CT DEEP to EPA, including facility, case, substance, and discovery information.",
@@ -558,6 +599,7 @@
       "qc_id": "CT36",
       "resource_id": "ct-brownfields-inventory",
       "category": "assessment",
+      "focus_areas": ["remediation"],
       "subcategory": "Brownfields",
       "title": "Connecticut Brownfields Inventory",
       "description": "CT DEEP inventory of known brownfield properties and available information about municipal, state, and federal brownfield program involvement.",
@@ -784,6 +826,7 @@
       "qc_id": "CT50",
       "resource_id": "ct-spill-reporting-requirements",
       "category": "waste-materials",
+      "focus_areas": ["tanks-oil"],
       "subcategory": "Emergency Response / Spill Reporting",
       "title": "Reporting Requirements for Spill Incidents",
       "description": "CT DEEP's authoritative gateway to Connecticut spill-notification requirements, the current statutory source, and agency-maintained reporting contacts.",

@@ -49,6 +49,15 @@ function matchesQuery(doc, q) {
   );
 }
 
+function getDocumentFocusAreas(doc) {
+  const additionalAreas = Array.isArray(doc.focus_areas) ? doc.focus_areas : [];
+  return [...new Set([doc.category, ...additionalAreas].filter(Boolean))];
+}
+
+function isDocumentInFocusArea(doc, slug) {
+  return getDocumentFocusAreas(doc).includes(slug);
+}
+
 // ── Document card HTML ───────────────────────────────────────
 function buildDocHTML(doc, q = '') {
   const titleHL = highlight(doc.title, q);
@@ -105,7 +114,7 @@ function getVisibleFocusAreas() {
     .filter(area => area && area.name && area.slug && area.description && area.icon)
     .sort((a, b) => (a.order || 0) - (b.order || 0))
     .filter(area => {
-      if (seen.has(area.slug) || !DOCS.some(doc => doc.category === area.slug)) return false;
+      if (seen.has(area.slug) || !DOCS.some(doc => isDocumentInFocusArea(doc, area.slug))) return false;
       seen.add(area.slug);
       return true;
     });
@@ -120,7 +129,7 @@ function renderFocusAreas() {
 
   if (grid) {
     grid.innerHTML = areas.map((area, index) => {
-      const count = DOCS.filter(doc => doc.category === area.slug).length;
+      const count = DOCS.filter(doc => isDocumentInFocusArea(doc, area.slug)).length;
       return `
         <a class="cat-card focus-theme-${index % FOCUS_THEMES.length}" href="#"
            data-focus-area="${area.slug}" aria-label="${area.name} documents">
@@ -191,7 +200,7 @@ function buildFilterBar(cat) {
   // Clear existing buttons (needed on state-switch re-render)
   container.innerHTML = '';
 
-  const subcats = [...new Set(DOCS.filter(d => d.category === cat).map(d => d.subcategory))];
+  const subcats = [...new Set(DOCS.filter(d => isDocumentInFocusArea(d, cat)).map(d => d.subcategory))];
 
   const allBtn = document.createElement('button');
   allBtn.className = 'filter-btn active';
@@ -229,7 +238,7 @@ function renderCategoryList(cat) {
   const listEl = document.getElementById(`list-${cat}`);
   if (!listEl) return;
 
-  let docs = DOCS.filter(d => d.category === cat);
+  let docs = DOCS.filter(d => isDocumentInFocusArea(d, cat));
   if (filter !== 'all') docs = docs.filter(d => d.subcategory === filter);
 
   const countEl = document.getElementById(`count-label-${cat}`);

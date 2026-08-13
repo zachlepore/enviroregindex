@@ -70,3 +70,26 @@ human QA communication.
 - Workflows must reference `resource_id`, never `qc_id` or the numeric `id`.
 - Source URLs, canonical titles, directory descriptions, publisher metadata,
   and verification metadata remain owned by the canonical resource record.
+
+## Directory classification integrity
+
+Canonical resource ingestion and Directory classification are one transaction.
+Every jurisdiction resource must resolve to at least one slug declared in that
+jurisdiction's `focus_areas`: its primary `category`, or an additional slug in
+its optional `focus_areas` array. A resource may belong to multiple focus areas
+without duplicating its canonical record. Workflow relationships and Directory
+classification are separate relationships to that same record; adding a
+resource for a workflow does not exempt it from Directory classification.
+
+The required workflow-ingestion sequence is:
+
+1. Confirm the workflow need and authoritative resource.
+2. Check for an existing canonical record.
+3. Ingest a genuinely missing canonical record.
+4. Assign its Directory focus area or areas.
+5. Add the workflow relationship.
+6. Run `node scripts/validate-data.js` before opening a PR.
+
+Every workflow PR that ingests resources must list each new `qc_id` and
+`resource_id`, its Directory focus area assignments, and its workflow use. The
+integrity check must pass; unclassified canonical resources are not permitted.

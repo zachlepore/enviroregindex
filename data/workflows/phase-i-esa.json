@@ -1,0 +1,94 @@
+{
+  "workflow": {
+    "workflow_id": "phase-i-esa",
+    "title": "Phase I Environmental Site Assessment",
+    "business_line": "site-assessment",
+    "business_line_label": "Site Assessment",
+    "description": "Regulatory, records, database, mapping, and technical resources commonly used to support environmental due diligence in Connecticut.",
+    "keywords": ["Phase I", "environmental site assessment", "environmental due diligence", "records review", "AAI"],
+    "synonyms": ["Phase One ESA", "Phase 1 ESA", "All Appropriate Inquiries"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["epa", "standards", "ct"]
+  },
+  "sections": [
+    { "section_id": "start-here", "title": "Core References", "display_order": 1 },
+    { "section_id": "records-databases", "title": "Records & Databases", "display_order": 2 },
+    { "section_id": "mapping-supporting", "title": "Mapping & Supporting Resources", "display_order": 3 },
+    { "section_id": "related-workflows", "title": "Related Workflows", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "epa-all-appropriate-inquiries",
+      "section": "start-here",
+      "workflow_note": "Open as the federal All Appropriate Inquiries framework relevant to environmental due diligence and associated landowner-liability considerations.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "std-astm-e1527-21",
+      "section": "start-here",
+      "workflow_note": "Open the authoritative ASTM product page for the professional practice standard commonly used for Phase I Environmental Site Assessments.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-contaminated-sites-dataset",
+      "section": "records-databases",
+      "workflow_note": "Use during records review to identify known or potentially contaminated properties associated with or near the subject property.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-react-tracker",
+      "section": "records-databases",
+      "workflow_note": "Search identified properties for release, assessment, cleanup-status, and available remediation information.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-deep-document-esearch",
+      "section": "records-databases",
+      "workflow_note": "Search historical DEEP records and supporting documents, including material submitted before the transition to REACT.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-ust-facility-tank-details",
+      "section": "records-databases",
+      "workflow_note": "Review current and historical registered commercial UST facility and tank records associated with the subject property and surrounding properties.",
+      "display_order": 4,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-ust-release-records",
+      "section": "records-databases",
+      "workflow_note": "Review documented releases from federally regulated UST systems associated with identified facilities.",
+      "display_order": 5,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-environmental-cleanup-map-viewer",
+      "section": "mapping-supporting",
+      "workflow_note": "Use for spatial screening of mapped environmental cleanup properties and releases near the subject property.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "phase-i-esa",
+      "resource_id": "ct-brownfields-inventory",
+      "section": "mapping-supporting",
+      "workflow_note": "Screen for known brownfield properties and documented state or federal brownfield-program involvement.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

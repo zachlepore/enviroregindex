@@ -300,6 +300,22 @@
       "verified": "August 13, 2026",
       "verification_note": "EPA continues to publish the older supporting fact-sheet content on its current reporting page, last updated November 18, 2025; no express replacement was identified.",
       "tags": ["oil discharge", "spill reporting", "National Response Center", "SPCC", "40 CFR 110", "40 CFR 112", "EPA"]
+    },
+    {
+      "id": 17,
+      "qc_id": "EPA17",
+      "resource_id": "epa-categorical-pretreatment-standards",
+      "category": "npdes-water",
+      "subcategory": "Industrial Pretreatment",
+      "title": "Pretreatment Standards and Requirements — Categorical Pretreatment Standards",
+      "description": "EPA's authoritative gateway to national categorical pretreatment standards and industry-specific effluent guidelines applicable to qualifying indirect industrial dischargers.",
+      "source_url": "https://www.epa.gov/npdes/pretreatment-standards-and-requirements-categorical-pretreatment-standards",
+      "document_type": "regulation",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA categorical pretreatment standards",
+      "verified": "August 13, 2026",
+      "tags": ["categorical pretreatment standards", "categorical industrial user", "CIU", "industrial wastewater", "POTW", "effluent guidelines"]
     }
   ]
 }

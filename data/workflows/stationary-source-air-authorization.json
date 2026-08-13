@@ -1,0 +1,69 @@
+{
+  "workflow": {
+    "workflow_id": "stationary-source-air-authorization",
+    "title": "New & Modified Stationary Source Air Authorization",
+    "business_line": "air",
+    "business_line_label": "Air",
+    "description": "Connecticut regulatory, applicability, professional-tool, and filing resources for evaluating the authorization path for new or modified stationary emissions sources.",
+    "keywords": ["air permit", "air permitting", "stationary source", "emissions", "emissions unit", "new source", "modified source", "NSR", "new source review", "permit applicability", "permit by rule", "registration", "general permit", "exemption", "air permit wizard"],
+    "synonyms": ["stationary source air permitting", "air authorization", "source registration"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct"]
+  },
+  "sections": [
+    { "section_id": "framework-authorization", "title": "Framework & Authorization", "display_order": 1 },
+    { "section_id": "applicability-tools", "title": "Applicability Tools", "display_order": 2 },
+    { "section_id": "applications-filing", "title": "Applications & Filing", "display_order": 3 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-air-permitting-inventory",
+      "section": "framework-authorization",
+      "workflow_note": "Use as the current CT DEEP gateway for stationary-source permitting, regulations, forms, assistance, and related authorization programs.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-abatement-air-pollution-regulations",
+      "section": "framework-authorization",
+      "workflow_note": "Consult the maintained Connecticut regulatory gateway when identifying provisions relevant to the proposed emissions unit or source change.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-rcsa-22a-174-3a",
+      "section": "framework-authorization",
+      "workflow_note": "Consult the controlling Connecticut requirements for New Source Review applicability, applications, and permit review.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-air-permits-faq",
+      "section": "applicability-tools",
+      "workflow_note": "Use CT DEEP's explanations of NSR, alternative authorization mechanisms, Title V handoffs, and common permitting issues.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-air-permitting-assistance",
+      "section": "applicability-tools",
+      "workflow_note": "Access CT DEEP's permit-screening wizard, emissions tools, control-technology resources, regulatory links, and pre-application support.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "stationary-source-air-authorization",
+      "resource_id": "ct-air-emissions-permits-forms",
+      "section": "applications-filing",
+      "workflow_note": "Use the maintained gateway for current NSR forms, modification and revision applications, notification forms, instructions, and submission requirements.",
+      "display_order": 1,
+      "importance": "core"
+    }
+  ],
+  "related_workflows": []
+}

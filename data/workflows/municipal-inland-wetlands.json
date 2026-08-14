@@ -1,0 +1,78 @@
+{
+  "workflow": {
+    "workflow_id": "municipal-inland-wetlands",
+    "title": "Municipal Inland Wetlands & Watercourses Permitting",
+    "business_line": "natural-resources",
+    "business_line_label": "Natural Resources",
+    "description": "Statewide framework, municipal permitting, identification, screening, and limited federal-coordination resources for inland wetlands and watercourses projects in Connecticut.",
+    "keywords": ["inland wetlands", "watercourses", "IWWA", "regulated activity", "municipal wetlands", "inland wetlands agency", "wetland permit", "wetland soils", "upland review area", "watercourse", "municipal permit"],
+    "synonyms": ["inland wetlands permitting", "wetlands application", "wetland screening"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "federal"]
+  },
+  "sections": [
+    { "section_id": "state-framework", "title": "State Framework", "display_order": 1 },
+    { "section_id": "municipal-permitting", "title": "Municipal Permitting", "display_order": 2 },
+    { "section_id": "identification-screening", "title": "Identification & Screening", "display_order": 3 },
+    { "section_id": "federal-coordination", "title": "Federal Coordination", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-inland-wetlands-watercourses-act",
+      "section": "state-framework",
+      "workflow_note": "Consult the controlling statewide definitions, municipal authority, regulated-activity framework, and application-review provisions.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-inland-wetlands-program",
+      "section": "state-framework",
+      "workflow_note": "Use for CT DEEP's current statewide program guidance, municipal implementation context, and maintained inland-wetlands resources.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-inland-wetlands-municipal-permitting",
+      "section": "municipal-permitting",
+      "workflow_note": "Review the statewide municipal permitting framework before consulting the applicable town's regulations, forms, and procedures.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-municipal-inland-wetlands-agency-directory",
+      "section": "municipal-permitting",
+      "workflow_note": "Use to identify the applicable municipal agency, then confirm current contacts and requirements directly with the municipality.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-inland-wetlands-watercourses-defined",
+      "section": "identification-screening",
+      "workflow_note": "Consult for Connecticut's soil-based inland-wetland definition and statutory watercourse identification framework.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "ct-inland-wetland-soils-gis",
+      "section": "identification-screening",
+      "workflow_note": "Use for preliminary mapped-soils screening without treating mapped information as a jurisdictional or field determination.",
+      "display_order": 2,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "municipal-inland-wetlands",
+      "resource_id": "fed-usace-connecticut-aquatic-resource-permits",
+      "section": "federal-coordination",
+      "workflow_note": "Open when evaluating whether a separate current federal aquatic-resource authorization process may also need review.",
+      "display_order": 1,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

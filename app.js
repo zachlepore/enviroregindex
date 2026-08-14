@@ -124,8 +124,6 @@ function renderFocusAreas() {
   const areas = getVisibleFocusAreas();
   const grid = document.getElementById('focus-area-grid');
   const views = document.getElementById('focus-area-views');
-  const nav = document.querySelector('.nav-tabs');
-  const searchTab = document.getElementById('tab-search');
 
   if (grid) {
     grid.innerHTML = areas.map((area, index) => {
@@ -144,20 +142,6 @@ function renderFocusAreas() {
         event.preventDefault();
         showView(card.dataset.focusArea);
       });
-    });
-  }
-
-  if (nav) {
-    nav.querySelectorAll('.focus-nav-tab').forEach(tab => tab.remove());
-    areas.forEach(area => {
-      const tab = document.createElement('button');
-      tab.className = 'nav-tab focus-nav-tab';
-      tab.id = `tab-${area.slug}`;
-      tab.type = 'button';
-      tab.setAttribute('role', 'tab');
-      tab.textContent = area.name;
-      tab.onclick = () => showView(area.slug);
-      nav.insertBefore(tab, searchTab);
     });
   }
 
@@ -261,12 +245,12 @@ function handleGlobalSearch(value) {
   searchQuery = value.trim();
 
   if (searchQuery.length < 2) {
-    document.getElementById('tab-search').style.display = 'none';
+    document.getElementById('tab-search').hidden = true;
     if (currentView === 'search') showView('home');
     return;
   }
 
-  document.getElementById('tab-search').style.display = '';
+  document.getElementById('tab-search').hidden = false;
   showView('search');
 
   const results  = DOCS.filter(d => matchesQuery(d, searchQuery));
@@ -292,6 +276,8 @@ function handleGlobalSearch(value) {
 // ── View switcher ────────────────────────────────────────────
 function showView(name) {
   currentView = name;
+  const directoryHero = document.getElementById('directory-hero');
+  if (directoryHero) directoryHero.hidden = name !== 'home' && name !== 'search';
 
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -306,7 +292,7 @@ function showView(name) {
     const searchEl = document.getElementById('globalSearch');
     if (searchEl) searchEl.value = '';
     searchQuery = '';
-    document.getElementById('tab-search').style.display = 'none';
+    document.getElementById('tab-search').hidden = true;
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -340,21 +326,13 @@ function renderRecentUpdates() {
 function renderHeroStats() {
   const totalEl = document.getElementById('total-resources');
   const focusAreaCountEl = document.getElementById('focus-area-count');
-  const agencyEl = document.getElementById('hero-agency');
   const lastQaEl = document.getElementById('last-qa');
-  const heroLabelEl = document.getElementById('hero-label');
 
   if (totalEl)  totalEl.textContent  = DOCS.length;
   if (focusAreaCountEl) focusAreaCountEl.textContent = getVisibleFocusAreas().length;
 
-  if (agencyEl && STATE_META.agency) {
-    agencyEl.textContent = STATE_META.agency;
-  }
   if (lastQaEl) {
     lastQaEl.textContent = formatMetadataDate(STATE_META.last_qa);
-  }
-  if (heroLabelEl && STATE_META.name) {
-    heroLabelEl.textContent = `${STATE_META.name} Environmental Regulatory Navigator`;
   }
 
   // Update page title
@@ -486,7 +464,7 @@ function buildStateBar() {
   if (!inner) return;
 
   // Clear any server-rendered placeholders
-  inner.innerHTML = `<span class="state-bar-label">Jurisdiction</span>`;
+  inner.innerHTML = '';
 
   const controls = document.createElement('div');
   controls.className = 'jurisdiction-controls';
@@ -536,12 +514,6 @@ function buildStateBar() {
   controls.appendChild(selectLabel);
   inner.appendChild(controls);
 
-  // Loading indicator
-  const loadingEl = document.createElement('div');
-  loadingEl.id = 'state-loading';
-  loadingEl.className = 'state-loading';
-  loadingEl.innerHTML = `<div class="state-loading-dot"></div><span>Loading…</span>`;
-  inner.appendChild(loadingEl);
   syncJurisdictionControls(currentJurisdiction);
 }
 

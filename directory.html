@@ -24,69 +24,55 @@
       Enviro<span>Reg</span>Index
     </a>
 
-    <div class="nav-search-wrap">
-      <span class="search-icon" aria-hidden="true">⌕</span>
-      <input
-        type="search"
-        id="globalSearch"
-        autocomplete="off"
-        placeholder="Search regulations, permits, guidance…"
-        oninput="handleGlobalSearch(this.value)"
-        aria-label="Search documents"
-      >
-    </div>
-
-    <div class="nav-tabs" role="tablist">
-      <button class="nav-tab active" id="tab-home"        role="tab" onclick="showView('home')">Home</button>
-      <!-- Focus-area tabs inserted by app.js -->
-      <button class="nav-tab"        id="tab-search"      role="tab" style="display:none">Search</button>
+    <div class="nav-tabs" aria-label="Primary navigation">
+      <a class="nav-tab active" id="tab-home" href="directory.html">Directory</a>
+      <a class="nav-tab" href="tasks.html">Workflows</a>
+      <a class="nav-tab" href="#">About</a>
+      <a class="nav-tab" href="#globalSearch">Search</a>
+      <span class="nav-tab" id="tab-search" hidden>Search results</span>
     </div>
   </div>
 </nav>
 
 <!-- ═══════════════════════════════════════════════════════════
-     JURISDICTION SELECTOR BAR
-═══════════════════════════════════════════════════════════ -->
-<div class="state-bar" role="navigation" aria-label="Jurisdiction selector">
-  <!-- Populated by app.js buildStateBar() -->
-  <div class="state-bar-inner" id="state-bar-inner"></div>
-</div>
-
-
-<!-- ═══════════════════════════════════════════════════════════
      HOME VIEW
 ═══════════════════════════════════════════════════════════ -->
-<div id="view-home" class="view active">
-
-  <!-- Hero -->
-  <div class="hero">
+<!-- Directory controls remain available while viewing search results. -->
+  <div class="hero" id="directory-hero">
     <div class="hero-inner">
-      <div class="hero-label" id="hero-label">Environmental Regulatory Navigator</div>
-      <h1>Find environmental<br><strong>regulations in seconds.</strong></h1>
+      <div class="hero-label">Directory</div>
+      <h1>Find environmental regulations in seconds.</h1>
       <p class="hero-sub">
-        A curated index of state environmental regulations, guidance documents, and permits
-        for engineers and consultants — no government website digging required.
+        Curated regulatory resources for environmental professionals.
       </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num" id="total-resources">—</span>
-          <span class="stat-label">Resources</span>
+      <div class="directory-tools">
+        <div class="state-bar" role="group" aria-label="Jurisdiction selector">
+          <div class="state-bar-inner" id="state-bar-inner"></div>
         </div>
-        <div class="stat">
-          <span class="stat-num" id="focus-area-count">—</span>
-          <span class="stat-label">Focus Areas</span>
+        <div class="directory-search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="globalSearch"
+            autocomplete="off"
+            placeholder="Search regulations, permits, guidance…"
+            oninput="handleGlobalSearch(this.value)"
+            aria-label="Search documents"
+          >
         </div>
-        <div class="stat">
-          <span class="stat-num" id="hero-agency">—</span>
-          <span class="stat-label">Agency</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num" id="last-qa">—</span>
-          <span class="stat-label">Last QA</span>
-        </div>
+      </div>
+      <div class="hero-context" aria-live="polite">
+        <span id="total-resources">—</span> resources
+        <span aria-hidden="true">·</span>
+        <span id="focus-area-count">—</span> areas
+        <span aria-hidden="true">·</span>
+        Verified <span id="last-qa">—</span>
+        <span class="state-loading" id="state-loading"><span class="state-loading-dot"></span>Loading…</span>
       </div>
     </div>
   </div>
+
+<div id="view-home" class="view active">
 
   <!-- Category cards -->
   <div class="section">

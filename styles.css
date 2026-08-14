@@ -41,38 +41,6 @@ body {
 
 .mono { font-family: 'IBM Plex Mono', monospace; }
 
-/* ── Navigation ─────────────────────────────────────────────── */
-nav {
-  background: var(--text-primary);
-  border-bottom: 3px solid var(--accent-green-mid);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  height: 56px;
-}
-
-.nav-logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-  color: #FFFFFF;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.nav-logo span { color: #5CCE8A; }
-
 #globalSearch {
   width: 100%;
   padding: 8px 12px 8px 36px;
@@ -101,30 +69,6 @@ nav {
   font-size: 14px;
   pointer-events: none;
 }
-
-.nav-tabs {
-  display: flex;
-  gap: 2px;
-  margin-left: auto;
-}
-
-.nav-tab {
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: rgba(255,255,255,0.55);
-  border-radius: 4px;
-  transition: all 0.15s;
-  cursor: pointer;
-  border: none;
-  background: none;
-  white-space: nowrap;
-}
-
-.nav-tab:hover { color: #FFFFFF; background: rgba(255,255,255,0.08); }
-.nav-tab.active { color: #5CCE8A; background: rgba(92,206,138,0.1); }
 
 /* ── Jurisdiction Selector ──────────────────────────────────── */
 .state-bar {
@@ -832,22 +776,8 @@ footer {
 
 /* ── Responsive / Mobile ────────────────────────────────────── */
 
-/* Tablet */
-@media (max-width: 1100px) {
-  .nav-inner { gap: 16px; }
-}
-
 /* Mobile */
 @media (max-width: 768px) {
-
-  /* Nav */
-  .nav-inner { gap: 10px; padding: 0 16px; }
-  .nav-logo { font-size: 12px; }
-  .nav-tabs { gap: 0; overflow-x: auto; scrollbar-width: none; }
-  .nav-tabs::-webkit-scrollbar { display: none; }
-  .nav-tab { padding: 6px 8px; font-size: 11px; }
-  .nav-tab[href="#"] { display: none; }
-
   /* Directory controls */
   .directory-tools { flex-direction: column; }
   .state-bar, .directory-search-wrap { width: 100%; }

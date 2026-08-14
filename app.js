@@ -245,12 +245,10 @@ function handleGlobalSearch(value) {
   searchQuery = value.trim();
 
   if (searchQuery.length < 2) {
-    document.getElementById('tab-search').hidden = true;
     if (currentView === 'search') showView('home');
     return;
   }
 
-  document.getElementById('tab-search').hidden = false;
   showView('search');
 
   const results  = DOCS.filter(d => matchesQuery(d, searchQuery));
@@ -280,19 +278,13 @@ function showView(name) {
   if (directoryHero) directoryHero.hidden = name !== 'home' && name !== 'search';
 
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-
   const viewEl = document.getElementById(`view-${name}`);
   if (viewEl) viewEl.classList.add('active');
-
-  const tabEl = document.getElementById(`tab-${name}`);
-  if (tabEl) tabEl.classList.add('active');
 
   if (name !== 'search') {
     const searchEl = document.getElementById('globalSearch');
     if (searchEl) searchEl.value = '';
     searchQuery = '';
-    document.getElementById('tab-search').hidden = true;
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });

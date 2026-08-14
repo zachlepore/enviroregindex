@@ -12,27 +12,15 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="global-header.css">
+  <script src="global-header.js" defer></script>
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════
      NAVIGATION
 ═══════════════════════════════════════════════════════════ -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="/" aria-label="EnviroRegIndex platform home">
-      Enviro<span>Reg</span>Index
-    </a>
-
-    <div class="nav-tabs" aria-label="Primary navigation">
-      <a class="nav-tab active" id="tab-home" href="directory.html">Directory</a>
-      <a class="nav-tab" href="tasks.html">Workflows</a>
-      <a class="nav-tab" href="#">About</a>
-      <a class="nav-tab" href="#globalSearch">Search</a>
-      <span class="nav-tab" id="tab-search" hidden>Search results</span>
-    </div>
-  </div>
-</nav>
+<eri-global-header active="directory"></eri-global-header>
 
 <!-- ═══════════════════════════════════════════════════════════
      HOME VIEW

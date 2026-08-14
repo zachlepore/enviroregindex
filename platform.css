@@ -29,12 +29,6 @@ body {
   flex-direction: column;
 }
 
-.platform-header {
-  background: var(--platform-dark);
-  border-bottom: 2px solid var(--platform-green-dark);
-}
-
-.platform-header-inner,
 .platform-footer-inner {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
@@ -43,9 +37,6 @@ body {
   justify-content: space-between;
 }
 
-.platform-header-inner { min-height: 64px; }
-
-.platform-logo,
 .platform-footer-logo {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
@@ -55,24 +46,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-.platform-logo span,
 .platform-footer-logo span { color: var(--platform-green); }
-
-.platform-label,
-.back-link {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.46);
-}
-
-.back-link {
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.back-link:hover { color: var(--platform-green); }
 
 .platform-main {
   flex: 1;
@@ -248,9 +222,7 @@ body {
   border-color: var(--platform-green);
 }
 
-.platform-button:focus-visible,
-.platform-logo:focus-visible,
-.back-link:focus-visible {
+.platform-button:focus-visible {
   outline: 2px solid var(--platform-green);
   outline-offset: 3px;
 }
@@ -311,15 +283,12 @@ body {
 }
 
 @media (max-width: 760px) {
-  .platform-header-inner,
   .platform-footer-inner,
   .platform-main,
   .placeholder-main {
     width: min(100% - 32px, 1180px);
   }
 
-  .platform-header-inner { min-height: 58px; }
-  .platform-label { display: none; }
   .platform-main { padding: 30px 0 44px; }
   .platform-intro { margin-bottom: 24px; }
   .platform-intro h1 { font-size: 42px; }

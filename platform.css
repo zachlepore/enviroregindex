@@ -1,0 +1,270 @@
+:root {
+  --platform-dark: #191917;
+  --platform-dark-soft: #222220;
+  --platform-green: #5CCE8A;
+  --platform-green-dark: #247A49;
+  --platform-green-pale: #E9F5EE;
+  --platform-surface: #F5F3EE;
+  --platform-card: #FFFFFF;
+  --platform-text: #1D1D1A;
+  --platform-muted: #686861;
+  --platform-border: #D9D5CB;
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--platform-text);
+  background: var(--platform-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.platform-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-main {
+  flex: 1;
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 38px 0 56px;
+}
+
+.platform-intro {
+  max-width: 720px;
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--platform-green-dark);
+}
+
+.platform-intro h1,
+.placeholder-panel h1 {
+  margin: 13px 0 12px;
+  font-size: clamp(42px, 5vw, 60px);
+  line-height: 1.07;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.platform-intro h1 { margin-top: 0; }
+
+.platform-intro > p,
+.placeholder-panel > p {
+  margin: 0;
+  max-width: 640px;
+  color: var(--platform-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.experience-card {
+  position: relative;
+  min-height: 348px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background: var(--platform-card);
+  border: 1px solid var(--platform-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(25,25,23,0.045);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-card:hover,
+.experience-card:focus-within {
+  transform: translateY(-3px);
+  border-color: #B9B4A9;
+  box-shadow: 0 18px 46px rgba(25,25,23,0.09);
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.experience-icon,
+.placeholder-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--platform-green-pale);
+  color: var(--platform-green-dark);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.experience-card h2 {
+  margin: 0 0 13px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.experience-description {
+  margin: 0;
+  min-height: 48px;
+  color: var(--platform-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.experience-examples,
+.experience-tags {
+  margin: 22px 0 26px;
+}
+
+.experience-examples ul,
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+}
+
+.experience-examples ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-examples li,
+.experience-tags span {
+  padding: 7px 11px;
+  border: 1px solid #D1CCC1;
+  border-radius: 999px;
+  background: transparent;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5F5D57;
+}
+
+.platform-button {
+  margin-top: auto;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 20px;
+  border: 1px solid var(--platform-dark);
+  border-radius: 6px;
+  color: #FFFFFF;
+  background: var(--platform-dark);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.platform-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.platform-button:hover,
+.platform-button:focus-visible {
+  color: var(--platform-dark);
+  background: var(--platform-green);
+  border-color: var(--platform-green);
+}
+
+.experience-card:hover .platform-button {
+  color: var(--platform-dark);
+  background: var(--platform-green);
+  border-color: var(--platform-green);
+}
+
+.platform-button:focus-visible {
+  outline: 2px solid var(--platform-green);
+  outline-offset: 3px;
+}
+
+.placeholder-page { background: var(--platform-dark); }
+
+.placeholder-main {
+  flex: 1;
+  width: min(900px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 72px 0;
+}
+
+.placeholder-panel {
+  width: 100%;
+  padding: clamp(32px, 7vw, 68px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 3px solid var(--platform-green);
+  border-radius: 8px;
+  background: var(--platform-dark-soft);
+  color: #FFFFFF;
+}
+
+.placeholder-panel .placeholder-mark { margin: 32px 0 24px; }
+
+.placeholder-panel h1 {
+  max-width: 720px;
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.placeholder-panel > p { color: rgba(255,255,255,0.55); }
+
+.platform-button-inline {
+  width: fit-content;
+  margin-top: 34px;
+  background: transparent;
+  border-color: rgba(255,255,255,0.28);
+}
+
+@media (max-width: 760px) {
+  .platform-main,
+  .placeholder-main {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .platform-main { padding: 30px 0 44px; }
+  .platform-intro { margin-bottom: 24px; }
+  .platform-intro h1 { font-size: 42px; }
+  .platform-intro > p { font-size: 16px; }
+  .experience-grid { grid-template-columns: 1fr; }
+  .experience-card { min-height: 0; padding: 27px 25px; }
+  .experience-description { min-height: 0; }
+  .platform-button { margin-top: 26px; }
+  .placeholder-main { padding: 40px 0; }
+  .placeholder-panel { padding: 30px 24px; }
+  .placeholder-panel h1 { font-size: 34px; }
+}
+
+@media (max-width: 380px) {
+  .platform-intro h1 { font-size: 38px; }
+  .experience-card { padding: 25px 21px; }
+}

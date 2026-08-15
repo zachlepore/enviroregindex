@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnviroRegIndex — Environmental Regulatory Directory</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-shell.css">
+  <script src="site-shell.js" defer></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<eri-global-header active="directory"></eri-global-header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOME VIEW
+═══════════════════════════════════════════════════════════ -->
+<!-- Directory controls remain available while viewing search results. -->
+  <div class="hero" id="directory-hero">
+    <div class="hero-inner">
+      <div class="hero-label">Directory</div>
+      <h1>Find environmental regulations in seconds.</h1>
+      <p class="hero-sub">
+        Curated regulatory resources for environmental professionals.
+      </p>
+      <div class="directory-tools">
+        <div class="state-bar" role="group" aria-label="Jurisdiction selector">
+          <div class="state-bar-inner" id="state-bar-inner"></div>
+        </div>
+        <div class="directory-search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="globalSearch"
+            autocomplete="off"
+            placeholder="Search regulations, permits, guidance…"
+            oninput="handleGlobalSearch(this.value)"
+            aria-label="Search documents"
+          >
+        </div>
+      </div>
+      <div class="hero-context" aria-live="polite">
+        <span id="total-resources">—</span> resources
+        <span aria-hidden="true">·</span>
+        <span id="focus-area-count">—</span> areas
+        <span aria-hidden="true">·</span>
+        Verified <span id="last-qa">—</span>
+        <span class="state-loading" id="state-loading"><span class="state-loading-dot"></span>Loading…</span>
+      </div>
+    </div>
+  </div>
+
+<div id="view-home" class="view active">
+
+  <!-- Category cards -->
+  <div class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-title">Focus Areas</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="cat-grid" id="focus-area-grid"></div>
+    </div>
+  </div>
+
+  <!-- Recent updates -->
+  <div class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-title">Recent Updates</span>
+        <div class="section-line"></div>
+      </div>
+      <!-- Populated by app.js renderRecentUpdates() -->
+      <div class="updates-grid" id="recent-updates-grid"></div>
+    </div>
+  </div>
+
+</div><!-- /view-home -->
+
+
+<!-- Focus-area views populated by app.js -->
+<div id="focus-area-views"></div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEARCH RESULTS VIEW
+═══════════════════════════════════════════════════════════ -->
+<div id="view-search" class="view">
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><span>Search Results</span></div>
+      <h1 class="page-title">Search Results</h1>
+    </div>
+    <div class="filter-bar">
+      <span id="search-result-label" class="result-count"></span>
+    </div>
+    <div class="doc-list" id="list-search" role="list"></div>
+  </div>
+</div><!-- /view-search -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<eri-global-footer></eri-global-footer>
+
+<!-- Application script -->
+<script src="jurisdictions.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

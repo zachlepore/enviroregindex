@@ -195,6 +195,7 @@
   text-align: left;
   cursor: pointer;
   transition: background 0.15s;
+  text-decoration: none;
 }
 
 .workflow-row:last-child { border-bottom: 0; }
@@ -214,43 +215,6 @@
 }
 .workflow-empty span { color: var(--platform-muted); font-size: 14px; }
 
-.jurisdiction-workflows {
-  padding-top: 48px;
-  border-top: 1px solid var(--platform-border);
-}
-
-.jurisdiction-workflow-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.jurisdiction-workflow-card {
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 22px;
-  border: 1px solid var(--platform-border);
-  border-radius: 10px;
-  background: var(--platform-card);
-  color: var(--platform-text);
-  text-align: left;
-  cursor: pointer;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.jurisdiction-workflow-card:hover,
-.jurisdiction-workflow-card:focus-visible {
-  border-color: var(--platform-green-dark);
-  box-shadow: 0 9px 25px rgba(25, 25, 23, 0.06);
-  outline: none;
-}
-
-.jurisdiction-workflow-card strong { font-size: 16px; }
-.jurisdiction-workflow-card > span:not(.jurisdiction-workflow-action) { margin-top: 8px; color: var(--platform-muted); font-size: 13px; line-height: 1.45; }
-.jurisdiction-workflow-action { margin-top: auto; padding-top: 18px; color: var(--platform-green-dark); font: 600 10px 'IBM Plex Mono', monospace; }
-
 @media (max-width: 900px) {
   .business-line-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -261,7 +225,7 @@
   .workflow-hero p { font-size: 16px; }
   .workflow-controls { grid-template-columns: 1fr; margin-top: 28px; padding: 17px; }
   .workflow-section, .workflow-results { margin-top: 42px; }
-  .business-line-grid, .jurisdiction-workflow-grid { grid-template-columns: 1fr; }
+  .business-line-grid { grid-template-columns: 1fr; }
   .business-line-card { min-height: 126px; }
   .workflow-section-heading { align-items: flex-start; }
   .workflow-row { min-height: 96px; padding: 17px; }

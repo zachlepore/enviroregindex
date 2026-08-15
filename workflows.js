@@ -1,10 +1,7 @@
 'use strict';
 
-const workflowState = {
-  jurisdiction: '',
-  businessLine: '',
-  query: '',
-};
+const workflowState = { jurisdiction: '', businessLine: '', query: '', availableWorkflows: [] };
+let explorerData = { business_lines: [], workflows: [] };
 
 const jurisdictionSelect = document.getElementById('workflow-jurisdiction');
 const searchInput = document.getElementById('workflow-search');
@@ -12,49 +9,26 @@ const businessLineGrid = document.getElementById('business-line-grid');
 const resultsSection = document.getElementById('workflow-results');
 const resultsHeading = document.getElementById('workflow-results-heading');
 const workflowList = document.getElementById('workflow-list');
-const jurisdictionSection = document.getElementById('jurisdiction-workflows');
-const jurisdictionHeading = document.getElementById('jurisdiction-workflows-heading');
-const jurisdictionGrid = document.getElementById('jurisdiction-workflow-grid');
-
-function getJurisdictionLabel(code) {
-  return JURISDICTION_REGISTRY.find(item => item.code === code)?.label || '';
-}
-
-function workflowsForJurisdiction() {
-  if (!workflowState.jurisdiction) return [];
-  return PLACEHOLDER_WORKFLOW_DATA.workflows.filter(workflow =>
-    workflow.jurisdictions.includes('all') || workflow.jurisdictions.includes(workflowState.jurisdiction)
-  );
-}
 
 function matchesWorkflowSearch(workflow, query) {
   const normalized = query.trim().toLowerCase();
   if (!normalized) return true;
-  const businessLine = PLACEHOLDER_WORKFLOW_DATA.businessLines.find(line => line.id === workflow.businessLine);
-  return [
-    workflow.title,
-    workflow.description,
-    businessLine?.title,
-    ...(workflow.keywords || []),
-    ...(workflow.synonyms || []),
-  ].some(value => value?.toLowerCase().includes(normalized));
+  const businessLine = explorerData.business_lines.find(line => line.id === workflow.businessLine);
+  return [workflow.title, workflow.description, businessLine?.title, ...(workflow.keywords || []), ...(workflow.synonyms || [])]
+    .some(value => value?.toLowerCase().includes(normalized));
 }
 
 function renderBusinessLines() {
-  const available = workflowsForJurisdiction().filter(workflow => !workflow.jurisdictionSpecific);
-  businessLineGrid.innerHTML = [...PLACEHOLDER_WORKFLOW_DATA.businessLines]
+  businessLineGrid.innerHTML = [...explorerData.business_lines]
     .sort((a, b) => a.order - b.order)
     .map(line => {
-      const count = available.filter(workflow => workflow.businessLine === line.id).length;
+      const count = workflowState.availableWorkflows.filter(workflow => workflow.businessLine === line.id).length;
       const disabled = !workflowState.jurisdiction || count === 0;
       return `
         <button class="business-line-card${workflowState.businessLine === line.id ? ' active' : ''}"
           type="button" data-business-line="${line.id}" ${disabled ? 'disabled' : ''}>
           <span class="business-line-icon" aria-hidden="true">${line.icon}</span>
-          <span class="business-line-copy">
-            <strong>${line.title}</strong>
-            <span>${line.description}</span>
-          </span>
+          <span class="business-line-copy"><strong>${line.title}</strong><span>${line.description}</span></span>
         </button>`;
     }).join('');
 }
@@ -65,10 +39,8 @@ function renderResults() {
     workflowList.innerHTML = '';
     return;
   }
-
-  const activeLine = PLACEHOLDER_WORKFLOW_DATA.businessLines.find(line => line.id === workflowState.businessLine);
-  const matches = workflowsForJurisdiction()
-    .filter(workflow => workflowState.query.trim() || !workflow.jurisdictionSpecific)
+  const activeLine = explorerData.business_lines.find(line => line.id === workflowState.businessLine);
+  const matches = workflowState.availableWorkflows
     .filter(workflow => !workflowState.businessLine || workflow.businessLine === workflowState.businessLine)
     .filter(workflow => matchesWorkflowSearch(workflow, workflowState.query));
 
@@ -77,71 +49,59 @@ function renderResults() {
     : activeLine?.title || 'Workflows';
   workflowList.innerHTML = matches.length
     ? matches.map(workflow => `
-        <button class="workflow-row" type="button" data-workflow-id="${workflow.id}" aria-label="Open ${workflow.title} placeholder">
-          <span>
-            <strong>${workflow.title}</strong>
-            <span>${workflow.description}</span>
-          </span>
+        <a class="workflow-row" href="${workflow.destination}" aria-label="Open ${workflow.title}">
+          <span><strong>${workflow.title}</strong><span>${workflow.description}</span></span>
           <span class="workflow-row-arrow" aria-hidden="true">→</span>
-        </button>`).join('')
+        </a>`).join('')
     : `<div class="workflow-empty"><strong>No matching workflows</strong><span>Try a different keyword or area of work.</span></div>`;
   resultsSection.hidden = false;
-}
-
-function renderJurisdictionWorkflows() {
-  const records = workflowsForJurisdiction().filter(workflow => workflow.jurisdictionSpecific);
-  if (!workflowState.jurisdiction || records.length === 0) {
-    jurisdictionSection.hidden = true;
-    jurisdictionGrid.innerHTML = '';
-    return;
-  }
-
-  jurisdictionHeading.textContent = `${getJurisdictionLabel(workflowState.jurisdiction)} Programs & Processes`;
-  jurisdictionGrid.innerHTML = records.map(workflow => `
-    <button class="jurisdiction-workflow-card" type="button" data-workflow-id="${workflow.id}" aria-label="Open ${workflow.title} placeholder">
-      <strong>${workflow.title}</strong>
-      <span>${workflow.description}</span>
-      <span class="jurisdiction-workflow-action">View workflow <span aria-hidden="true">→</span></span>
-    </button>`).join('');
-  jurisdictionSection.hidden = false;
 }
 
 function renderWorkflowExplorer() {
   renderBusinessLines();
   renderResults();
-  renderJurisdictionWorkflows();
 }
 
-function openWorkflow(event) {
-  const workflowElement = event.target.closest('[data-workflow-id]');
-  if (!workflowElement) return;
-  const workflow = PLACEHOLDER_WORKFLOW_DATA.workflows.find(item => item.id === workflowElement.dataset.workflowId);
-  const destination = workflow?.detailPages?.[workflowState.jurisdiction];
-  if (destination) window.location.href = destination;
+async function resolveImplementedWorkflows(jurisdiction) {
+  // Explorer availability is derived from implemented workflow definitions.
+  // Discovery metadata alone must never expose an unfinished workflow.
+  const candidates = explorerData.workflows.filter(workflow =>
+    workflow.jurisdictions.includes(jurisdiction) && workflow.destinations?.[jurisdiction]
+  );
+  const resolved = await Promise.all(candidates.map(async workflow => {
+    try {
+      const response = await fetch(`data/workflows/${encodeURIComponent(workflow.id)}.json`);
+      if (!response.ok) return null;
+      const definition = await response.json();
+      if (definition.workflow?.workflow_id !== workflow.id) return null;
+      if (!definition.workflow?.supported_jurisdictions?.includes(jurisdiction)) return null;
+      return { ...workflow, destination: workflow.destinations[jurisdiction] };
+    } catch {
+      return null;
+    }
+  }));
+  return resolved.filter(Boolean);
 }
 
-JURISDICTION_REGISTRY.forEach(jurisdiction => {
-  const option = document.createElement('option');
-  option.value = jurisdiction.code;
-  option.textContent = jurisdiction.label;
-  jurisdictionSelect.append(option);
-});
-
-jurisdictionSelect.addEventListener('change', event => {
-  workflowState.jurisdiction = event.target.value;
+async function selectJurisdiction(code) {
+  workflowState.jurisdiction = code;
   workflowState.businessLine = '';
   workflowState.query = '';
+  workflowState.availableWorkflows = [];
   searchInput.value = '';
-  searchInput.disabled = !workflowState.jurisdiction;
+  searchInput.disabled = true;
   renderWorkflowExplorer();
-});
+  if (code) workflowState.availableWorkflows = await resolveImplementedWorkflows(code);
+  searchInput.disabled = !code;
+  renderWorkflowExplorer();
+}
 
+jurisdictionSelect.addEventListener('change', event => selectJurisdiction(event.target.value));
 searchInput.addEventListener('input', event => {
   workflowState.query = event.target.value;
   workflowState.businessLine = '';
   renderWorkflowExplorer();
 });
-
 businessLineGrid.addEventListener('click', event => {
   const card = event.target.closest('[data-business-line]');
   if (!card || card.disabled) return;
@@ -152,7 +112,19 @@ businessLineGrid.addEventListener('click', event => {
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-workflowList.addEventListener('click', openWorkflow);
-jurisdictionGrid.addEventListener('click', openWorkflow);
+async function initializeWorkflowExplorer() {
+  const response = await fetch('data/workflows/explorer.json');
+  if (!response.ok) throw new Error(`Unable to load workflow discovery data (HTTP ${response.status})`);
+  explorerData = await response.json();
+  JURISDICTION_REGISTRY.forEach(jurisdiction => {
+    const option = document.createElement('option');
+    option.value = jurisdiction.code;
+    option.textContent = jurisdiction.label;
+    jurisdictionSelect.append(option);
+  });
+  renderWorkflowExplorer();
+}
 
-renderWorkflowExplorer();
+initializeWorkflowExplorer().catch(error => {
+  businessLineGrid.innerHTML = `<div class="workflow-empty"><strong>Workflows unavailable</strong><span>${error.message}</span></div>`;
+});

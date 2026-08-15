@@ -8,11 +8,12 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const dataDir = path.join(root, 'data');
 const workflowDir = path.join(dataDir, 'workflows');
+const explorerFile = path.join(workflowDir, 'explorer.json');
 const jsonFiles = fs.readdirSync(dataDir)
   .filter(name => name.endsWith('.json'))
   .map(name => path.join(dataDir, name));
 const workflowFiles = fs.readdirSync(workflowDir)
-  .filter(name => name.endsWith('.json'))
+  .filter(name => name.endsWith('.json') && name !== 'explorer.json')
   .map(name => path.join(workflowDir, name));
 
 const failures = [];
@@ -21,6 +22,7 @@ const qcIds = new Map();
 const canonicalResources = new Map();
 const workflowReferences = new Map();
 const jurisdictionInventories = new Map();
+const workflowDefinitions = new Map();
 
 function readJSON(file) {
   try {
@@ -94,6 +96,20 @@ for (const file of jsonFiles) {
 for (const file of workflowFiles) {
   const data = readJSON(file);
   if (!data) continue;
+  const relativeFile = path.relative(root, file);
+  const workflowId = data.workflow?.workflow_id;
+  const fileId = path.basename(file, '.json');
+  if (!workflowId) {
+    failures.push(`${relativeFile} has no workflow.workflow_id`);
+    continue;
+  }
+  if (workflowId !== fileId) {
+    failures.push(`${relativeFile} workflow_id ${workflowId} does not match filename ${fileId}`);
+  }
+  if (workflowDefinitions.has(workflowId)) {
+    failures.push(`Duplicate workflow_id ${workflowId}: ${workflowDefinitions.get(workflowId).relativeFile} and ${relativeFile}`);
+  }
+  workflowDefinitions.set(workflowId, { data, relativeFile });
   for (const relationship of data.relationships || []) {
     const id = relationship.resource_id;
     if (!canonicalResources.has(id)) {
@@ -101,6 +117,77 @@ for (const file of workflowFiles) {
     }
     if (!workflowReferences.has(id)) workflowReferences.set(id, []);
     workflowReferences.get(id).push(data.workflow?.workflow_id || path.basename(file, '.json'));
+  }
+}
+
+// Explorer availability is derived from implemented workflow definitions.
+// Discovery metadata alone must never expose an unfinished workflow.
+const explorerData = readJSON(explorerFile);
+if (explorerData) {
+  const businessLineIds = new Set();
+  for (const line of explorerData.business_lines || []) {
+    if (!line.id) failures.push('data/workflows/explorer.json has a business line without an id');
+    if (businessLineIds.has(line.id)) failures.push(`Duplicate Explorer business line id ${line.id}`);
+    businessLineIds.add(line.id);
+  }
+
+  const discoveryRecords = new Map();
+  for (const discovery of explorerData.workflows || []) {
+    if (!discovery.id) {
+      failures.push('data/workflows/explorer.json has production discovery metadata without an id');
+      continue;
+    }
+    if (discoveryRecords.has(discovery.id)) {
+      failures.push(`Duplicate production Explorer workflow id ${discovery.id}`);
+      continue;
+    }
+    discoveryRecords.set(discovery.id, discovery);
+    const definitionRecord = workflowDefinitions.get(discovery.id);
+    if (!definitionRecord) {
+      failures.push(`Explorer exposes ${discovery.id}, but no production workflow definition exists`);
+      continue;
+    }
+    const definition = definitionRecord.data.workflow;
+    if (!discovery.title || !discovery.description || !discovery.businessLine) {
+      failures.push(`Explorer discovery metadata for ${discovery.id} is incomplete`);
+    }
+    if (!businessLineIds.has(discovery.businessLine)) {
+      failures.push(`Explorer workflow ${discovery.id} references unknown business line ${discovery.businessLine}`);
+    }
+    if (discovery.businessLine !== definition.business_line) {
+      failures.push(`Explorer workflow ${discovery.id} business line does not match its definition`);
+    }
+    const advertised = discovery.jurisdictions || [];
+    if (!advertised.length || advertised.includes('all')) {
+      failures.push(`Explorer workflow ${discovery.id} must advertise explicit implemented jurisdictions`);
+    }
+    for (const jurisdiction of advertised) {
+      if (!(definition.supported_jurisdictions || []).includes(jurisdiction)) {
+        failures.push(`Explorer workflow ${discovery.id} advertises unsupported jurisdiction ${jurisdiction}`);
+      }
+      const expectedDestination = `workflow.html?workflow=${discovery.id}&jurisdiction=${jurisdiction}`;
+      if (discovery.destinations?.[jurisdiction] !== expectedDestination) {
+        failures.push(`Explorer workflow ${discovery.id} has invalid destination for ${jurisdiction}`);
+      }
+    }
+    for (const jurisdiction of Object.keys(discovery.destinations || {})) {
+      if (!advertised.includes(jurisdiction)) {
+        failures.push(`Explorer workflow ${discovery.id} configures an unadvertised destination for ${jurisdiction}`);
+      }
+    }
+  }
+
+  for (const workflowId of workflowDefinitions.keys()) {
+    if (!discoveryRecords.has(workflowId)) {
+      failures.push(`Production workflow ${workflowId} has no Explorer discovery metadata`);
+    }
+  }
+
+  const allDiscoveryIds = new Set(discoveryRecords.keys());
+  for (const future of explorerData.future_workflows || []) {
+    if (!future.id) continue;
+    if (allDiscoveryIds.has(future.id)) failures.push(`Workflow id ${future.id} conflicts across production and future discovery metadata`);
+    allDiscoveryIds.add(future.id);
   }
 }
 

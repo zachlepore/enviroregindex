@@ -41,61 +41,23 @@ body {
 
 .mono { font-family: 'IBM Plex Mono', monospace; }
 
-/* ── Navigation ─────────────────────────────────────────────── */
-nav {
-  background: var(--text-primary);
-  border-bottom: 3px solid var(--accent-green-mid);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  height: 56px;
-}
-
-.nav-logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-  color: #FFFFFF;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.nav-logo span { color: #5CCE8A; }
-
-.nav-search-wrap {
-  flex: 1;
-  max-width: 420px;
-  position: relative;
-}
-
 #globalSearch {
   width: 100%;
   padding: 8px 12px 8px 36px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 6px;
-  color: #FFFFFF;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   outline: none;
   transition: border-color 0.2s;
 }
 
-#globalSearch::placeholder { color: rgba(255,255,255,0.4); }
+#globalSearch::placeholder { color: var(--text-muted); }
 #globalSearch:focus {
-  border-color: rgba(92,206,138,0.5);
-  background: rgba(255,255,255,0.12);
+  border-color: var(--accent-green-mid);
+  box-shadow: 0 0 0 3px rgba(46,125,82,0.12);
 }
 
 .search-icon {
@@ -103,127 +65,85 @@ nav {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255,255,255,0.4);
+  color: var(--text-muted);
   font-size: 14px;
   pointer-events: none;
 }
 
-.nav-tabs {
-  display: flex;
-  gap: 2px;
-  margin-left: auto;
+/* ── Jurisdiction Selector ──────────────────────────────────── */
+.state-bar {
+  flex: 0 0 auto;
 }
 
-.nav-tab {
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: rgba(255,255,255,0.55);
-  border-radius: 4px;
-  transition: all 0.15s;
+.state-bar-inner {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+}
+
+.jurisdiction-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.federal-jurisdiction-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 14px;
+  height: 46px;
   cursor: pointer;
-  border: none;
-  background: none;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
   white-space: nowrap;
 }
 
-.nav-tab:hover { color: #FFFFFF; background: rgba(255,255,255,0.08); }
-.nav-tab.active { color: #5CCE8A; background: rgba(92,206,138,0.1); }
-
-/* ── State Selector ─────────────────────────────────────────── */
-/*
- * Sits below the nav. Visually consistent with existing design language:
- * monospace labels, border-based, dark background strip.
- */
-.state-bar {
-  background: #222220;
-  border-bottom: 1px solid #2E2E2A;
-  padding: 0;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;
+.federal-jurisdiction-btn:hover {
+  color: var(--accent-green);
+  border-color: var(--border-strong);
 }
-.state-bar::-webkit-scrollbar { display: none; }
 
-.state-bar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+.federal-jurisdiction-btn.active {
+  color: var(--accent-green);
+  background: var(--accent-green-light);
+  border-color: rgba(46,125,82,0.45);
+}
+
+.federal-jurisdiction-btn:focus-visible,
+.state-select:focus-visible {
+  outline: 2px solid #5CCE8A;
+  outline-offset: 2px;
+}
+
+.state-select-label {
   display: flex;
   align-items: center;
-  gap: 0;
-  height: 38px;
-}
-
-.state-bar-label {
+  gap: 8px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  padding-right: 16px;
-  border-right: 1px solid rgba(255,255,255,0.08);
-  margin-right: 12px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: var(--text-muted);
 }
 
-.state-btn {
+.state-select {
+  min-width: 190px;
+  height: 46px;
+  padding: 0 30px 0 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  color: rgba(255,255,255,0.4);
-  background: none;
-  border: none;
-  padding: 0 12px;
-  height: 38px;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-  position: relative;
-}
-
-.state-btn:hover { color: rgba(255,255,255,0.8); }
-
-.state-btn.active {
-  color: #5CCE8A;
-}
-
-.state-btn.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 12px;
-  right: 12px;
-  height: 2px;
-  background: #5CCE8A;
-  border-radius: 1px 1px 0 0;
-}
-
-.state-btn.coming-soon {
-  color: rgba(255,255,255,0.2);
-  cursor: default;
-}
-
-.state-btn.coming-soon::before {
-  content: '';
-}
-
-.state-coming-tag {
-  font-size: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.25);
-  border-radius: 2px;
-  padding: 1px 4px;
-  margin-left: 5px;
-  vertical-align: middle;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* State loading indicator */
@@ -231,10 +151,10 @@ nav {
   display: none;
   align-items: center;
   gap: 8px;
-  margin-left: auto;
+  margin-left: 8px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.45);
   letter-spacing: 0.05em;
 }
 .state-loading.visible { display: flex; }
@@ -261,7 +181,7 @@ nav {
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   background: var(--text-primary);
-  padding: 48px 0 52px;
+  padding: 64px 0 60px;
   border-bottom: 1px solid #2A2A26;
 }
 
@@ -278,15 +198,16 @@ nav {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #5CCE8A;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: 38px;
+  font-size: clamp(36px, 5vw, 56px);
   font-weight: 300;
   color: #FFFFFF;
   line-height: 1.2;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
+  max-width: 780px;
   letter-spacing: -0.02em;
 }
 
@@ -301,31 +222,32 @@ nav {
   line-height: 1.65;
 }
 
-.hero-stats {
+.directory-tools {
   display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 820px;
 }
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.directory-search-wrap {
+  position: relative;
+  flex: 1;
 }
 
-.stat-num {
+.directory-search-wrap #globalSearch {
+  height: 46px;
+  padding-left: 38px;
+}
+
+.hero-context {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 22px;
-  font-weight: 600;
-  color: #5CCE8A;
-}
-
-.stat-label {
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.42);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
 }
 
 /* ── Section chrome ─────────────────────────────────────────── */
@@ -384,9 +306,9 @@ nav {
   height: 3px;
 }
 
-.cat-card.remediation::before { background: var(--accent-green-mid); }
-.cat-card.stormwater::before  { background: var(--accent-blue); }
-.cat-card.assessment::before  { background: var(--accent-amber); }
+.cat-card.focus-theme-0::before { background: var(--accent-green-mid); }
+.cat-card.focus-theme-1::before { background: var(--accent-blue); }
+.cat-card.focus-theme-2::before { background: var(--accent-amber); }
 
 .cat-card:hover {
   border-color: var(--border-strong);
@@ -405,9 +327,9 @@ nav {
   margin-bottom: 14px;
 }
 
-.cat-card.remediation .cat-icon { background: var(--accent-green-light); }
-.cat-card.stormwater  .cat-icon { background: var(--accent-blue-light); }
-.cat-card.assessment  .cat-icon { background: var(--accent-amber-light); }
+.cat-card.focus-theme-0 .cat-icon { background: var(--accent-green-light); }
+.cat-card.focus-theme-1 .cat-icon { background: var(--accent-blue-light); }
+.cat-card.focus-theme-2 .cat-icon { background: var(--accent-amber-light); }
 
 .cat-card h3 {
   font-size: 16px;
@@ -524,10 +446,26 @@ nav {
   margin: 0 0 10px;
 }
 
+.doc-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .doc-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+.doc-verified {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.65;
+  white-space: nowrap;
 }
 
 .tag {
@@ -798,70 +736,35 @@ mark {
   padding: 0 1px;
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
-footer {
-  margin-top: 64px;
-  border-top: 1px solid var(--border);
-  padding: 28px 0;
-  background: var(--surface);
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.footer-logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.footer-logo span { color: var(--accent-green-mid); }
-
-.footer-note {
-  font-size: 12px;
-  color: var(--text-muted);
-  max-width: 480px;
-  line-height: 1.6;
-}
-
-.footer-note a { color: var(--accent-green-mid); text-decoration: none; }
-.footer-note a:hover { text-decoration: underline; }
-
 /* ── Responsive / Mobile ────────────────────────────────────── */
-
-/* Tablet */
-@media (max-width: 900px) {
-  .nav-tabs { gap: 0; }
-  .nav-tab  { padding: 6px 10px; font-size: 11px; }
-}
 
 /* Mobile */
 @media (max-width: 768px) {
-
-  /* Nav */
-  .nav-inner { gap: 12px; padding: 0 16px; }
-  .nav-tabs  { display: none; }
-  .nav-search-wrap { max-width: none; }
-
-  /* State bar */
-  .state-bar-inner { padding: 0 16px; }
+  /* Directory controls */
+  .directory-tools { flex-direction: column; }
+  .state-bar, .directory-search-wrap { width: 100%; }
+  .state-bar-inner { min-height: 42px; }
+  .jurisdiction-controls {
+    width: 100%;
+    gap: 8px;
+  }
+  .state-select-label {
+    flex: 1;
+  }
+  .state-select {
+    min-width: 0;
+    width: 100%;
+    height: 42px;
+  }
+  .federal-jurisdiction-btn { height: 42px; }
+  .directory-search-wrap #globalSearch { height: 44px; }
 
   /* Hero */
-  .hero { padding: 32px 0 36px; }
+  .hero { padding: 42px 0 38px; }
   .hero-inner { padding: 0 16px; }
-  .hero h1 { font-size: 26px; line-height: 1.25; }
-  .hero-sub { font-size: 14px; margin-bottom: 24px; }
-  .hero-stats { gap: 20px; }
-  .stat-num { font-size: 18px; }
+  .hero h1 { font-size: 34px; line-height: 1.14; }
+  .hero-sub { font-size: 14px; margin-bottom: 26px; }
+  .hero-context { flex-wrap: wrap; }
 
   /* Layout */
   .container { padding: 0 16px; }
@@ -924,15 +827,12 @@ footer {
   .filter-bar::-webkit-scrollbar { display: none; }
   .result-count { display: none; }
 
-  /* Footer */
-  footer { margin-top: 40px; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .footer-note  { max-width: 100%; }
 }
 
 /* Very small phones */
 @media (max-width: 380px) {
-  .hero h1 { font-size: 22px; }
-  .state-btn { padding: 0 8px; font-size: 10px; }
+  .hero h1 { font-size: 30px; }
+  .federal-jurisdiction-btn { padding: 0 9px; font-size: 10px; }
+  .state-select-label { gap: 5px; }
+  .state-select { padding-left: 7px; font-size: 10px; }
 }
-

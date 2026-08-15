@@ -736,44 +736,6 @@ mark {
   padding: 0 1px;
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
-footer {
-  margin-top: 64px;
-  border-top: 1px solid var(--border);
-  padding: 28px 0;
-  background: var(--surface);
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.footer-logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.footer-logo span { color: var(--accent-green-mid); }
-
-.footer-note {
-  font-size: 12px;
-  color: var(--text-muted);
-  max-width: 480px;
-  line-height: 1.6;
-}
-
-.footer-note a { color: var(--accent-green-mid); text-decoration: none; }
-.footer-note a:hover { text-decoration: underline; }
-
 /* ── Responsive / Mobile ────────────────────────────────────── */
 
 /* Mobile */
@@ -865,10 +827,6 @@ footer {
   .filter-bar::-webkit-scrollbar { display: none; }
   .result-count { display: none; }
 
-  /* Footer */
-  footer { margin-top: 40px; }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .footer-note  { max-width: 100%; }
 }
 
 /* Very small phones */

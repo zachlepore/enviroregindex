@@ -29,25 +29,6 @@ body {
   flex-direction: column;
 }
 
-.platform-footer-inner {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.platform-footer-logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  font-weight: 600;
-  color: #FFFFFF;
-  text-decoration: none;
-  letter-spacing: -0.02em;
-}
-
-.platform-footer-logo span { color: var(--platform-green); }
-
 .platform-main {
   flex: 1;
   width: min(1180px, calc(100% - 48px));
@@ -227,24 +208,6 @@ body {
   outline-offset: 3px;
 }
 
-.platform-footer {
-  border-top: 1px solid var(--platform-border);
-  background: #FFFFFF;
-}
-
-.platform-footer-inner {
-  min-height: 92px;
-  gap: 24px;
-}
-
-.platform-footer-logo { color: var(--platform-text); }
-
-.platform-footer-inner p {
-  margin: 0;
-  color: #85827A;
-  font-size: 12px;
-}
-
 .placeholder-page { background: var(--platform-dark); }
 
 .placeholder-main {
@@ -283,7 +246,6 @@ body {
 }
 
 @media (max-width: 760px) {
-  .platform-footer-inner,
   .platform-main,
   .placeholder-main {
     width: min(100% - 32px, 1180px);
@@ -297,13 +259,6 @@ body {
   .experience-card { min-height: 0; padding: 27px 25px; }
   .experience-description { min-height: 0; }
   .platform-button { margin-top: 26px; }
-  .platform-footer-inner {
-    min-height: 110px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 8px;
-  }
   .placeholder-main { padding: 40px 0; }
   .placeholder-panel { padding: 30px 24px; }
   .placeholder-panel h1 { font-size: 34px; }

@@ -78,25 +78,33 @@
       "title": "Release-Based Cleanup Regs (RBCRs) — Effective",
       "description": "RBCRs took effect March 1, 2026, establishing Connecticut’s release-based reporting and cleanup system while preserving applicable transition pathways for existing cleanup programs.",
       "date": "March 1, 2026",
-      "color": "#E65100"
+      "color": "#E65100",
+      "destination": "https://portal.ct.gov/deep/remediation--site-clean-up/release-based-cleanup-program/release-based-cleanup-program",
+      "destination_type": "external"
     },
     {
       "title": "MS4 General Permit — Draft Reissuance",
       "description": "CT DEEP issued a Notice of Tentative Determination to reissue the MS4 General Permit; public comment period opened March 25, 2025.",
       "date": "March 25, 2025",
-      "color": "#1B4670"
+      "color": "#1B4670",
+      "destination": "https://portal.ct.gov/DEEP/Water-Regulating-and-Discharges/Stormwater/Municipal-Stormwater",
+      "destination_type": "external"
     },
     {
       "title": "REACT Portal Launch",
       "description": "CT DEEP's new Release, Environmental Assessment, and Cleanup Tracker (REACT) portal is live for document uploads and tracking as of early 2026.",
       "date": "February 2026",
-      "color": "#2E7D52"
+      "color": "#2E7D52",
+      "destination": "https://portal.ct.gov/deep/remediation--site-clean-up/environmental-cleanup",
+      "destination_type": "external"
     },
     {
       "title": "Release Remediation Closure Report Guide — Published",
       "description": "CT DEEP replaced its Verification Report Guidance Document with updated guidance for documenting release remediation closure and compliance across cleanup programs.",
       "date": "June 15, 2026",
-      "color": "#8B5E00"
+      "color": "#8B5E00",
+      "destination": "https://portal.ct.gov/-/media/deep/site_clean_up/guidance/release-closure-report-guide.pdf?rev=c4e56f0b69004524853af96fd7d46dd4&hash=38D618CF133EC48744CF2AD6F3F3FE42",
+      "destination_type": "external"
     }
   ],
   "documents": [

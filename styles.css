@@ -638,6 +638,32 @@ body {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.update-card:hover {
+  border-color: var(--border-strong);
+  background: var(--bg);
+}
+
+.update-card:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+.update-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.update-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1;
+  margin-top: 1px;
 }
 
 .update-dot {

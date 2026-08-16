@@ -57,7 +57,9 @@
       "title": "EPA / Federal Resources Added",
       "description": "Initial federal jurisdiction launched with official EPA and eCFR resources for SPCC, NPDES, RCRA, CERCLA, TSCA/PCBs, and EPCRA programs.",
       "date": "August 4, 2026",
-      "color": "#1B4670"
+      "color": "#1B4670",
+      "destination": "/directory.html",
+      "destination_type": "internal"
     }
   ],
   "documents": [

@@ -6,7 +6,7 @@ class EriGlobalHeader extends HTMLElement {
     this.innerHTML = `
       <header class="global-header">
         <div class="global-header-inner">
-          <a class="global-header-logo" href="/directory.html" aria-label="EnviroRegIndex Directory">
+          <a class="global-header-logo" href="/" aria-label="EnviroRegIndex home">
             Enviro<span>Reg</span>Index
           </a>
           <nav class="global-header-nav" aria-label="Primary navigation">

@@ -35,7 +35,9 @@
       "title": "MCP 2023 Amendments",
       "description": "MassDEP finalized updates to the Massachusetts Contingency Plan (MCP) addressing changes to soil and groundwater cleanup standards.",
       "date": "2023",
-      "color": "#2E7D52"
+      "color": "#2E7D52",
+      "destination": "https://www.mass.gov/regulations/310-cmr-4000-massachusetts-contingency-plan",
+      "destination_type": "external"
     }
   ],
   "documents": [

@@ -303,15 +303,21 @@ function renderRecentUpdates() {
     return;
   }
 
-  grid.innerHTML = RECENT_UPDATES.map(u => `
-    <div class="update-card">
+  grid.innerHTML = RECENT_UPDATES.map(u => {
+    const externalAttributes = u.destination_type === 'external'
+      ? ' target="_blank" rel="noopener"'
+      : '';
+    return `
+    <a class="update-card" href="${u.destination}"${externalAttributes}>
       <div class="update-dot" style="background:${u.color}"></div>
-      <div>
+      <div class="update-copy">
         <h4>${u.title}</h4>
         <p>${u.description}</p>
         <span class="update-date">${u.date}</span>
       </div>
-    </div>`).join('');
+      <span class="update-arrow" aria-hidden="true">${u.destination_type === 'external' ? '↗' : '→'}</span>
+    </a>`;
+  }).join('');
 }
 
 // ── Hero stats ───────────────────────────────────────────────

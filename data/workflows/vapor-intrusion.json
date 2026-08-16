@@ -1,0 +1,70 @@
+{
+  "workflow": {
+    "workflow_id": "vapor-intrusion",
+    "title": "Vapor Intrusion Evaluation & Investigation",
+    "business_line": "site-assessment",
+    "business_line_label": "Site Assessment",
+    "description": "Connecticut regulatory, investigation, criteria, technical, and analytical resources for evaluating a potential vapor intrusion pathway.",
+    "keywords": ["vapor intrusion", "vapor migration", "soil vapor", "soil gas", "sub-slab", "indoor air", "volatile compounds", "groundwater volatilization", "Volatilization Criteria", "conceptual site model", "preferential pathway", "attenuation", "TO-15"],
+    "synonyms": ["VI investigation", "vapor pathway evaluation", "subsurface vapor investigation"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "connecticut-framework", "title": "Connecticut Framework & Investigation", "display_order": 1 },
+    { "section_id": "criteria-pathway", "title": "Criteria & Pathway Evaluation", "display_order": 2 },
+    { "section_id": "technical-investigation", "title": "Technical Investigation", "display_order": 3 },
+    { "section_id": "sampling-data-quality", "title": "Sampling & Data Quality", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "ct-release-characterization-guidance",
+      "section": "connecticut-framework",
+      "workflow_note": "Use when incorporating soil vapor, indoor air, buildings, receptors, and preferential migration pathways into the Connecticut release-characterization approach and conceptual site model.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "ct-rbcr-official-regulations",
+      "section": "connecticut-framework",
+      "workflow_note": "Consult the controlling Connecticut requirements governing release characterization, groundwater Volatilization Criteria, and available vapor-related compliance provisions.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "ct-rbcr-cleanup-standards",
+      "section": "criteria-pathway",
+      "workflow_note": "Open to locate Connecticut's current Volatilization Criteria and maintained guidance connecting groundwater conditions, land use, and overlying buildings.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "ct-rbcr-compliance-measures",
+      "section": "criteria-pathway",
+      "workflow_note": "Review when investigation data may be relevant to an alternative Volatilization Criterion or another vapor-related compliance measure recognized by the RBCRs.",
+      "display_order": 2,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "epa-vapor-intrusion-technical-guide",
+      "section": "technical-investigation",
+      "workflow_note": "Use as the principal technical reference for developing and evaluating a vapor-intrusion conceptual site model, investigation strategy, and multiple lines of evidence.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "vapor-intrusion",
+      "resource_id": "ct-deep-quality-assurance-quality-control",
+      "section": "sampling-data-quality",
+      "workflow_note": "Use when selecting applicable Connecticut analytical QA/QC materials and planning review of soil-vapor, sub-slab, or indoor-air laboratory data.",
+      "display_order": 1,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

@@ -1,0 +1,44 @@
+{
+  "workflow": {
+    "workflow_id": "municipal-stormwater",
+    "title": "MS4 / Municipal Stormwater Compliance",
+    "business_line": "stormwater",
+    "business_line_label": "Stormwater",
+    "description": "Permit, program implementation, monitoring, and reporting resources for Connecticut MS4 compliance.",
+    "keywords": ["MS4", "municipal stormwater", "municipal separate storm sewer system", "Stormwater Management Plan", "SWMP", "minimum control measures", "MCM", "public education", "public participation", "IDDE", "illicit discharge", "outfall", "outfall mapping", "impaired waters", "priority areas", "annual report", "good housekeeping", "post-construction stormwater"],
+    "synonyms": ["MS4 General Permit", "Small MS4", "Municipal Storm Sewer"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct"]
+  },
+  "sections": [
+    { "section_id": "permit-program", "title": "Permit & Program Framework", "display_order": 1 },
+    { "section_id": "implementation-compliance", "title": "Implementation & Compliance", "display_order": 2 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "municipal-stormwater",
+      "resource_id": "ct-ms4-general-permit",
+      "section": "permit-program",
+      "workflow_note": "Consult the controlling permit for coverage, registration, SWMP, minimum-control-measure, mapping, monitoring, impaired-water, reporting, and recordkeeping requirements.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-stormwater",
+      "resource_id": "ct-municipal-stormwater-program",
+      "section": "permit-program",
+      "workflow_note": "Review current permit and reissuance status, annual-report instructions, registration materials, templates, and CT DEEP program resources.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "municipal-stormwater",
+      "resource_id": "ct-stormwater-quality-manual",
+      "section": "implementation-compliance",
+      "workflow_note": "Consult the current technical manual for applicable post-construction stormwater measures, LID practices, BMP selection, and water-quality design criteria.",
+      "display_order": 3,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

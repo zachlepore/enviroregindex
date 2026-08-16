@@ -1,0 +1,69 @@
+{
+  "workflow": {
+    "workflow_id": "industrial-stormwater",
+    "title": "Industrial Stormwater Permit & SWPPP",
+    "business_line": "stormwater",
+    "business_line_label": "Stormwater",
+    "description": "Permit, registration, SWPPP, monitoring, and reporting resources for industrial stormwater compliance in Connecticut.",
+    "keywords": ["industrial stormwater", "industrial stormwater permit", "industrial general permit", "industrial activity", "SWPPP", "stormwater pollution prevention plan", "no exposure", "no exposure certification", "SIC", "NAICS", "benchmark monitoring", "stormwater sampling", "visual assessment", "industrial inspection", "NetDMR", "DMR", "notice of coverage", "notice of termination"],
+    "synonyms": ["Industrial Stormwater General Permit", "Industrial SWPPP", "IGP"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "permit-applicability", "title": "Permit & Applicability", "display_order": 1 },
+    { "section_id": "registration-swppp", "title": "Registration & SWPPP", "display_order": 2 },
+    { "section_id": "monitoring-compliance", "title": "Monitoring & Compliance", "display_order": 3 },
+    { "section_id": "reporting-tools", "title": "Reporting & Supporting Tools", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "ct-industrial-stormwater-program",
+      "section": "permit-applicability",
+      "workflow_note": "Review the current permit program, regulated-activity context, registration paths, permit materials, forms, and CT DEEP submission resources.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "ct-industrial-stormwater-general-permit",
+      "section": "permit-applicability",
+      "workflow_note": "Consult the controlling permit for sector coverage, exclusions, SWPPP conditions, inspections, monitoring, corrective actions, reporting, and records.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "ct-industrial-stormwater-swppp-framework",
+      "section": "registration-swppp",
+      "workflow_note": "Use CT DEEP's editable framework to organize the facility SWPPP and document applicable controls, inspections, monitoring, and permit procedures.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "ct-industrial-stormwater-compliance-assistance",
+      "section": "monitoring-compliance",
+      "workflow_note": "Navigate current CT DEEP implementation guidance, inspection and monitoring resources, reporting instructions, forms, and compliance assistance.",
+      "display_order": 4,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "ct-netdmr",
+      "section": "reporting-tools",
+      "workflow_note": "Access Connecticut enrollment, subscriber-agreement, CDX, and DMR guidance when the applicable reporting path calls for NetDMR.",
+      "display_order": 5,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "industrial-stormwater",
+      "resource_id": "epa-industrial-stormwater-guidance",
+      "section": "reporting-tools",
+      "workflow_note": "Consult EPA's sector fact sheets, SWPPP guidance, and BMP resources as supplementary support to the Connecticut permit.",
+      "display_order": 6,
+      "importance": "supporting"
+    }
+  ]
+}

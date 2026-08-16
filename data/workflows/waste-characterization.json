@@ -1,0 +1,78 @@
+{
+  "workflow": {
+    "workflow_id": "waste-characterization",
+    "title": "Waste Characterization & Hazardous Waste Determination",
+    "business_line": "waste-materials",
+    "business_line_label": "Waste & Materials",
+    "description": "Authoritative Connecticut and federal resources for identifying, classifying, testing, and documenting a waste stream before downstream generator compliance.",
+    "keywords": ["waste characterization", "waste determination", "hazardous waste determination", "solid waste", "listed waste", "characteristic waste", "Connecticut-regulated waste", "SW-846", "knowledge of process"],
+    "synonyms": ["Characterize a Waste Stream", "waste classification", "hazardous waste identification"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "determination-framework", "title": "Waste Determination Framework", "display_order": 1 },
+    { "section_id": "hazardous-waste-identification", "title": "Hazardous Waste Identification", "display_order": 2 },
+    { "section_id": "connecticut-classification", "title": "Connecticut-Specific Classification", "display_order": 3 },
+    { "section_id": "testing-documentation", "title": "Testing & Documentation", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "ct-hazardous-waste-regulations",
+      "section": "determination-framework",
+      "workflow_note": "Consult the Connecticut regulatory framework and incorporated federal provisions governing waste identification and hazardous-waste determinations.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "ct-hazardous-waste-determinations",
+      "section": "determination-framework",
+      "workflow_note": "Use when organizing and documenting the Connecticut determination, including exclusions, listings, characteristics, process knowledge, testing, and supporting records.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "epa-solid-waste-definition-exclusions",
+      "section": "hazardous-waste-identification",
+      "workflow_note": "Open when evaluating federal solid-waste concepts and exclusions that may be relevant to the material under review.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "epa-hazardous-waste-identification",
+      "section": "hazardous-waste-identification",
+      "workflow_note": "Use as a federal reference for listed-waste categories, hazardous-waste characteristics, and related identification concepts.",
+      "display_order": 2,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "ct-connecticut-regulated-waste",
+      "section": "connecticut-classification",
+      "workflow_note": "Consult when evaluating whether a non-RCRA waste may fall within a Connecticut-specific regulated-waste category.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "epa-sw-846-test-methods",
+      "section": "testing-documentation",
+      "workflow_note": "Use to identify current EPA sampling, preparation, analytical, and quality-assurance resources when testing is part of the professional determination.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "waste-characterization",
+      "resource_id": "ct-environmental-laboratory-certification",
+      "section": "testing-documentation",
+      "workflow_note": "Use to locate Connecticut-approved laboratories and review relevant certified matrices or analytes before commissioning waste analysis.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

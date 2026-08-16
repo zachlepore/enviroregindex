@@ -7,10 +7,34 @@
     "agency_url": "https://www.dec.ny.gov",
     "status": "coming-soon"
   },
+  "focus_areas": [
+    {
+      "name": "Site Remediation",
+      "slug": "remediation",
+      "description": "Cleanup standards, regulatory frameworks, licensed professional programs, voluntary remediation, and document portals.",
+      "icon": "🌿",
+      "order": 1
+    },
+    {
+      "name": "Stormwater",
+      "slug": "stormwater",
+      "description": "Permits and guidance for municipal, construction, and industrial stormwater, plus stormwater quality resources.",
+      "icon": "💧",
+      "order": 2
+    },
+    {
+      "name": "Site Assessment",
+      "slug": "assessment",
+      "description": "Site characterization guidance, environmental assessment resources, database search tools, and brownfield programs.",
+      "icon": "🔍",
+      "order": 3
+    }
+  ],
   "recent_updates": [],
   "documents": [
     {
       "id": 1,
+      "qc_id": "NY1",
       "category": "remediation",
       "subcategory": "Part 375",
       "title": "6 NYCRR Part 375 — Remedial Program Regulations",
@@ -22,6 +46,7 @@
     },
     {
       "id": 2,
+      "qc_id": "NY2",
       "category": "remediation",
       "subcategory": "VCP",
       "title": "Voluntary Cleanup Program (VCP) — Overview",
@@ -33,6 +58,7 @@
     },
     {
       "id": 3,
+      "qc_id": "NY3",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "NY Construction General Permit (GP-0-20-001)",
@@ -44,6 +70,7 @@
     },
     {
       "id": 4,
+      "qc_id": "NY4",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "NY MS4 General Permit (GP-0-15-003)",
@@ -55,6 +82,7 @@
     },
     {
       "id": 5,
+      "qc_id": "NY5",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "NY Stormwater Management Design Manual (2015)",
@@ -66,6 +94,7 @@
     },
     {
       "id": 6,
+      "qc_id": "NY6",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "NY Brownfield Cleanup Program (BCP) — Site Assessment",
@@ -77,6 +106,7 @@
     },
     {
       "id": 7,
+      "qc_id": "NY7",
       "category": "assessment",
       "subcategory": "Database Search",
       "title": "NY Environmental Site Remediation Database (ENSR)",

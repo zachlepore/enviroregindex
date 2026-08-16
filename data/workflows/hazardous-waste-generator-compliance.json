@@ -1,0 +1,78 @@
+{
+  "workflow": {
+    "workflow_id": "hazardous-waste-generator-compliance",
+    "title": "Hazardous Waste Generator Compliance",
+    "business_line": "waste-materials",
+    "business_line_label": "Waste & Materials",
+    "description": "Regulatory, waste-determination, generator-requirement, manifest, reporting, and submission resources for hazardous waste generators in Connecticut.",
+    "keywords": ["hazardous waste", "hazardous waste generator", "generator requirements", "RCRA generator", "CESQG", "VSQG", "SQG", "LQG", "waste determination", "manifest", "biennial report", "EPA ID"],
+    "synonyms": ["Hazardous Waste Management", "Conditionally Exempt Small Quantity Generator", "Very Small Quantity Generator", "Small Quantity Generator", "Large Quantity Generator", "RCRA compliance", "generator category"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "epa"]
+  },
+  "sections": [
+    { "section_id": "regulatory-framework", "title": "Regulatory Framework", "display_order": 1 },
+    { "section_id": "generator-status-determination", "title": "Generator Status & Waste Determination", "display_order": 2 },
+    { "section_id": "manifests-reporting", "title": "Manifests & Reporting", "display_order": 3 },
+    { "section_id": "systems-connecticut-requirements", "title": "Systems & Connecticut Requirements", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-hazardous-waste-regulations",
+      "section": "regulatory-framework",
+      "workflow_note": "Consult the current Connecticut regulatory framework, including incorporated federal provisions and state-specific requirements.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-rcra-help",
+      "section": "regulatory-framework",
+      "workflow_note": "Use to navigate Connecticut's generator categories, category-specific requirements, and generator compliance resources.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-hazardous-waste-determinations",
+      "section": "generator-status-determination",
+      "workflow_note": "Consult when evaluating and documenting whether a facility's waste streams are regulated hazardous wastes.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-hazardous-waste-manifest-requirements",
+      "section": "manifests-reporting",
+      "workflow_note": "Review Connecticut requirements for manifested hazardous waste shipments and associated records.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-biennial-hazardous-waste-reporting",
+      "section": "manifests-reporting",
+      "workflow_note": "Consult when determining and completing applicable Connecticut biennial hazardous waste reporting obligations.",
+      "display_order": 2,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "epa-rcrainfo-industry-applications",
+      "section": "systems-connecticut-requirements",
+      "workflow_note": "Use myRCRAid, e-Manifest, and Biennial Report for applicable Connecticut site notifications, shipment records, and electronic submissions.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "hazardous-waste-generator-compliance",
+      "resource_id": "ct-connecticut-regulated-waste",
+      "section": "systems-connecticut-requirements",
+      "workflow_note": "Consult for Connecticut-regulated waste categories and state requirements that may apply when a waste is not classified as RCRA hazardous waste.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

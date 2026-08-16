@@ -279,6 +279,41 @@
       }
     },
     {
+      "id": "waste-characterization",
+      "title": "Waste Characterization & Hazardous Waste Determination",
+      "description": "Navigate authoritative resources for identifying, classifying, testing, and documenting a Connecticut waste stream.",
+      "businessLine": "waste-materials",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "waste characterization",
+        "characterize waste",
+        "waste determination",
+        "hazardous waste determination",
+        "hazardous waste",
+        "solid waste",
+        "listed waste",
+        "characteristic waste",
+        "waste codes",
+        "RCRA",
+        "CESQG",
+        "VSQG",
+        "Connecticut-regulated waste",
+        "testing",
+        "SW-846",
+        "knowledge of process"
+      ],
+      "synonyms": [
+        "Characterize a Waste Stream",
+        "waste classification",
+        "hazardous waste identification"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=waste-characterization&jurisdiction=ct"
+      }
+    },
+    {
       "id": "spcc-plan",
       "title": "SPCC Plan Development & Compliance",
       "description": "Navigate applicability, planning, implementation, and discharge-reporting resources for SPCC compliance.",
@@ -495,23 +530,6 @@
       "synonyms": [
         "rap",
         "remediation plan"
-      ]
-    },
-    {
-      "id": "waste-characterization",
-      "title": "Characterize a Waste Stream",
-      "description": "Determine waste classification and appropriate management requirements.",
-      "businessLine": "waste-materials",
-      "jurisdictions": [
-        "all"
-      ],
-      "keywords": [
-        "hazardous waste",
-        "sampling",
-        "disposal"
-      ],
-      "synonyms": [
-        "waste determination"
       ]
     },
     {

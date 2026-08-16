@@ -679,6 +679,7 @@
       "qc_id": "CT39",
       "resource_id": "ct-environmental-laboratory-certification",
       "category": "assessment",
+      "focus_areas": ["waste-materials"],
       "subcategory": "Laboratory / Data Quality",
       "title": "Environmental Laboratory Certification",
       "description": "Connecticut Department of Public Health resource for environmental laboratory certification, approved laboratory lists, analyte and matrix information, and related program materials.",
@@ -800,6 +801,7 @@
       "source_type": "government-agency",
       "last_updated": "Current Connecticut guidance",
       "verified": "August 13, 2026",
+      "verification_note": "The CT DEEP page remains the maintained Connecticut waste-determination resource. Some subordinate federal references point to historical text associated with Connecticut's incorporated framework; current federal eCFR language should not be substituted automatically for Connecticut's adopted requirements. The page's re-characterization interval is treated as agency guidance here because this review did not identify an independent controlling citation.",
       "tags": ["hazardous waste determination", "waste classification", "knowledge of process", "recordkeeping", "RCRA", "generator"]
     },
     {

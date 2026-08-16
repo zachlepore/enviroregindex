@@ -319,6 +319,54 @@
       "last_updated": "Current EPA categorical pretreatment standards",
       "verified": "August 13, 2026",
       "tags": ["categorical pretreatment standards", "categorical industrial user", "CIU", "industrial wastewater", "POTW", "effluent guidelines"]
+    },
+    {
+      "id": 18,
+      "qc_id": "EPA18",
+      "resource_id": "epa-solid-waste-definition-exclusions",
+      "category": "hazardous-waste",
+      "subcategory": "RCRA / Waste Identification",
+      "title": "Criteria for the Definition of Solid Waste and Solid and Hazardous Waste Exclusions",
+      "description": "EPA guidance on the federal definition of solid waste and exclusions from solid- and hazardous-waste regulation, including links to the governing federal framework.",
+      "source_url": "https://www.epa.gov/hw/criteria-definition-solid-waste-and-solid-and-hazardous-waste-exclusions",
+      "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA waste-identification guidance",
+      "verified": "August 16, 2026",
+      "tags": ["solid waste", "definition of solid waste", "exclusions", "hazardous waste", "RCRA", "waste identification"]
+    },
+    {
+      "id": 19,
+      "qc_id": "EPA19",
+      "resource_id": "epa-hazardous-waste-identification",
+      "category": "hazardous-waste",
+      "subcategory": "RCRA / Waste Identification",
+      "title": "Defining Hazardous Waste: Listed, Characteristic and Mixed Radiological Wastes",
+      "description": "EPA guidance on the federal hazardous-waste identification framework, including listed, characteristic, and mixed radiological wastes.",
+      "source_url": "https://www.epa.gov/hw/defining-hazardous-waste-listed-characteristic-and-mixed-radiological-wastes",
+      "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA hazardous-waste identification guidance",
+      "verified": "August 16, 2026",
+      "tags": ["hazardous waste", "listed waste", "characteristic waste", "mixed radiological waste", "waste codes", "RCRA"]
+    },
+    {
+      "id": 20,
+      "qc_id": "EPA20",
+      "resource_id": "epa-sw-846-test-methods",
+      "category": "hazardous-waste",
+      "subcategory": "RCRA / Analytical Methods",
+      "title": "Hazardous Waste Test Methods / SW-846",
+      "description": "EPA's current compendium of sampling, preparation, analytical, and quality-assurance methods used to support hazardous-waste and other environmental evaluations.",
+      "source_url": "https://www.epa.gov/hw-sw846",
+      "document_type": "manual",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Current EPA SW-846 compendium",
+      "verified": "August 16, 2026",
+      "tags": ["SW-846", "hazardous waste testing", "sampling", "analytical methods", "quality assurance", "laboratory"]
     }
   ]
 }

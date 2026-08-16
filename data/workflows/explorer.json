@@ -380,6 +380,44 @@
       }
     },
     {
+      "id": "ust-registration-compliance",
+      "title": "Underground Storage Tank Registration & Compliance",
+      "description": "Navigate Connecticut registration, operating, testing, operator, financial, status, and administrative closure resources for regulated UST systems.",
+      "businessLine": "tanks-oil",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "underground storage tank",
+        "UST",
+        "tank registration",
+        "tank notification",
+        "tank compliance",
+        "release detection",
+        "tank testing",
+        "piping testing",
+        "corrosion protection",
+        "spill prevention",
+        "overfill prevention",
+        "Class A operator",
+        "Class B operator",
+        "Class C operator",
+        "financial responsibility",
+        "temporary closure",
+        "permanent closure",
+        "change of ownership",
+        "ezFile"
+      ],
+      "synonyms": [
+        "UST compliance",
+        "underground tank compliance",
+        "UST registration"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=ust-registration-compliance&jurisdiction=ct"
+      }
+    },
+    {
       "id": "industrial-pretreatment",
       "title": "Industrial Pretreatment Permitting & Compliance",
       "description": "Navigate Connecticut permit paths, controlling permits, and reporting resources for industrial discharges to POTWs.",

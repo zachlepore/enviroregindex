@@ -108,6 +108,39 @@
       }
     },
     {
+      "id": "vapor-intrusion",
+      "title": "Vapor Intrusion Evaluation & Investigation",
+      "description": "Navigate Connecticut framework, criteria, technical, and analytical resources for evaluating a potential vapor pathway.",
+      "businessLine": "site-assessment",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "vapor intrusion",
+        "vapor migration",
+        "soil vapor",
+        "soil gas",
+        "sub-slab",
+        "indoor air",
+        "volatile compounds",
+        "groundwater volatilization",
+        "volatilization criteria",
+        "VI",
+        "conceptual site model",
+        "preferential pathway",
+        "attenuation",
+        "TO-15"
+      ],
+      "synonyms": [
+        "VI investigation",
+        "vapor pathway evaluation",
+        "subsurface vapor investigation"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=vapor-intrusion&jurisdiction=ct"
+      }
+    },
+    {
       "id": "release-discovery-cleanup-entry",
       "title": "Release Discovery, Reporting & Cleanup Entry",
       "description": "Navigate Connecticut’s current release-based framework, characterization resources, submissions, and cleanup-entry pathways.",
@@ -481,23 +514,6 @@
     }
   ],
   "future_workflows": [
-    {
-      "id": "vapor-intrusion",
-      "title": "Vapor Intrusion Investigation",
-      "description": "Evaluate vapor migration and potential indoor-air exposure pathways.",
-      "businessLine": "site-assessment",
-      "jurisdictions": [
-        "all"
-      ],
-      "keywords": [
-        "vapor",
-        "indoor air",
-        "sub-slab"
-      ],
-      "synonyms": [
-        "vi investigation"
-      ]
-    },
     {
       "id": "brownfield-investigation",
       "title": "Brownfield Site Investigation",

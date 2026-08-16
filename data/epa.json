@@ -367,6 +367,23 @@
       "last_updated": "Current EPA SW-846 compendium",
       "verified": "August 16, 2026",
       "tags": ["SW-846", "hazardous waste testing", "sampling", "analytical methods", "quality assurance", "laboratory"]
+    },
+    {
+      "id": 21,
+      "qc_id": "EPA21",
+      "resource_id": "epa-vapor-intrusion-technical-guide",
+      "category": "superfund",
+      "subcategory": "Vapor Intrusion / Technical Guidance",
+      "title": "Technical Guide for Assessing and Mitigating the Vapor Intrusion Pathway from Subsurface Vapor Sources to Indoor Air",
+      "description": "EPA's maintained gateway to the final technical guide and current errata for evaluating the vapor intrusion pathway from subsurface vapor sources to indoor air.",
+      "source_url": "https://www.epa.gov/vaporintrusion/technical-guide-assessing-and-mitigating-vapor-intrusion-pathway-subsurface-vapor",
+      "document_type": "guidance",
+      "publisher": "United States Environmental Protection Agency",
+      "source_type": "government-agency",
+      "last_updated": "Gateway updated December 1, 2025",
+      "verified": "August 16, 2026",
+      "verification_note": "The maintained EPA gateway resolves without redirect or archive warning and links the June 2015 final technical guide and October 2016 errata. No superseding general EPA vapor-intrusion technical guide was identified during final QA.",
+      "tags": ["vapor intrusion", "soil vapor", "sub-slab", "indoor air", "conceptual site model", "multiple lines of evidence", "technical guide", "Superfund"]
     }
   ]
 }

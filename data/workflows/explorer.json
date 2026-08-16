@@ -1,0 +1,621 @@
+{
+  "business_lines": [
+    {
+      "id": "site-assessment",
+      "title": "Site Assessment",
+      "description": "Phase I & II ESAs, due diligence, and site investigations.",
+      "icon": "⌕",
+      "order": 1
+    },
+    {
+      "id": "remediation",
+      "title": "Remediation",
+      "description": "Cleanup planning, closure, and contaminated-site programs.",
+      "icon": "◇",
+      "order": 2
+    },
+    {
+      "id": "stormwater",
+      "title": "Stormwater",
+      "description": "Construction, industrial, and municipal stormwater compliance.",
+      "icon": "≋",
+      "order": 3
+    },
+    {
+      "id": "waste-materials",
+      "title": "Waste & Materials",
+      "description": "Waste characterization, handling, recycling, and disposal.",
+      "icon": "▣",
+      "order": 4
+    },
+    {
+      "id": "tanks-oil",
+      "title": "Tanks & Oil",
+      "description": "Storage tanks, spill prevention, and oil management.",
+      "icon": "◉",
+      "order": 5
+    },
+    {
+      "id": "water",
+      "title": "Water & Wastewater",
+      "description": "Water quality, wastewater discharges, permitting, and related compliance.",
+      "icon": "≈",
+      "order": 6
+    },
+    {
+      "id": "natural-resources",
+      "title": "Natural Resources",
+      "description": "Wetlands, habitat, endangered species, and natural resource permitting.",
+      "icon": "⌁",
+      "order": 7
+    },
+    {
+      "id": "coastal",
+      "title": "Coastal",
+      "description": "Coastal development, resilience, and shoreline permitting.",
+      "icon": "∿",
+      "order": 8
+    },
+    {
+      "id": "air",
+      "title": "Air",
+      "description": "Emissions, permitting, monitoring, and air-quality compliance.",
+      "icon": "○",
+      "order": 9
+    }
+  ],
+  "workflows": [
+    {
+      "id": "phase-i-esa",
+      "title": "Phase I Environmental Site Assessment",
+      "description": "Evaluate environmental conditions and potential liability before a transaction.",
+      "businessLine": "site-assessment",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "due diligence",
+        "property",
+        "transaction"
+      ],
+      "synonyms": [
+        "phase one",
+        "aai"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=phase-i-esa&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "phase-ii-esa",
+      "title": "Phase II Environmental Site Assessment",
+      "description": "Plan sampling to evaluate recognized environmental conditions.",
+      "businessLine": "site-assessment",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "sampling",
+        "investigation",
+        "soil",
+        "groundwater"
+      ],
+      "synonyms": [
+        "phase two"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=phase-ii-esa&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "release-discovery-cleanup-entry",
+      "title": "Release Discovery, Reporting & Cleanup Entry",
+      "description": "Navigate Connecticut’s current release-based framework, characterization resources, submissions, and cleanup-entry pathways.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "RBCR",
+        "release-based cleanup",
+        "release discovery",
+        "release reporting",
+        "release characterization",
+        "conceptual site model",
+        "CSM",
+        "significant existing release",
+        "SER",
+        "immediate action",
+        "release tier",
+        "tier assignment",
+        "REACT",
+        "cleanup entry"
+      ],
+      "synonyms": [
+        "release cleanup",
+        "release-based cleanup regulations",
+        "release response"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=release-discovery-cleanup-entry&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "construction-stormwater",
+      "title": "Construction Stormwater Permit & SPCP",
+      "description": "Navigate permit, planning, filing, and compliance resources for construction stormwater.",
+      "businessLine": "stormwater",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "construction stormwater",
+        "construction activities",
+        "CGP",
+        "SPCP",
+        "SWPPP",
+        "land disturbance",
+        "erosion",
+        "ezFile"
+      ],
+      "synonyms": [
+        "construction general permit",
+        "construction site stormwater",
+        "stormwater pollution control plan",
+        "stormwater pollution prevention plan",
+        "construction SWPPP"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=construction-stormwater&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "industrial-stormwater",
+      "title": "Industrial Stormwater Permit & SWPPP",
+      "description": "Navigate Connecticut permit, registration, planning, monitoring, and reporting resources for industrial stormwater.",
+      "businessLine": "stormwater",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "industrial stormwater",
+        "industrial stormwater permit",
+        "industrial general permit",
+        "industrial activity",
+        "SWPPP",
+        "stormwater pollution prevention plan",
+        "no exposure",
+        "no exposure certification",
+        "SIC",
+        "NAICS",
+        "benchmark monitoring",
+        "stormwater sampling",
+        "visual assessment",
+        "industrial inspection",
+        "NetDMR",
+        "DMR",
+        "notice of coverage",
+        "notice of termination"
+      ],
+      "synonyms": [
+        "industrial SWPPP",
+        "industrial stormwater general permit",
+        "IGP"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=industrial-stormwater&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "municipal-stormwater",
+      "title": "MS4 / Municipal Stormwater Compliance",
+      "description": "Navigate Connecticut MS4 permit, program implementation, monitoring, and reporting resources.",
+      "businessLine": "stormwater",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "MS4",
+        "municipal stormwater",
+        "municipal separate storm sewer system",
+        "Stormwater Management Plan",
+        "SWMP",
+        "minimum control measures",
+        "MCM",
+        "public education",
+        "public participation",
+        "IDDE",
+        "illicit discharge",
+        "outfall",
+        "outfall mapping",
+        "impaired waters",
+        "priority areas",
+        "annual report",
+        "good housekeeping",
+        "post-construction stormwater"
+      ],
+      "synonyms": [
+        "MS4 General Permit",
+        "small MS4",
+        "municipal storm sewer"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=municipal-stormwater&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "hazardous-waste-generator-compliance",
+      "title": "Hazardous Waste Generator Compliance",
+      "description": "Navigate Connecticut generator requirements, waste determinations, manifests, reporting, and RCRAInfo.",
+      "businessLine": "waste-materials",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "hazardous waste",
+        "hazardous waste generator",
+        "RCRA",
+        "generator",
+        "CESQG",
+        "VSQG",
+        "SQG",
+        "LQG",
+        "manifest",
+        "EPA ID",
+        "waste determination",
+        "hazardous waste reporting"
+      ],
+      "synonyms": [
+        "generator requirements",
+        "RCRA generator",
+        "conditionally exempt small quantity generator",
+        "very small quantity generator",
+        "small quantity generator",
+        "large quantity generator",
+        "hazardous waste management"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=hazardous-waste-generator-compliance&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "waste-characterization",
+      "title": "Waste Characterization & Hazardous Waste Determination",
+      "description": "Navigate authoritative resources for identifying, classifying, testing, and documenting a Connecticut waste stream.",
+      "businessLine": "waste-materials",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "waste characterization",
+        "characterize waste",
+        "waste determination",
+        "hazardous waste determination",
+        "hazardous waste",
+        "solid waste",
+        "listed waste",
+        "characteristic waste",
+        "waste codes",
+        "RCRA",
+        "CESQG",
+        "VSQG",
+        "Connecticut-regulated waste",
+        "testing",
+        "SW-846",
+        "knowledge of process"
+      ],
+      "synonyms": [
+        "Characterize a Waste Stream",
+        "waste classification",
+        "hazardous waste identification"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=waste-characterization&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "spcc-plan",
+      "title": "SPCC Plan Development & Compliance",
+      "description": "Navigate applicability, planning, implementation, and discharge-reporting resources for SPCC compliance.",
+      "businessLine": "tanks-oil",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "SPCC",
+        "spill prevention control and countermeasure",
+        "spill prevention",
+        "oil storage",
+        "bulk oil storage",
+        "AST",
+        "aboveground storage tank",
+        "secondary containment",
+        "qualified facility",
+        "Tier I",
+        "Tier II",
+        "oil discharge",
+        "40 CFR Part 112"
+      ],
+      "synonyms": [
+        "SPCC plan",
+        "oil spill prevention",
+        "oil facility",
+        "self-certification"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=spcc-plan&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "industrial-pretreatment",
+      "title": "Industrial Pretreatment Permitting & Compliance",
+      "description": "Navigate Connecticut permit paths, controlling permits, and reporting resources for industrial discharges to POTWs.",
+      "businessLine": "water",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "industrial wastewater",
+        "pretreatment",
+        "SIU",
+        "significant industrial user",
+        "Non-SIU",
+        "categorical industrial user",
+        "CIU",
+        "POTW",
+        "sanitary sewer",
+        "industrial discharge",
+        "wastewater discharge",
+        "categorical standards",
+        "NetDMR",
+        "pretreatment permit"
+      ],
+      "synonyms": [
+        "industrial pretreatment",
+        "sewer discharge",
+        "publicly owned treatment works"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=industrial-pretreatment&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "municipal-inland-wetlands",
+      "title": "Municipal Inland Wetlands & Watercourses Permitting",
+      "description": "Navigate Connecticut's statewide framework, municipal permitting process, screening resources, and federal handoff.",
+      "businessLine": "natural-resources",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "inland wetlands",
+        "watercourses",
+        "IWWA",
+        "regulated activity",
+        "municipal wetlands",
+        "inland wetlands agency",
+        "wetland permit",
+        "wetland soils",
+        "upland review area",
+        "watercourse",
+        "municipal permit"
+      ],
+      "synonyms": [
+        "inland wetlands permitting",
+        "wetlands application",
+        "wetland screening"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=municipal-inland-wetlands&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "coastal-structures-permitting",
+      "title": "Coastal Structures, Dredging & Tidal Wetlands Permitting",
+      "description": "Navigate Connecticut coastal statutes, permit paths, application materials, jurisdiction references, and federal coordination.",
+      "businessLine": "coastal",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "coastal",
+        "tidal",
+        "tidal wetlands",
+        "tidal waters",
+        "coastal permit",
+        "coastal permitting",
+        "waterfront",
+        "structures",
+        "dredging",
+        "fill",
+        "dock",
+        "pier",
+        "shoreline",
+        "seawall",
+        "bulkhead",
+        "coastal jurisdiction",
+        "coastal structures"
+      ],
+      "synonyms": [
+        "tidal wetlands permitting",
+        "structures dredging and fill",
+        "waterfront permitting"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=coastal-structures-permitting&jurisdiction=ct"
+      }
+    },
+    {
+      "id": "stationary-source-air-authorization",
+      "title": "New & Modified Stationary Source Air Authorization",
+      "description": "Navigate Connecticut regulations, applicability resources, professional tools, and current filing materials for stationary-source air authorization.",
+      "businessLine": "air",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "air permit",
+        "air permitting",
+        "stationary source",
+        "emissions",
+        "emissions unit",
+        "new source",
+        "modified source",
+        "NSR",
+        "new source review",
+        "permit applicability",
+        "permit by rule",
+        "registration",
+        "general permit",
+        "exemption",
+        "air permit wizard"
+      ],
+      "synonyms": [
+        "stationary source air permitting",
+        "air authorization",
+        "source registration"
+      ],
+      "destinations": {
+        "ct": "workflow.html?workflow=stationary-source-air-authorization&jurisdiction=ct"
+      }
+    }
+  ],
+  "future_workflows": [
+    {
+      "id": "vapor-intrusion",
+      "title": "Vapor Intrusion Investigation",
+      "description": "Evaluate vapor migration and potential indoor-air exposure pathways.",
+      "businessLine": "site-assessment",
+      "jurisdictions": [
+        "all"
+      ],
+      "keywords": [
+        "vapor",
+        "indoor air",
+        "sub-slab"
+      ],
+      "synonyms": [
+        "vi investigation"
+      ]
+    },
+    {
+      "id": "brownfield-investigation",
+      "title": "Brownfield Site Investigation",
+      "description": "Assess environmental conditions to support reuse and redevelopment.",
+      "businessLine": "site-assessment",
+      "jurisdictions": [
+        "all"
+      ],
+      "keywords": [
+        "brownfield",
+        "redevelopment"
+      ],
+      "synonyms": [
+        "site characterization"
+      ]
+    },
+    {
+      "id": "cleanup-plan",
+      "title": "Develop a Remedial Action Plan",
+      "description": "Organize cleanup objectives, methods, controls, and documentation.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "all"
+      ],
+      "keywords": [
+        "cleanup",
+        "remediation",
+        "closure"
+      ],
+      "synonyms": [
+        "rap",
+        "remediation plan"
+      ]
+    },
+    {
+      "id": "habitat-review",
+      "title": "Complete a Natural Resource Review",
+      "description": "Identify habitat, wildlife, and natural-resource constraints.",
+      "businessLine": "natural-resources",
+      "jurisdictions": [
+        "all"
+      ],
+      "keywords": [
+        "habitat",
+        "wildlife",
+        "species"
+      ],
+      "synonyms": [
+        "ecological review"
+      ]
+    },
+    {
+      "id": "ct-rbcr",
+      "title": "Release-Based Cleanup Regulations",
+      "description": "Navigate Connecticut release reporting, characterization, tiering, and cleanup obligations.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "rbcr",
+        "release",
+        "cleanup"
+      ],
+      "synonyms": [
+        "release-based cleanup"
+      ]
+    },
+    {
+      "id": "ct-lep-verification",
+      "title": "LEP Verification",
+      "description": "Prepare and document a Connecticut LEP verification.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "lep",
+        "verification",
+        "closure"
+      ],
+      "synonyms": [
+        "licensed environmental professional"
+      ]
+    },
+    {
+      "id": "ct-seh",
+      "title": "Significant Environmental Hazard",
+      "description": "Evaluate and respond to Connecticut significant environmental hazard conditions.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "seh",
+        "hazard",
+        "notification"
+      ],
+      "synonyms": [
+        "significant environmental hazard"
+      ]
+    },
+    {
+      "id": "ct-react",
+      "title": "REACT",
+      "description": "Use Connecticut’s release, environmental assessment, and cleanup tracker.",
+      "businessLine": "remediation",
+      "jurisdictions": [
+        "ct"
+      ],
+      "keywords": [
+        "react",
+        "portal",
+        "submission"
+      ],
+      "synonyms": [
+        "cleanup tracker"
+      ]
+    }
+  ]
+}

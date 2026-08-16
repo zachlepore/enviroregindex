@@ -1,0 +1,68 @@
+{
+  "workflow": {
+    "workflow_id": "release-discovery-cleanup-entry",
+    "title": "Release Discovery, Reporting & Cleanup Entry",
+    "business_line": "remediation",
+    "business_line_label": "Remediation",
+    "description": "Current framework, characterization, submission, and cleanup-entry resources for handling a discovered release in Connecticut.",
+    "keywords": ["RBCR", "release-based cleanup", "release discovery", "release reporting", "release characterization", "conceptual site model", "CSM", "significant existing release", "SER", "immediate action", "release tier", "tier assignment", "REACT", "cleanup entry"],
+    "synonyms": ["Release-Based Cleanup Regulations", "Release Cleanup", "Release Response"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct"]
+  },
+  "sections": [
+    { "section_id": "framework-reporting", "title": "Framework & Reporting", "display_order": 1 },
+    { "section_id": "characterization-entry", "title": "Characterization & Cleanup Entry", "display_order": 2 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-release-based-cleanup-program",
+      "section": "framework-reporting",
+      "workflow_note": "Review the current program framework, maintained guidance, reporting resources, cleanup pathways, professional-role materials, and implementation updates.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-rbcr-official-regulations",
+      "section": "framework-reporting",
+      "workflow_note": "Consult the controlling regulations for release discovery, reporting, characterization, immediate-action, cleanup, tiering, and closure provisions.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-significant-existing-releases-immediate-actions",
+      "section": "framework-reporting",
+      "workflow_note": "Review the current framework for historical releases presenting increased short-term risk and the associated immediate-action process.",
+      "display_order": 3,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-release-characterization-guidance",
+      "section": "characterization-entry",
+      "workflow_note": "Use when developing the conceptual site model and investigation approach for an identified release and affected environmental media.",
+      "display_order": 4,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-react-tracker",
+      "section": "characterization-entry",
+      "workflow_note": "Search the property and release record, manage the applicable case, and access current submission and tracking functions.",
+      "display_order": 5,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "release-discovery-cleanup-entry",
+      "resource_id": "ct-rbcr-release-tiers",
+      "section": "characterization-entry",
+      "workflow_note": "Review the current tier-assignment framework and REACT handoff when a release proceeds beyond the initial characterization and closure period.",
+      "display_order": 6,
+      "importance": "core"
+    }
+  ],
+  "related_workflows": []
+}

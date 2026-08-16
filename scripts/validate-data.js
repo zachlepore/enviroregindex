@@ -23,6 +23,8 @@ const canonicalResources = new Map();
 const workflowReferences = new Map();
 const jurisdictionInventories = new Map();
 const workflowDefinitions = new Map();
+const normalizedUrls = new Map();
+const allowedSourceTypes = new Set(['government-agency', 'standards-body']);
 
 function readJSON(file) {
   try {
@@ -38,6 +40,18 @@ function documentFocusAreas(document) {
   return [...new Set([document.category, ...additionalAreas].filter(Boolean))];
 }
 
+function normalizeCanonicalUrl(value) {
+  try {
+    const url = new URL(value);
+    if (!['http:', 'https:'].includes(url.protocol)) return null;
+    url.hostname = url.hostname.toLowerCase();
+    url.pathname = url.pathname.replace(/\/$/, '') || '/';
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
 for (const file of jsonFiles) {
   const data = readJSON(file);
   if (!data) continue;
@@ -49,28 +63,58 @@ for (const file of jsonFiles) {
   }
   const documents = data.documents || [];
   const jurisdictionCode = data.state?.code;
+  const isLiveCollection = (data.state?.status || data.collection?.status) === 'live';
+  const requiresCompleteCanonicalMetadata = jurisdictionCode?.toLowerCase() === 'ct';
   const inventory = [];
   const numericIds = new Set();
 
   for (const document of documents) {
+    const recordLabel = document.qc_id || document.resource_id || document.title || 'unknown record';
+    if (requiresCompleteCanonicalMetadata && !Number.isInteger(document.id)) {
+      failures.push(`${relativeFile}: ${recordLabel} has no valid numeric id`);
+    }
     if (numericIds.has(document.id)) {
       failures.push(`${relativeFile} has duplicate numeric id ${document.id}`);
     }
     numericIds.add(document.id);
 
-    if (document.qc_id) {
+    if (requiresCompleteCanonicalMetadata && (!document.qc_id || typeof document.qc_id !== 'string')) {
+      failures.push(`${relativeFile}: numeric id ${document.id ?? 'missing'} has no QC ID`);
+    } else if (document.qc_id) {
       if (qcIds.has(document.qc_id)) {
         failures.push(`Duplicate QC ID ${document.qc_id}: ${qcIds.get(document.qc_id)} and ${relativeFile}`);
       }
       qcIds.set(document.qc_id, relativeFile);
     }
 
-    if (document.resource_id) {
+    if (requiresCompleteCanonicalMetadata && (!document.resource_id || typeof document.resource_id !== 'string')) {
+      failures.push(`${relativeFile}: ${recordLabel} has no immutable resource_id`);
+    } else if (document.resource_id) {
       if (resourceIds.has(document.resource_id)) {
         failures.push(`Duplicate resource_id ${document.resource_id}: ${resourceIds.get(document.resource_id)} and ${relativeFile}`);
       }
       resourceIds.set(document.resource_id, relativeFile);
       canonicalResources.set(document.resource_id, document);
+    }
+
+    if (requiresCompleteCanonicalMetadata && (!document.publisher || typeof document.publisher !== 'string')) {
+      failures.push(`${relativeFile}: ${recordLabel} has no publisher`);
+    }
+    if (requiresCompleteCanonicalMetadata && !allowedSourceTypes.has(document.source_type)) {
+      failures.push(`${relativeFile}: ${recordLabel} has invalid or missing source_type`);
+    }
+    if (requiresCompleteCanonicalMetadata && (!document.verified || typeof document.verified !== 'string')) {
+      failures.push(`${relativeFile}: ${recordLabel} has no verification date`);
+    }
+
+    const normalizedUrl = normalizeCanonicalUrl(document.source_url);
+    if (requiresCompleteCanonicalMetadata && !normalizedUrl) {
+      failures.push(`${relativeFile}: ${recordLabel} has no valid HTTP(S) canonical URL`);
+    } else if (normalizedUrl && isLiveCollection && normalizedUrls.has(normalizedUrl)) {
+      const existing = normalizedUrls.get(normalizedUrl);
+      failures.push(`Duplicate normalized canonical URL ${normalizedUrl}: ${existing} and ${relativeFile}:${recordLabel}`);
+    } else if (normalizedUrl && isLiveCollection) {
+      normalizedUrls.set(normalizedUrl, `${relativeFile}:${recordLabel}`);
     }
 
     if (jurisdictionCode) {

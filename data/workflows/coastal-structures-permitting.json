@@ -1,0 +1,77 @@
+{
+  "workflow": {
+    "workflow_id": "coastal-structures-permitting",
+    "title": "Coastal Structures, Dredging & Tidal Wetlands Permitting",
+    "business_line": "coastal",
+    "business_line_label": "Coastal",
+    "description": "Connecticut statutory, permitting, application, jurisdiction-reference, and federal-coordination resources for work in tidal wetlands and tidal, coastal, or navigable waters.",
+    "keywords": ["coastal", "tidal", "tidal wetlands", "tidal waters", "coastal permit", "coastal permitting", "waterfront", "structures", "dredging", "fill", "dock", "pier", "shoreline", "seawall", "bulkhead", "coastal jurisdiction", "coastal structures"],
+    "synonyms": ["tidal wetlands permitting", "structures dredging and fill", "waterfront permitting"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct", "federal"]
+  },
+  "sections": [
+    { "section_id": "state-coastal-framework", "title": "State Coastal Framework", "display_order": 1 },
+    { "section_id": "applications-permitting", "title": "Applications & Permitting", "display_order": 2 },
+    { "section_id": "jurisdiction-coordination", "title": "Jurisdiction & Coordination", "display_order": 3 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-tidal-wetlands-act",
+      "section": "state-coastal-framework",
+      "workflow_note": "Consult the controlling Connecticut statutory framework for activities affecting tidal wetlands.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-structures-dredging-fill-statutes",
+      "section": "state-coastal-framework",
+      "workflow_note": "Consult the controlling Connecticut requirements for structures, dredging, fill, and related work in tidal, coastal, or navigable waters.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-coastal-permit-program-overview",
+      "section": "state-coastal-framework",
+      "workflow_note": "Use for CT DEEP's current program scope, permit paths, review framework, and pre-application context.",
+      "display_order": 3,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-licenses-activities-tidal-waters",
+      "section": "applications-permitting",
+      "workflow_note": "Use to navigate current individual-permit, Certificate of Permission, and coastal general-permit application paths.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-lwrd-forms-instructions",
+      "section": "applications-permitting",
+      "workflow_note": "Access current transmittal materials, supporting attachments, consultation forms, and application instructions.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "ct-regulatory-jurisdiction-tidal-waters-wetlands",
+      "section": "jurisdiction-coordination",
+      "workflow_note": "Use as a Connecticut regulatory-boundary reference without treating it as a project-specific jurisdictional determination.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "coastal-structures-permitting",
+      "resource_id": "fed-usace-connecticut-aquatic-resource-permits",
+      "section": "jurisdiction-coordination",
+      "workflow_note": "Consult the current USACE Connecticut gateway when evaluating whether separate federal authorization may also require review.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

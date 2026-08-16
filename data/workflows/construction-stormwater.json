@@ -1,0 +1,78 @@
+{
+  "workflow": {
+    "workflow_id": "construction-stormwater",
+    "title": "Construction Stormwater Permit & SPCP",
+    "business_line": "stormwater",
+    "business_line_label": "Stormwater",
+    "description": "Permit, registration, planning, inspection, monitoring, and closeout resources for construction stormwater compliance in Connecticut.",
+    "keywords": ["construction stormwater", "construction general permit", "construction activities", "SPCP", "SWPPP", "land disturbance", "erosion and sediment control", "stormwater inspection", "ezFile"],
+    "synonyms": ["Construction Stormwater General Permit", "Construction Site Stormwater", "Stormwater Pollution Control Plan", "Stormwater Pollution Prevention Plan", "Construction SWPPP", "CGP"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct"]
+  },
+  "sections": [
+    { "section_id": "permit-applicability", "title": "Permit & Applicability", "display_order": 1 },
+    { "section_id": "registration-documentation", "title": "Registration & Documentation", "display_order": 2 },
+    { "section_id": "planning-standards", "title": "Planning Standards", "display_order": 3 },
+    { "section_id": "inspection-monitoring-closeout", "title": "Inspection, Monitoring & Closeout", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-construction-stormwater-program",
+      "section": "permit-applicability",
+      "workflow_note": "Review current program status, project categories, registration requirements, transition information, and termination criteria.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-construction-stormwater-general-permit",
+      "section": "permit-applicability",
+      "workflow_note": "Review the controlling permit for applicable authorization, SPCP, inspection, monitoring, recordkeeping, reporting, and termination requirements.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-ezfile-construction-stormwater",
+      "section": "registration-documentation",
+      "workflow_note": "Use for required electronic construction stormwater registration and permit application submissions.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-construction-stormwater-application-guide",
+      "section": "registration-documentation",
+      "workflow_note": "Consult while preparing the current permit application and completing the construction stormwater filing in ezFile.",
+      "display_order": 2,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-soil-erosion-sediment-control-guidelines",
+      "section": "planning-standards",
+      "workflow_note": "Consult when developing permit-referenced erosion and sediment controls and the applicable construction-phase portions of the SPCP.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-stormwater-quality-manual",
+      "section": "planning-standards",
+      "workflow_note": "Consult for applicable post-construction stormwater measures and design criteria incorporated into the permit framework.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "construction-stormwater",
+      "resource_id": "ct-construction-dewatering-monitoring-guide",
+      "section": "inspection-monitoring-closeout",
+      "workflow_note": "Use when construction dewatering is subject to the permit's turbidity-monitoring and inspection provisions.",
+      "display_order": 1,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

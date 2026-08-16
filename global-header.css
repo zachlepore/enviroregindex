@@ -1,0 +1,75 @@
+eri-global-header {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.global-header {
+  background: #191917;
+  border-bottom: 3px solid #2e7d52;
+}
+
+.global-header-inner {
+  width: min(1200px, calc(100% - 48px));
+  min-height: 56px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.global-header-logo {
+  flex-shrink: 0;
+  color: #fff;
+  font: 600 14px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.global-header-logo span { color: #5cce8a; }
+
+.global-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.global-header-link {
+  padding: 6px 14px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.55);
+  font: 500 12px 'DM Sans', sans-serif;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+
+.global-header-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.global-header-link.active {
+  color: #5cce8a;
+  background: rgba(92, 206, 138, 0.1);
+}
+
+.global-header-link:focus-visible,
+.global-header-logo:focus-visible {
+  outline: 2px solid #5cce8a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .global-header-inner {
+    width: calc(100% - 32px);
+    min-height: 56px;
+    gap: 10px;
+  }
+
+  .global-header-logo { font-size: 12px; }
+  .global-header-link { padding: 6px 8px; font-size: 11px; }
+}

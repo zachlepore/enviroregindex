@@ -1,0 +1,78 @@
+{
+  "workflow": {
+    "workflow_id": "ust-registration-compliance",
+    "title": "Underground Storage Tank Registration & Compliance",
+    "business_line": "tanks-oil",
+    "business_line_label": "Tanks & Oil",
+    "description": "Connecticut regulatory, registration, operating, testing, operator, financial-responsibility, status, and administrative closure resources for existing regulated UST systems.",
+    "keywords": ["underground storage tank", "UST", "tank registration", "tank notification", "tank compliance", "release detection", "tank testing", "piping testing", "corrosion protection", "spill prevention", "overfill prevention", "Class A operator", "Class B operator", "Class C operator", "financial responsibility", "temporary closure", "permanent closure", "change of ownership", "ezFile"],
+    "synonyms": ["UST compliance", "underground tank compliance", "UST registration"],
+    "supported_jurisdictions": ["ct"],
+    "resource_collections": ["ct"]
+  },
+  "sections": [
+    { "section_id": "regulatory-framework", "title": "Regulatory Framework", "display_order": 1 },
+    { "section_id": "registration-records", "title": "Registration & Facility Records", "display_order": 2 },
+    { "section_id": "operating-compliance", "title": "Operating Compliance", "display_order": 3 },
+    { "section_id": "operator-financial", "title": "Operator & Financial Requirements", "display_order": 4 }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-underground-storage-tanks-program",
+      "section": "regulatory-framework",
+      "workflow_note": "Review current Connecticut program updates, notification pathways, release-prevention information, closure resources, and ezFile instructions for regulated UST systems.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-official-regulations",
+      "section": "regulatory-framework",
+      "workflow_note": "Consult the controlling Connecticut requirements for applicability, operation, testing, release detection, operators, financial responsibility, status changes, closure, notification, and records.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-registration-compliance",
+      "section": "registration-records",
+      "workflow_note": "Use as the maintained professional hub for current notification, inspection, testing, operator, financial-responsibility, closure, and suspected-release materials.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-facility-tank-details",
+      "section": "registration-records",
+      "workflow_note": "Review current and historical facility and tank records and compare the state dataset with the owner or operator's facility information and notification history.",
+      "display_order": 2,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-testing-requirements",
+      "section": "operating-compliance",
+      "workflow_note": "Open the current CT DEEP table when identifying the testing provisions that may be relevant to a tank system or component.",
+      "display_order": 1,
+      "importance": "core"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-operator-training",
+      "section": "operator-financial",
+      "workflow_note": "Use to locate Connecticut operator requirements, approved Class A/B courses and exams, Class C information, and current training-submission resources.",
+      "display_order": 1,
+      "importance": "supporting"
+    },
+    {
+      "workflow_id": "ust-registration-compliance",
+      "resource_id": "ct-ust-financial-responsibility",
+      "section": "operator-financial",
+      "workflow_note": "Review Connecticut's current financial-responsibility guidance, recognized mechanisms, notification relationship, and program contacts.",
+      "display_order": 2,
+      "importance": "supporting"
+    }
+  ],
+  "related_workflows": []
+}

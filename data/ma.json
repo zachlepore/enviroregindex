@@ -7,17 +7,43 @@
     "agency_url": "https://www.mass.gov/orgs/massachusetts-department-of-environmental-protection",
     "status": "coming-soon"
   },
+  "focus_areas": [
+    {
+      "name": "Site Remediation",
+      "slug": "remediation",
+      "description": "Cleanup standards, regulatory frameworks, licensed professional programs, voluntary remediation, and document portals.",
+      "icon": "🌿",
+      "order": 1
+    },
+    {
+      "name": "Stormwater",
+      "slug": "stormwater",
+      "description": "Permits and guidance for municipal, construction, and industrial stormwater, plus stormwater quality resources.",
+      "icon": "💧",
+      "order": 2
+    },
+    {
+      "name": "Site Assessment",
+      "slug": "assessment",
+      "description": "Site characterization guidance, environmental assessment resources, database search tools, and brownfield programs.",
+      "icon": "🔍",
+      "order": 3
+    }
+  ],
   "recent_updates": [
     {
       "title": "MCP 2023 Amendments",
       "description": "MassDEP finalized updates to the Massachusetts Contingency Plan (MCP) addressing changes to soil and groundwater cleanup standards.",
       "date": "2023",
-      "color": "#2E7D52"
+      "color": "#2E7D52",
+      "destination": "https://www.mass.gov/regulations/310-cmr-4000-massachusetts-contingency-plan",
+      "destination_type": "external"
     }
   ],
   "documents": [
     {
       "id": 1,
+      "qc_id": "MA1",
       "category": "remediation",
       "subcategory": "MCP",
       "title": "Massachusetts Contingency Plan (MCP) — 310 CMR 40.0000",
@@ -29,6 +55,7 @@
     },
     {
       "id": 2,
+      "qc_id": "MA2",
       "category": "remediation",
       "subcategory": "MCP",
       "title": "Reportable Conditions & Release Notification (310 CMR 40.0300)",
@@ -40,6 +67,7 @@
     },
     {
       "id": 3,
+      "qc_id": "MA3",
       "category": "remediation",
       "subcategory": "LSP Program",
       "title": "Licensed Site Professional (LSP) Program",
@@ -51,6 +79,7 @@
     },
     {
       "id": 4,
+      "qc_id": "MA4",
       "category": "stormwater",
       "subcategory": "MS4",
       "title": "MA EPA MS4 General Permit (2016)",
@@ -62,6 +91,7 @@
     },
     {
       "id": 5,
+      "qc_id": "MA5",
       "category": "stormwater",
       "subcategory": "Construction Stormwater",
       "title": "Construction General Permit (CGP) — Massachusetts",
@@ -73,6 +103,7 @@
     },
     {
       "id": 6,
+      "qc_id": "MA6",
       "category": "stormwater",
       "subcategory": "Post-Construction",
       "title": "Massachusetts Stormwater Handbook",
@@ -84,6 +115,7 @@
     },
     {
       "id": 7,
+      "qc_id": "MA7",
       "category": "assessment",
       "subcategory": "Phase I / II ESA",
       "title": "MCP Phase I / II Initial Site Investigation",
@@ -95,6 +127,7 @@
     },
     {
       "id": 8,
+      "qc_id": "MA8",
       "category": "assessment",
       "subcategory": "Database Search",
       "title": "MassDEP Site Search — Release Tracking System (BWSC)",
